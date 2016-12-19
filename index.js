@@ -6,7 +6,7 @@ var helmet = require('helmet');
 
 var port = process.env.PORT || 8080;
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public'), {maxAge: 86400000}));
 
 app.get('*', function (req, res) {
     const index = path.join(__dirname, 'public', 'index.html');
