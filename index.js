@@ -6,10 +6,10 @@ var helmet = require('helmet');
 
 var port = process.env.PORT || 8080;
 
-app.use(express.static(__dirname + '/Drinky'));
+app.use(express.static(__dirname + '/app'));
 
 app.get('*', function (req, res) {
-    var file = __dirname + "/Drinky/index.html";
+    var file = __dirname + "/app/index.html";
     res.sendFile(path.resolve(file));
 });
 
