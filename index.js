@@ -1,7 +1,21 @@
-var gzippo = require('gzippo');
 var express = require('express');
 var app = express();
+var path = require('path');
+var compression = require('compression');
+var helmet = require('helmet');
+var gzippo = require('gzippo');
 
-app.use(express.logger('dev'));
-app.use(gzippo.staticGzip("" + __dirname + "/public"));
-app.listen(process.env.PORT || 5000);
+var port = process.env.PORT || 8080;
+process.env.PWD = process.cwd();
+
+
+app.use(gzippo.staticGzip(__dirname + "/public"));
+
+app.get('*', function (req, res) {
+    const index = path.join(process.env.PWD, 'public', 'index.html');
+    res.sendFile(index);
+});
+
+app.listen(port, function() {
+    console.log('Our app is running on http://localhost:' + port);
+});
