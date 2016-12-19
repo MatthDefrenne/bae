@@ -4,7 +4,7 @@ var path = require('path');
 var compression = require('compression');
 var helmet = require('helmet');
 
-app.use(helmet());
+var port = process.env.PORT || 8080;
 
 app.use(express.static(path.join(__dirname, 'Locality'), {maxAge: 86400000}));
 
@@ -13,5 +13,6 @@ app.get('*', function (req, res) {
     res.sendFile(path.resolve(file));
 });
 
-app.listen(3000);
-console.log('Express Server started on port 3000');
+app.listen(port, function() {
+    console.log('Our app is running on http://localhost:' + port);
+})
