@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "main": "qsd",
   "scripts": {
-    "start": "node index"
+    "start": "node index.js"
   },
   "dependencies": {
     "compression": "^1.6.2",
