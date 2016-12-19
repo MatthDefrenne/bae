@@ -15,7 +15,7 @@ app.get('*', function (req, res) {
     fs.readFile( '.' + __dirname + '/public/index.html', function read(err, data) {
         console.log(err, data)
     });
-    res.sendFile('/public/index.html');
+    res.sendFile(__dirname + '/index.html');
 });
 
 app.listen(port, function() {
