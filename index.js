@@ -5,6 +5,8 @@ var compression = require('compression');
 var helmet = require('helmet');
 
 var port = process.env.PORT || 8080;
+process.env.PWD = process.cwd();
+console.log(process.env.PWD );
 
 app.use(express.static(path.join(__dirname, 'public'), {maxAge: 86400000}));
 
