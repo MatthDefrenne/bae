@@ -8,12 +8,12 @@ var gzippo = require('gzippo');
 var port = process.env.PORT || 8080;
 process.env.PWD = process.cwd();
 
-
+app.set('views', __dirname + '/public');
 app.use(gzippo.staticGzip(__dirname + "/public"));
 
 app.get('*', function (req, res) {
-    const index = path.join(process.env.PWD, 'public', 'index.html');
-    res.sendFile(index);
+
+    res.sendFile(path.join(__dirname, 'public'));
 });
 
 app.listen(port, function() {
