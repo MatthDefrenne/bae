@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "main": "qsd",
+  "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
