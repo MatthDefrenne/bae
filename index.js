@@ -6,7 +6,7 @@ var helmet = require('helmet');
 
 var port = process.env.PORT || 8080;
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static('public'));
 
 app.get('*', function (req, res) {
     const index = path.join(__dirname, 'public', 'index.html');
@@ -15,4 +15,4 @@ app.get('*', function (req, res) {
 
 app.listen(port, function() {
     console.log('Our app is running on http://localhost:' + port);
-})
+});
