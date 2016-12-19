@@ -1,10 +1,12 @@
 {
-  "name": "Drinky app",
-  "version": "0.0.0",
-  "main": "index.js",
+  "version": "1.0.0",
+  "main": "qsd",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index"
   },
-  "author": "Matthieu",
-  "license": "ISC"
+  "dependencies": {
+    "compression": "^1.6.2",
+    "express": "^4.14.0",
+    "helmet": "^3.1.0"
+  }
 }
