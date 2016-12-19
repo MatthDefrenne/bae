@@ -4,6 +4,7 @@ var path = require('path');
 var compression = require('compression');
 var helmet = require('helmet');
 var gzippo = require('gzippo');
+var fs = require('fs');
 
 var port = process.env.PORT || 8080;
 process.env.PWD = process.cwd();
