@@ -9,7 +9,7 @@ var port = process.env.PORT || 8080;
 app.use(express.static(__dirname + '/app'));
 
 app.get('*', function (req, res) {
-    var file = __dirname + 'index.html';
+    var file = __dirname + '/index.html';
     res.sendFile(path.resolve(file));
 });
 
