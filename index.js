@@ -11,7 +11,7 @@ process.env.PWD = process.cwd();
 app.use(gzippo.staticGzip(__dirname + "/public"));
 
 app.get('*', function (req, res) {
-    res.sendFile('/app/public/index.html');
+    res.sendFile('./public/index.html');
 });
 
 app.listen(port, function() {
