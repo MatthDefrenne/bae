@@ -11,7 +11,7 @@ console.log(process.env.PWD );
 app.use(express.static(path.join(process.cwd(), '../../speaky-client/'), {maxAge: 86400000}));
 
 app.get('*', function (req, res) {
-    var file = path.join(process.cwd(), '/public/index.html');
+    var file = path.join('./drinky', '/public/', 'index.html');
     return res.sendfile(path.resolve(file));
 });
 
