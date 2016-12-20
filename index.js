@@ -8,16 +8,12 @@ var port = process.env.PORT || 8080;
 process.env.PWD = process.cwd();
 console.log(process.env.PWD );
 
-app.use('/public', express.static(__dirname + '/../public'));
+app.use(express.static("public"));
 
 app.get('*', function (req, res) {
-    res.sendFile(__dirname + '/public/index.html'); // load the single view file (angular will handle the page changes on the front-end)
+    var file = __dirname + "/public/index.html";
+    res.sendFile(path.resolve(file));
 });
-
-app.get('/test', function (req, res) {
-    res.sendFile("public/index.html");
-});
-
 
 
 app.listen(port, function() {
