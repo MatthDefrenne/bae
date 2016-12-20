@@ -15,7 +15,7 @@ app.get('/tab', function (req, res) {
 });
 
 app.get('/test', function (req, res) {
-    res.sendFile("./index.html");
+    res.sendFile("public/index.html");
 });
 
 
