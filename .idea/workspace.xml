@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1646e073-a68b-4cb3-88bb-6ae8e9508de7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
     </list>
     <ignored path="ChatSystemAngularJS-master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,7 +40,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
               <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-              <folding />
+              <folding>
+                <element signature="e#410#480#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -356,12 +357,12 @@
       <workItem from="1482184116333" duration="1644000" />
       <workItem from="1482185782476" duration="6442000" />
       <workItem from="1482194132242" duration="4038000" />
-      <workItem from="1482198234057" duration="349000" />
+      <workItem from="1482198234057" duration="570000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107384000" />
+    <option name="totallyTimeSpent" value="107605000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -524,7 +525,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-          <folding />
+          <folding>
+            <element signature="e#410#480#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
