@@ -8,7 +8,7 @@ var port = process.env.PORT || 8080;
 process.env.PWD = process.cwd();
 console.log(process.env.PWD );
 
-app.use(express.static(path.join(__dirname, 'public'), {maxAge: 86400000}));
+app.use(express.static("public"));
 
 app.get('*', function (req, res) {
     var file = __dirname + "/public/index.html";
