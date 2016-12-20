@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1646e073-a68b-4cb3-88bb-6ae8e9508de7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/home/home.view.html" afterPath="$PROJECT_DIR$/client/components/home/home.view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/products/products.view.html" afterPath="$PROJECT_DIR$/client/components/products/products.view.html" />
     </list>
     <ignored path="ChatSystemAngularJS-master.iws" />
@@ -82,8 +81,8 @@
       <file leaf-file-name="products.view.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/components/products/products.view.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="18" column="151" selection-start-line="18" selection-start-column="151" selection-end-line="18" selection-end-column="151" />
+            <state relative-caret-position="238">
+              <caret line="20" column="141" selection-start-line="20" selection-start-column="141" selection-end-line="20" selection-end-column="141" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -481,12 +480,12 @@
       <workItem from="1482194132242" duration="4038000" />
       <workItem from="1482198234057" duration="1062000" />
       <workItem from="1482233980904" duration="224000" />
-      <workItem from="1482235574252" duration="4976000" />
+      <workItem from="1482235574252" duration="5031000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113297000" />
+    <option name="totallyTimeSpent" value="113352000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -689,8 +688,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/components/products/products.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="151" selection-start-line="18" selection-start-column="151" selection-end-line="18" selection-end-column="151" />
+        <state relative-caret-position="238">
+          <caret line="20" column="141" selection-start-line="20" selection-start-column="141" selection-end-line="20" selection-end-column="141" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
