@@ -16,7 +16,7 @@
                     <option value="48">48 Bouteilles</option>
                 </select>
 
-            <div style="margin-top: 20px"><h1>€ {{quantity * 1.20}}</h1> </div>
+            <div style="margin-top: 20px"><h1>€ {{quantity * 1.20 | limitTo: 3}}</h1> </div>
 
             <div ng-if="quantity < 11" style="margin-bottom: 10px;"><b>Acheter au moins 12 bouteilles pour avoir la livraison offerte</b></div>
             <button ng-click="logEvent('clickOnBuyDrinky')" class="btn btn-success" style="width: 300px">Commander</button>
