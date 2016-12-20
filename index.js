@@ -11,8 +11,8 @@ console.log(process.env.PWD );
 app.use(express.static(path.join(__dirname, 'public'), {maxAge: 86400000}));
 
 app.get('*', function (req, res) {
-    const index = path.join(__dirname, 'public', 'index.html');
-    res.sendFile(index);
+    var file = __dirname + "/public/index.html";
+    res.sendFile(path.resolve(file));
 });
 
 app.listen(port, function() {
