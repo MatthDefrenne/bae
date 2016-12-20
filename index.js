@@ -14,7 +14,7 @@ app.get('*', function (req, res) {
     var file = __dirname + "/public/index.html";
     console.log(file);
     console.log(path.resolve(file));
-    res.sendFile(path.resolve(file));
+    res.render(path.resolve(file));
 });
 
 
