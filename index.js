@@ -11,7 +11,7 @@ console.log(process.env.PWD );
 app.use(express.static("./public"));
 
 app.get('*', function (req, res) {
-    var file = "./index.html";
+    var file = "/index.html";
     res.sendFile(path.resolve(file));
 });
 
