@@ -1,0 +1,49 @@
+<div class="container" style="margin-top: 40px; ">
+
+    <h2>Achetez Drinky</h2>
+    <hr class="featurette-divider">
+
+
+    <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+            <h2 class="featurette-heading">Drinky 330ml</h2>
+            <p class="lead">Uniquement disponible en goût framboise (Pour l'instant)</p>
+                <select ng-model="quantity" class="form-control">
+                    <option value="1">Une bouteille</option>
+                    <option value="6">6 bouteilles</option>
+                    <option value="12">12 bouteilles</option>
+                    <option value="24">24 Bouteilles</option>
+                    <option value="48">48 Bouteilles</option>
+                </select>
+
+            <div style="margin-top: 20px"><h1>€ {{quantity * 2}}</h1> </div>
+
+            <div ng-if="quantity < 11" style="margin-bottom: 10px;"><b>Acheter au moins 12 bouteilles pour avoir la livraison offerte</b></div>
+            <button ng-click="logEvent('clickOnBuyDrinky')" class="btn btn-success" style="width: 300px">Commander</button>
+
+            <div class="mt10" style="color: red; font-weight: bold; margin-top: 50px"><i>Drinky se lance sur Namur, Belgique, vous voulez venir tester la boisson avant de l'acheter ? Aucun problème,
+                rejoignez notre page facebook et fait le nous savoir.</i>
+            </div>
+            <div class="mt10"><a href="https://www.facebook.com/Drinky-308767716189772/?ref=bookmarks" target="_blank">Notre page Facebook</a></div>
+
+
+        </div>
+
+        <div class="col-md-5 col-md-pull-7">
+            <img class="featurette-image img-responsive center-block" src="./img/tea.jpg" data-holder-rendered="true">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+    <h2>Drinky en images : </h2>
+    <BR/>
+
+    <div class="row" style="text-align: center; margin-bottom: 15px;">
+
+    </div><!-- /.row -->
+
+    <footer style="margin-top: 40px">
+            <p>© 2016 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </footer>
+
+</div>

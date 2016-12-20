@@ -1,0 +1,18 @@
+{
+  "name": "angular-seed",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Admin",
+  "repository": "https://github.com/angular/angular-seed",
+  "license": "MIT",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-copy": "^0.1.0",
+    "grunt-html2js": "^0.3.6",
+    "grunt-injector": "^1.1.0",
+    "grunt-minified": "0.0.6"
+  }
+}

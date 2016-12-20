@@ -1,0 +1,96 @@
+                    body {
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.banner {
+    background-repeat: no-repeat;
+    margin-bottom: 60px;
+    position: relative;
+    height: 500px;
+    width: 100%;
+    background-image: url("./img/background.jpg");
+}
+
+.navbar-default {
+    background: transparent;
+    border-color: transparent;
+}
+
+.input-search {
+    background: rgba(238, 238, 238, 0.22);
+    width: 350px;
+    border-color: transparent;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #5cb85c;
+}
+
+.btn-success {
+    font-size: 18px;
+    padding: 10px 12px;
+}
+
+.profile-pp-100 {
+    width: 75px;
+    margin-right: 10px;
+    float: left;
+    border-radius: 100px;
+}
+
+.label-default {
+    border-radius: 100px;
+    padding: 5px 15px;
+    background-color: #000;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.fwb {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 70px;
+}
+
+.fwb2 {
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+.container-top {
+    color: white;
+}
+
+@media (min-width: 1280px) {
+    .container-top {
+        color: white;
+        margin-left: 330px;
+        margin-right: 330px;
+    }
+}
+.jumbotron {
+    color: white;
+    background-image: url("./img/background.jpg");
+    background-position: center center;
+}
+h2, h3 {
+    font-weight: bold;
+}
+hr {
+    border-top: 5px solid #333333;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.ta-c {
+    text-align: center;
+}
+.img-circle {
+    width: 75px;
+    height: 75px;
+}
