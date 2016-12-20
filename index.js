@@ -8,10 +8,10 @@ var port = process.env.PORT || 8080;
 process.env.PWD = process.cwd();
 console.log(process.env.PWD );
 
-app.use(express.static(__dirname  + "public"));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/tab', function (req, res) {
-    res.sendFile(__dirname + "/public/index.html");
+    res.sendfile(path.join(__dirname, '../public', 'index.html'));
 });
 
 app.get('/test', function (req, res) {
