@@ -18,7 +18,9 @@
 
             <div style="margin-top: 20px"><h1>€ {{quantity * 1.25 | limitTo: 4}}</h1>  </div>
 
-            <div ng-if="quantity < 11" style="margin-bottom: 10px;"><b>Sans engagement vous payer sur place, <b>Satisfait ou rembourser</b> Acheter au moins 12 bouteilles pour avoir la livraison offerte</b></div>
+            <div ng-if="quantity < 11" style="margin-bottom: 10px;">
+                <p>Acheter au moins 12 bouteilles pour avoir la livraison offerte</p>
+            </div>
             <button ng-click="logEvent('clickOnBuyDrinky')" class="btn btn-success" style="width: 300px">Commander</button>
 
             <div class="mt10" style="color: red; font-weight: bold; margin-top: 50px"><i>Drinky se lance sur Namur, Belgique, vous voulez venir tester la boisson avant de l'acheter ? Aucun problème,
