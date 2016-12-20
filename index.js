@@ -8,10 +8,10 @@ var port = process.env.PORT || 8080;
 process.env.PWD = process.cwd();
 console.log(process.env.PWD );
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/public', express.static(__dirname + '/../public'));
 
-app.get('/tab', function (req, res) {
-    res.sendfile(path.join(__dirname, '../public', 'index.html'));
+app.get('*', function (req, res) {
+    res.sendFile(__dirname + '/public/index.html'); // load the single view file (angular will handle the page changes on the front-end)
 });
 
 app.get('/test', function (req, res) {
