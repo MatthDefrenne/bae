@@ -15,9 +15,7 @@
                     <option value="24">24 Bouteilles</option>
                     <option value="48">48 Bouteilles</option>
                 </select>
-
             <div style="margin-top: 20px"><h1>€ {{quantity * 1.25 | limitTo: 4}}</h1>  </div>
-
             <button ng-click="logEvent('clickOnBuyDrinky')" data-toggle="modal" data-target="#buyModal" class="btn btn-success" style="width: 300px">Commander</button>
 
             <div class="modal fade" id="buyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -30,37 +28,39 @@
                         <div class="modal-body">
                             <form class="form-horizontal mt10">
                                 <fieldset>
-
-                                    <div class="form-group">
+                                    <div class="form-group" >
                                         <div class="col-md-6">
-                                            <input name="name" type="text" placeholder="Nom" class="form-control input-md">
+                                            <input name="name" ng-model="order.name" type="text" placeholder="Nom" class="form-control input-md">
                                         </div>
                                         <div class="col-md-6">
-                                            <input  name="firstname" type="text" placeholder="Prénom" class="form-control input-md">
+                                            <input  name="firstname" ng-model="order.firstname" type="text" placeholder="Prénom" class="form-control input-md">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <div class="col-md-12">
-                                            <input  name="textinput" type="email" placeholder="example@gmail.com" class="form-control input-md">
+                                            <input  name="textinput" ng-model="order.mail" type="email" placeholder="example@gmail.com" class="form-control input-md">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <div class="col-md-8">
-                                            <input  name="textinput" type="text" placeholder="Adresse de livraison" class="form-control input-md">
+                                            <input  name="textinput" ng-model="order.adress"  type="text" placeholder="Adresse de livraison" class="form-control input-md">
 
                                         </div>
                                         <div class="col-md-4">
-                                            <input  name="textinput" type="text" placeholder="Code postal" class="form-control input-md">
+                                            <input  name="textinput" ng-model="order.codepostal" type="text" placeholder="Code postal" class="form-control input-md">
                                         </div>
                                     </div>
-                                    <i class="m10"><i>Une fois que vous avez envoyer une demande, votre boisson est livrée en 24h entre 8h et 16h00, le payement est effectué sur place.</i></i>
+                                    <li ng-if="allEmpty" style="color: red;">Merci de remplire tous les champs</li>
+                                    <i style="margin-top: 25px"><i>Une fois que vous avez envoyer une demande, votre commande est livrée en 24h entre 8h et 16h00, le payement est effectué sur place.</i></i>
                                 </fieldset>
                             </form>
                         </div>
+                        <div ng-if="error">Une erreur est servenue</div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-success">Envoyer</button>
+                            <i class="fa fa-spinner fa-spin fa-3x fa-fw" ng-if="inProgress"></i>
+                            <button type="button" ng-click="sendOrder(order)" class="btn btn-success">Envoyer</button>
                         </div>
                     </div>
                 </div>
@@ -69,9 +69,9 @@
                 rejoignez notre page facebook et fait le nous savoir.</i>
             </div>
             <div class="mt10"><a href="https://www.facebook.com/Drinky-308767716189772/?ref=bookmarks" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i>
-                 Notre page Facebook</a></div>
-
-
+                 Notre page Facebook
+            </a>
+            </div>
         </div>
 
         <div class="col-md-5 col-md-pull-7">

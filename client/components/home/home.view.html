@@ -2,7 +2,7 @@
     <div class="container">
         <h1 class="fwb">Drinky</h1>
         <p>
-            Nous avons créer la boisson qui vous aidera à réduire votre stress et votre anxiété ! Drinky est au gout citron et framboise, il vous maintiendra vous et votre cerveau en pleine forme tout au long de la journée.        <p><a class="btn btn-danger btn-lg" href="/products/" ng-click="logEvent('clickOnBuyNow')" role="button">Acheter maintenant <i class="glyphicon glyphicon-chevron-right"></i></a></p>
+            Nous avons créer la boisson qui vous aidera à réduire votre stress et votre anxiété, drinky est au gout citron et framboise, elle vous maintiendra vous et votre cerveau en pleine forme tout au long de la journée.        <p><a class="btn btn-danger btn-lg" href="/products/" ng-click="logEvent('clickOnBuyNow')" role="button">Acheter maintenant <i class="glyphicon glyphicon-chevron-right"></i></a></p>
     </div>
 </div>
 
@@ -27,7 +27,7 @@
         <div class="col-lg-4">
             <img class="img-circle" src="http://image.flaticon.com/icons/svg/126/126464.svg" alt="Generic placeholder image" width="140" height="140">
             <h2>Énergie</h2>
-            <p><b>Drinky ne vous laissera jamais tomber lorsque vous manquez d'énergie</b>, notre formule vous   maintiendra en forme toute la journée !</p>
+            <p><b>Drinky ne vous laissera jamais tomber lorsque vous manquez d'énergie</b>, notre formule vous maintiendra en forme toute la journée !</p>
         </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
 
@@ -53,14 +53,15 @@
                         <div class="col-lg-4">
                             <img class="img-circle" src="http://mr-ginseng.com/wp-content/uploads/2012/01/ginkgo-biloba.jpg" alt="Generic placeholder image" width="140" height="140">
                             <h3>Ginko biloba</h3>
+
                         </div><!-- /.col-lg-4 -->
                         <div class="col-lg-4">
                             <img class="img-circle" src="http://mr-ginseng.com/wp-content/uploads/2012/01/rhodiola.jpg" alt="Generic placeholder image" width="140" height="140">
                             <h3>Rhodiola Rosea</h3>
                         </div><!-- /.col-lg-4 -->
                         <div class="col-lg-4">
-                            <img class="img-circle" src="http://www.vulgaris-medical.com/sites/default/files/field/image/billet-de-blog/le-blog-de-sophie-lacoste/2013/12/30/trucs-au-citron.jpg" alt="Generic placeholder image" width="140" height="140">
-                            <h3>Citron</h3>
+                            <img class="img-circle" src="https://sc01.alicdn.com/kf/HTB1qqlmJFXXXXXHXpXXq6xXFXXXx/1282587/HTB1qqlmJFXXXXXHXpXXq6xXFXXXx.jpg" alt="Generic placeholder image" width="140" height="140">
+                            <h3>Coenzyme q10</h3>
                         </div><!-- /.col-lg-4 -->
                     </div><!-- /.row -->
 
@@ -78,11 +79,6 @@
                         <div class="col-lg-4">
                             <img class="img-circle" src="http://konradmarkham.com/wp-content/uploads/2014/11/bigstock-vitamins-pills-and-tablets-16253030.jpg" alt="Generic placeholder image" width="140" height="140">
                             <h3>100% des vitamines et mineraux journalier</h3>
-                        </div><!-- /.col-lg-4 -->
-
-                        <div class="col-lg-4">
-                            <img class="img-circle" src="https://sc01.alicdn.com/kf/HTB1qqlmJFXXXXXHXpXXq6xXFXXXx/1282587/HTB1qqlmJFXXXXXHXpXXq6xXFXXXx.jpg" alt="Generic placeholder image" width="140" height="140">
-                            <h3>Coenzyme q10</h3>
                         </div><!-- /.col-lg-4 -->
 
                     </div>
@@ -176,11 +172,31 @@
                    <div><b>Pourquoi partager Drinky ? :</b></div>
 
                     <p class="mt10">Lorsque vous partager Drinky à vos amis cela permet de faire grandir notre communauté,
-                    de plus lorsque vous réussisez à faire partager Drinky vous recevez automatiquement par mail une confirmation d'une boisson gratuite.
+                    de plus lorsque vous réussisez à faire partager Drinky et que votre amis achète au moins une boisson vous recevez automatiquement par mail une confirmation d'une boisson gratuite.
                     </p>
 
                     <div><b>Comment je peux partager ? :</b></div>
                     <p class="mt10">Pour partager Drinky à tes amis clique commence par leur envoyer un message via messenger</p>
+
+                    <div><b>Quelles conditions  ? :</b></div>
+                    <p class="mt10" style="color: red "><b>Pour pouvoir bénéficier d'un parainnage vous devez déjà avoir acheter une boisson Drinky. <a  data-dismiss="modal" href="/products/">Cliquer ici pour acheter Drinky</a></b></p>
+
+                    <div class="row" style="    padding: 20px;
+    border: 5px solid black;
+    margin: 20px;">
+                        <div class="form-group">
+                            <div class="col-md-8">
+                                <label>Étape 1 : Votre adresse email avec laquelle vous avez acheter précédement Drinky </label>
+                                <input  ng-model="emailToShare" type="email" placeholder="example@gmail.com" class="form-control input-md">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-8 mt10" >
+                                <label style="margin-right: 10px">Étape 2 : Partager sur Facebook </label><button ng-disabled="!emailToShare" class="btn btn-sm btn-primary" ng-click="shareOnMessenger()">Envoyer par messenger</button>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>

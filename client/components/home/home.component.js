@@ -59,4 +59,11 @@ function homeComponent($scope, $interval) {
 
     amplitude.getInstance().setUserId('' + Math.floor((Math.random() * 9999999) + 1));
 
+    $scope.shareOnMessenger = function() {
+        FB.ui({
+            method: 'send',
+            link: 'http://www.drinky.be/#' + $scope.emailToShare,
+        });
+    }
+
 }
