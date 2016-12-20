@@ -10,7 +10,7 @@ console.log(process.env.PWD );
 
 app.use(express.static(__dirname  + "public"));
 
-app.get('*', function (req, res) {
+app.get('/tab', function (req, res) {
     res.sendFile(__dirname + "/public/index.html");
 });
 
