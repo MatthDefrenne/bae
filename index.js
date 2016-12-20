@@ -12,7 +12,7 @@ app.use(helmet());
 app.use(express.static("client"));
 
 app.get('*', function (req, res) {
-    var file = __dirname + "/clieent/index.html";
+    var file = __dirname + "/client/index.html";
     res.sendFile(path.resolve(file));
 });
 
