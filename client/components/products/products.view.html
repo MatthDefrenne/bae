@@ -18,15 +18,58 @@
 
             <div style="margin-top: 20px"><h1>€ {{quantity * 1.25 | limitTo: 4}}</h1>  </div>
 
-            <div ng-if="quantity < 11" style="margin-bottom: 10px;">
-                <p>Acheter au moins 12 bouteilles pour avoir la livraison offerte</p>
-            </div>
-            <button ng-click="logEvent('clickOnBuyDrinky')" class="btn btn-success" style="width: 300px">Commander</button>
+            <button ng-click="logEvent('clickOnBuyDrinky')" data-toggle="modal" data-target="#buyModal" class="btn btn-success" style="width: 300px">Commander</button>
 
-            <div class="mt10" style="color: red; font-weight: bold; margin-top: 50px"><i>Drinky se lance sur Namur, Belgique, vous voulez venir tester la boisson avant de l'acheter ? Aucun problème,
+            <div class="modal fade" id="buyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title">Commander Drinky</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-horizontal mt10">
+                                <fieldset>
+
+                                    <div class="form-group">
+                                        <div class="col-md-6">
+                                            <input name="name" type="text" placeholder="Nom" class="form-control input-md">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input  name="firstname" type="text" placeholder="Prénom" class="form-control input-md">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <input  name="textinput" type="email" placeholder="example@gmail.com" class="form-control input-md">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-md-8">
+                                            <input  name="textinput" type="text" placeholder="Adresse de livraison" class="form-control input-md">
+
+                                        </div>
+                                        <div class="col-md-4">
+                                            <input  name="textinput" type="text" placeholder="Code postal" class="form-control input-md">
+                                        </div>
+                                    </div>
+                                    <i class="m10"><i>Une fois que vous avez envoyer une demande, votre boisson est livrée en 24h entre 8h et 16h00, le payement est effectué sur place.</i></i>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success">Envoyer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt10" style="color: red; font-weight: bold; margin-top: 25px"><i>Drinky se lance sur Namur, Belgique, vous voulez venir tester la boisson avant de l'acheter ? Aucun problème,
                 rejoignez notre page facebook et fait le nous savoir.</i>
             </div>
-            <div class="mt10"><a href="https://www.facebook.com/Drinky-308767716189772/?ref=bookmarks" target="_blank">Notre page Facebook</a></div>
+            <div class="mt10"><a href="https://www.facebook.com/Drinky-308767716189772/?ref=bookmarks" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i>
+                 Notre page Facebook</a></div>
 
 
         </div>
