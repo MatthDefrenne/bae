@@ -8,16 +8,14 @@ var port = process.env.PORT || 8080;
 process.env.PWD = process.cwd();
 console.log(process.env.PWD );
 
-app.use(express.static("/public"));
+app.use(express.static("public"));
 
 app.get('*', function (req, res) {
     var file = __dirname + "/public/index.html";
-    console.log(file);
-    console.log(path.resolve(file));
-    res.render(path.resolve(file));
+    res.sendFile(path.resolve(file));
 });
 
 
-app.listen(port, function() {
+app.listen(port, '137.74.164.253', function() {
     console.log('Our app is running on http://localhost:' + port);
 });
