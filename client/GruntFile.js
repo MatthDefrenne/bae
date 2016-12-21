@@ -61,7 +61,7 @@ module.exports = function (grunt) {
           relative: false,
           destFile: 'assets/dev/index.html',
           transform: function (file) {
-            return '<script src=\"' + file.replace('/', '/') + '"></script>';
+            return '<script src=\"' + file.replace('/', '') + '"></script>';
           }
         },
         files: [
