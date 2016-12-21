@@ -85,7 +85,7 @@ angular.module("components/home/home.view.html", []).run(["$templateCache", func
     "\n" +
     "                        <div class=\"col-lg-4\">\n" +
     "                            <img class=\"img-circle\" src=\"http://konradmarkham.com/wp-content/uploads/2014/11/bigstock-vitamins-pills-and-tablets-16253030.jpg\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">\n" +
-    "                            <h3>100% des vitamines et mineraux journalier</h3>\n" +
+    "                            <h3>Vitamine B12 & Fer</h3>\n" +
     "                        </div><!-- /.col-lg-4 -->\n" +
     "\n" +
     "                    </div>\n" +
@@ -111,7 +111,7 @@ angular.module("components/home/home.view.html", []).run(["$templateCache", func
     "            </p>\n" +
     "\n" +
     "            <p class=\"lead\">\n" +
-    "                <b>Drinky c'est aussi une équipe, suivez-nous sur les réseaux sociaux :</b>\n" +
+    "                <b>Drinky c'est aussi une équipe, une Startup Belge, vous pouvez suivez-nous sur les réseaux sociaux et voir l'avancée du projet au jour le jour :) !</b>\n" +
     "            </p>\n" +
     "\n" +
     "            <div class=\"mt10\"><a href=\"https://www.facebook.com/Drinky-308767716189772/?ref=bookmarks\" target=\"_blank\" style=\"margin-right: 30px;\"><i class=\"fa fa-facebook\" aria-hidden=\"true\"></i>\n" +
@@ -279,10 +279,6 @@ angular.module("components/products/products.view.html", []).run(["$templateCach
     "            <img class=\"featurette-image img-responsive center-block\" src=\"./img/tea.jpg\" data-holder-rendered=\"true\">\n" +
     "        </div>\n" +
     "    </div>\n" +
-    "\n" +
-    "    <footer style=\"margin-top: 40px\">\n" +
-    "            <p>© 2016 Company, Inc. · <a href=\"#\">Privacy</a> · <a href=\"#\">Terms</a></p>\n" +
-    "    </footer>\n" +
     "\n" +
     "</div>");
 }]);
