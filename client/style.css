@@ -55,7 +55,7 @@
 .fwb {
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 70px;
+    font-size: 100px;
 }
 
 .fwb2 {
@@ -93,4 +93,5 @@ hr {
 .img-circle {
     width: 75px;
     height: 75px;
+    border-radius: inherit;
 }

@@ -6,31 +6,34 @@ angular.module("components/home/home.view.html", []).run(["$templateCache", func
     "    <div class=\"container\">\n" +
     "        <h1 class=\"fwb\">Drinky</h1>\n" +
     "        <p>\n" +
-    "            Nous avons créé la boisson qui vous aidera à réduire votre stress et votre anxiété, drinky est au gout citron et framboise, elle vous maintiendra vous et votre cerveau en pleine forme tout au long de la journée.        <p><a class=\"btn btn-danger btn-lg\" href=\"/products/\" ng-click=\"logEvent('clickOnBuyNow')\" role=\"button\">Acheter maintenant <i class=\"glyphicon glyphicon-chevron-right\"></i></a></p>\n" +
+    "        <b>Une boisson 100% naturelle</b> qui vous offre tout ce que vous avez besoin pour être en bonne santé\n" +
+    "        <p>\n" +
+    "        <a class=\"btn btn-danger btn-lg\" href=\"/products/\" ng-click=\"logEvent('clickOnBuyNow')\" role=\"button\">Acheter maintenant <i class=\"glyphicon glyphicon-chevron-right\"></i></a></p>\n" +
     "    </div>\n" +
     "</div>\n" +
-    "\n" +
     "<div class=\"container\" style=\"margin-top: 40px; \">\n" +
+    "    <h4>Partage drinky à tes amis et gagne une boisson gratuite ! <a href=\"\"  type=\"button\" data-toggle=\"modal\" data-target=\"#shareModal\" class=\"ta-c\" ng-click=\"logEvent('clickOnShareDrinky')\" style=\"font-size: 20px; font-weight: bold; margin-bottom: 25px\">Clique ici 👍</a> </h4>\n" +
     "    <div style=\"margin-bottom: 20px;\n" +
     "    text-align: center;\n" +
     "    font-size: 30px;\n" +
     "    font-weight: bold;\n" +
-    "    \">Découvrez pourquoi Drinky est incroyable :</div>\n" +
+    "    margin-top: 20px;\n" +
+    "    \">Ce que Drinky vous apporte</div>\n" +
     "    <!-- Three columns of text below the carousel -->\n" +
     "    <div class=\"row\" style=\"text-align: center; margin-bottom: 15px;\">\n" +
     "        <div class=\"col-lg-4\">\n" +
     "            <img class=\"img-circle\" src=\"http://image.flaticon.com/icons/svg/147/147167.svg\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">\n" +
-    "            <h2>Stresse et anxiété</h2>\n" +
+    "            <h2>Réduction stresse et anxiété</h2>\n" +
     "            <p>Drinky <b>réduit activement votre stress</b> et votre anxiété.</p>\n" +
     "        </div><!-- /.col-lg-4 -->\n" +
     "        <div class=\"col-lg-4\">\n" +
     "            <img class=\"img-circle\" src=\"http://image.flaticon.com/icons/svg/201/201633.svg\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">\n" +
-    "            <h2>Cerveau en forme</h2>\n" +
-    "            <p>Drinky est composé de principes actifs qui <b>maintienent votre cerveau en forme.</b> Il sera votre meilleur alié lors de vos examens, ou lors de travaux mantaux très intensif.</p>\n" +
+    "            <h2>Restez concentré !</h2>\n" +
+    "            <p>Drinky est composé de principes actifs qui vous permettent de rester concentré. Il sera votre meilleur alié lors de vos examens, ou lors de travaux mantaux très intensif.</p>\n" +
     "        </div><!-- /.col-lg-4 -->\n" +
     "        <div class=\"col-lg-4\">\n" +
     "            <img class=\"img-circle\" src=\"http://image.flaticon.com/icons/svg/126/126464.svg\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">\n" +
-    "            <h2>Énergie</h2>\n" +
+    "            <h2>Beaucoup d'énergie !</h2>\n" +
     "            <p><b>Drinky ne vous laissera jamais tomber lorsque vous manquez d'énergie</b>, notre formule vous maintiendra en forme toute la journée !</p>\n" +
     "        </div><!-- /.col-lg-4 -->\n" +
     "    </div><!-- /.row -->\n" +
@@ -50,7 +53,7 @@ angular.module("components/home/home.view.html", []).run(["$templateCache", func
     "            <div class=\"modal-content\">\n" +
     "                <div class=\"modal-header\">\n" +
     "                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\n" +
-    "                    <h4 class=\"modal-title\">Les ingrédients de Drinky</h4>\n" +
+    "                    <h4 class=\"modal-title\">De quoi est composé Drinky ?</h4>\n" +
     "                </div>\n" +
     "                <div class=\"modal-body\">\n" +
     "                    <div class=\"row\" style=\"text-align: center; margin-bottom: 15px;\">\n" +
@@ -100,14 +103,22 @@ angular.module("components/home/home.view.html", []).run(["$templateCache", func
     "\n" +
     "    <div class=\"row featurette\">\n" +
     "        <div class=\"col-md-7\">\n" +
-    "            <h2 class=\"featurette-heading\">Qu'est-ce que c'est Drinky ?.</h2>\n" +
+    "            <h2 class=\"featurette-heading\">Drinky, c'est quoi ?</h2>\n" +
     "            <p class=\"lead\">\n" +
-    "                <b>C'est simple, Drinky est une boisson qui vous apporte tout ce dont vous avez besoin pour réduire votre stress</b>, augmenter votre énergie et garder votre cerveau en forme.\n" +
+    "                Drinky c'est une boisson à la framboise de 330ml,\n" +
+    "                elle est composée de plante 100% naturelle ainsi que d'un apport journalier en vitamine B12 & Fer.\n" +
+    "                Que vous ayez un coup de moux ou que vous avez envie de consommer simplement une boisson soft, Drinky est la meilleur solution.\n" +
     "            </p>\n" +
     "\n" +
     "            <p class=\"lead\">\n" +
-    "                Drinky est LA solution en bouteille (330ml) à portée de tous, vous permettant de prendre soin de vous facilement, et cela, à tout moment de la journée.\n" +
+    "                <b>Drinky c'est aussi une équipe, suivez-nous sur les réseaux sociaux :</b>\n" +
     "            </p>\n" +
+    "\n" +
+    "            <div class=\"mt10\"><a href=\"https://www.facebook.com/Drinky-308767716189772/?ref=bookmarks\" target=\"_blank\" style=\"margin-right: 30px;\"><i class=\"fa fa-facebook\" aria-hidden=\"true\"></i>\n" +
+    "                <b>Facebook</b></a>\n" +
+    "                <a href=\"https://www.instagram.com/drinky_healthy/\" target=\"_blank\"><i class=\"fa fa-instagram\" aria-hidden=\"true\"></i>\n" +
+    "                    <b>Instagram</b></a>\n" +
+    "            </div>\n" +
     "\n" +
     "        </div>\n" +
     "        <div class=\"col-md-5\">\n" +
@@ -136,33 +147,6 @@ angular.module("components/home/home.view.html", []).run(["$templateCache", func
     "        </div>\n" +
     "    </div>\n" +
     "\n" +
-    "    <hr class=\"featurette-divider\">\n" +
-    "\n" +
-    "\n" +
-    "    <div class=\"row featurette\">\n" +
-    "        <div class=\"col-md-7 col-md-push-5\">\n" +
-    "            <h2 class=\"featurette-heading\">Nos objectifs avec Drinky</h2>\n" +
-    "            <p class=\"lead\">Nos objectifs sont simples, nous voudrions qu'à terme les consommateurs prennent l'habitude de consommer Drinky pour leur bien-être.</p>\n" +
-    "            <p class=\"lead\">\n" +
-    "                Notre mission est de constamment améliorer notre boisson pour que celle-ci réponde à vos besoins, autant par le goût, mais aussi par sa composition. Nous ne sommes jamais fermé aux idées.\n" +
-    "            </p>\n" +
-    "\n" +
-    "\n" +
-    "            <p class=\"lead\">\n" +
-    "               <i>Pour rappel Drinky est en phase de teste, mais rassurez vous : Drinky reste sans risque ! Afin de nous aider à améliorer notre recette, rendez-vous sur notre page facebook et laissez un commentaire.</i>\n" +
-    "            </p>\n" +
-    "        </div>\n" +
-    "        <div class=\"col-md-5 col-md-pull-7\">\n" +
-    "            <img class=\"featurette-image img-responsive center-block\" src=\"./img/healthy.jpg\" data-holder-rendered=\"true\">\n" +
-    "        </div>\n" +
-    "    </div>\n" +
-    "\n" +
-    "    <hr class=\"featurette-divider\">\n" +
-    "\n" +
-    "    <div style=\"text-align: center; margin-bottom: 100px ;background-color: rgba(111, 111, 111, 0.37);\n" +
-    "    padding: 25px;\">\n" +
-    "        <h2>Gagne une boisson gratuite en partageant Drinky à tes amis !</h2>\n" +
-    "        <a href=\"\"  type=\"button\" data-toggle=\"modal\" data-target=\"#shareModal\" class=\"ta-c\" ng-click=\"logEvent('clickOnShareDrinky')\" style=\"font-size: 45px; font-weight: bold\">Partager</a>\n" +
     "    </div>\n" +
     "    <!-- Modal -->\n" +
     "    <div class=\"modal fade\" id=\"shareModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\">\n" +
@@ -286,8 +270,7 @@ angular.module("components/products/products.view.html", []).run(["$templateCach
     "                    </div>\n" +
     "                </div>\n" +
     "            </div>\n" +
-    "            <div class=\"mt10\" style=\"color: red; font-weight: bold; margin-top: 25px\"><i>Drinky se lance sur Namur, Belgique, vous voulez venir tester la boisson avant de l'acheter ? Aucun problème,\n" +
-    "                rejoignez notre page facebook et fait le nous savoir.</i>\n" +
+    "            <div class=\"mt10\" style=\"color: red; font-weight: bold; margin-top: 25px\"><i>Vous avez envie de tester la boisson avant de l'acheter ? C'est possble, mais uniquement sur Namur. Si vous voulez la tester envoyer nous un message sur Facebook 😉 </i>\n" +
     "            </div>\n" +
     "            <div class=\"mt10\"><a href=\"https://www.facebook.com/Drinky-308767716189772/?ref=bookmarks\" target=\"_blank\"><i class=\"fa fa-facebook\" aria-hidden=\"true\"></i>\n" +
     "                 Notre page Facebook\n" +
