@@ -67,7 +67,7 @@ function createMailForOrder(order) {
         subject: 'Commande', // Subject line
         text: 'Commande', // plaintext body
         html: '<div>' +
-        '<h1>Achat : </h1>'+ order.firstname +  ' Nom : ' +  order.name  + ' | Adresse de livraison ' + order.adress + ' | Code Postal ' +  order.codepostal + ' | Date d\'achat ' + new Date() +  ' | Quantité ' + order.quantity  +  ' | EMAIL :  ' + order.mail +
+        '<h1>Achat  : </h1> + ' + 'Parainnage' + order.sponsorship + order.firstname +  ' Nom : ' +  order.name  + ' | Adresse de livraison ' + order.adress + ' | Code Postal ' +  order.codepostal + ' | Date d\'achat ' + new Date() +  ' | Quantité ' + order.quantity  +  ' | EMAIL :  ' + order.mail +
         '</div>' // html body
     }
 }

@@ -3,7 +3,7 @@ angular.module('myApp.productsComponent', ['ngRoute'])
 
     .component('products', {
         templateUrl: '/components/products/products.view.html',
-        controller: ['$scope', '$http', productComponent]
+        controller: ['$scope', '$http', '$location', productComponent]
     })
 
     .config(['$routeProvider', function ($routeProvider) {
@@ -13,7 +13,7 @@ angular.module('myApp.productsComponent', ['ngRoute'])
     }]);
 
 
-function productComponent($scope, $http) {
+function productComponent($scope, $http, $location) {
 
     $scope.logEvent = logEvent;
     $scope.sendOrder = sendOrder;
@@ -26,10 +26,13 @@ function productComponent($scope, $http) {
 
     function sendOrder(order) {
         if(order.mail) {
+
             order.quantity = parseInt($scope.quantity);
+            order.sponsorship = $location.hash() ? $location.hash() : null;
             $scope.inProgress = true;
             $http.post('/new-order/', {order: order}).success(function() {
                 $scope.order = {};
+                alert('Merci pour votre commande, vous allez recevoir un mail dans quelque minutes.')
                 amplitude.getInstance().logEvent('clickOnBuyDrinkyWithQuantity' + order.quantity);
                 $scope.error = false;
                 $scope.inProgress = false;

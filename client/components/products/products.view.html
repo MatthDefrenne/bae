@@ -15,8 +15,9 @@
                     <option value="24">24 Bouteilles</option>
                     <option value="48">48 Bouteilles</option>
                 </select>
-            <div style="margin-top: 20px"><h1>€ {{quantity * 1.25 | limitTo: 4}}</h1>  </div>
-            <button ng-click="logEvent('clickOnBuyDrinky')" data-toggle="modal" data-target="#buyModal" class="btn btn-success" style="width: 300px">Commander</button>
+            <div style="margin-top: 20px"><h1>€ {{quantity * 1.25 | limitTo: 4}}</h1>  <b style="margin-top: 5px;">Satisfait ou rembourser</b></div>
+
+            <button ng-click="logEvent('clickOnBuyDrinky')" data-toggle="modal" data-target="#buyModal" class="btn btn-success" style="width: 300px; margin-top: 10px">Commander</button>
 
             <div class="modal fade" id="buyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                 <div class="modal-dialog" role="document">
@@ -78,14 +79,6 @@
             <img class="featurette-image img-responsive center-block" src="./img/tea.jpg" data-holder-rendered="true">
         </div>
     </div>
-
-    <hr class="featurette-divider">
-    <h2>Drinky en images : </h2>
-    <BR/>
-
-    <div class="row" style="text-align: center; margin-bottom: 15px;">
-
-    </div><!-- /.row -->
 
     <footer style="margin-top: 40px">
             <p>© 2016 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
