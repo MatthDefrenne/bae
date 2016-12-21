@@ -14,7 +14,7 @@ module.exports = function (grunt) {
           'services/**/*.js',
           'assets/template/templates.js',
         ],
-        dest: 'assets/locality.min.js'
+        dest: 'assets/drinky.min.js'
       },
     },
     html2js: {
@@ -61,7 +61,7 @@ module.exports = function (grunt) {
           relative: false,
           destFile: 'assets/dev/index.html',
           transform: function (file) {
-            return '<script src=\"' + file.replace('/', '') + '"></script>';
+            return '<script src=\"' + file.replace('/', '/') + '"></script>';
           }
         },
         files: [

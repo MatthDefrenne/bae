@@ -39,7 +39,7 @@ app.post('/new-order/', function(req, res) {
             res.json(200);
         });
     });
-})
+});
 
 //*////////////////////
 

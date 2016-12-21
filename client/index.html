@@ -12,61 +12,123 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <!-- Hotjar Tracking Code for http://localhost:3000/ -->
     <meta charset="utf-8">
-    <meta property="og:url"           content="http://www.drinky.be/" />
-    <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="Drinky, boisson bien être energisante" />
-    <meta property="og:description"   content="La boissons qui réduit votre stress et votre anxiété, et qui vous maintient vous et votre cerveau en forme. Avec un léger goût citron & framboise 100% naturelle." />
-    <meta property="og:image"         content="http://www.drinky.be/img/background.jpg" />
+    <meta property="og:url" content="http://www.drinky.be/"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Drinky, boisson bien être energisante"/>
+    <meta property="og:description"
+          content="La boissons qui réduit votre stress et votre anxiété, et qui vous maintient vous et votre cerveau en forme. Avec un léger goût citron & framboise 100% naturelle."/>
+    <meta property="og:image" content="http://www.drinky.be/img/background.jpg"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Drinky, boisson bien être energisante</title>
-    <meta name="description"  content="La boissons qui réduit votre stress et votre anxiété, et qui vous maintient vous et votre cerveau en forme. Avec un léger goût citron & framboise 100% naturelle." />
-    <meta name="keywords" content="Boissons bien être, boisson energisante sans caféine, boisson energisante sans taurine, boisson bonne pour la santé, boisson sans sucre, boisson pour étudiant, boisson gratuite, boisson sans effet secondaire, boisson avec stévia, , drink healthy, reduce stress, réduire votre stress naturellement, augmenter son énergie naturellement, boisson sans caféine, ">
+    <meta name="description"
+          content="La boissons qui réduit votre stress et votre anxiété, et qui vous maintient vous et votre cerveau en forme. Avec un léger goût citron & framboise 100% naturelle."/>
+    <meta name="keywords"
+          content="Boissons bien être, boisson energisante sans caféine, boisson energisante sans taurine, boisson bonne pour la santé, boisson sans sucre, boisson pour étudiant, boisson gratuite, boisson sans effet secondaire, boisson avec stévia, , drink healthy, reduce stress, réduire votre stress naturellement, augmenter son énergie naturellement, boisson sans caféine, ">
     <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <script type="text/javascript">
-    (function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script");r.type="text/javascript";
-        r.async=true;r.src="https://d24n15hnbwhuhn.cloudfront.net/libs/amplitude-3.0.1-min.gz.js";
-        r.onload=function(){e.amplitude.runQueuedFunctions()};var i=t.getElementsByTagName("script")[0];
-        i.parentNode.insertBefore(r,i);function s(e,t){e.prototype[t]=function(){this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));
-            return this}}var o=function(){this._q=[];return this};var a=["add","append","clearAll","prepend","set","setOnce","unset"];
-        for(var u=0;u<a.length;u++){s(o,a[u])}n.Identify=o;var c=function(){this._q=[];return this;
-        };var p=["setProductId","setQuantity","setPrice","setRevenueType","setEventProperties"];
-        for(var l=0;l<p.length;l++){s(c,p[l])}n.Revenue=c;var d=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId","setGlobalUserProperties","identify","clearUserProperties","setGroup","logRevenueV2","regenerateDeviceId"];
-        function v(e){function t(t){e[t]=function(){e._q.push([t].concat(Array.prototype.slice.call(arguments,0)));
-        }}for(var n=0;n<d.length;n++){t(d[n])}}v(n);n.getInstance=function(e){e=(!e||e.length===0?"$default_instance":e).toLowerCase();
-            if(!n._iq.hasOwnProperty(e)){n._iq[e]={_q:[]};v(n._iq[e])}return n._iq[e]};e.amplitude=n;
-    })(window,document);
+    (function (e, t) {
+        var n = e.amplitude || {_q: [], _iq: {}};
+        var r = t.createElement("script");
+        r.type = "text/javascript";
+        r.async = true;
+        r.src = "https://d24n15hnbwhuhn.cloudfront.net/libs/amplitude-3.0.1-min.gz.js";
+        r.onload = function () {
+            e.amplitude.runQueuedFunctions()
+        };
+        var i = t.getElementsByTagName("script")[0];
+        i.parentNode.insertBefore(r, i);
+        function s(e, t) {
+            e.prototype[t] = function () {
+                this._q.push([t].concat(Array.prototype.slice.call(arguments, 0)));
+                return this
+            }
+        }
+
+        var o = function () {
+            this._q = [];
+            return this
+        };
+        var a = ["add", "append", "clearAll", "prepend", "set", "setOnce", "unset"];
+        for (var u = 0; u < a.length; u++) {
+            s(o, a[u])
+        }
+        n.Identify = o;
+        var c = function () {
+            this._q = [];
+            return this;
+        };
+        var p = ["setProductId", "setQuantity", "setPrice", "setRevenueType", "setEventProperties"];
+        for (var l = 0; l < p.length; l++) {
+            s(c, p[l])
+        }
+        n.Revenue = c;
+        var d = ["init", "logEvent", "logRevenue", "setUserId", "setUserProperties", "setOptOut", "setVersionName", "setDomain", "setDeviceId", "setGlobalUserProperties", "identify", "clearUserProperties", "setGroup", "logRevenueV2", "regenerateDeviceId"];
+
+        function v(e) {
+            function t(t) {
+                e[t] = function () {
+                    e._q.push([t].concat(Array.prototype.slice.call(arguments, 0)));
+                }
+            }
+
+            for (var n = 0; n < d.length; n++) {
+                t(d[n])
+            }
+        }
+
+        v(n);
+        n.getInstance = function (e) {
+            e = (!e || e.length === 0 ? "$default_instance" : e).toLowerCase();
+            if (!n._iq.hasOwnProperty(e)) {
+                n._iq[e] = {_q: []};
+                v(n._iq[e])
+            }
+            return n._iq[e]
+        };
+        e.amplitude = n;
+    })(window, document);
 
     amplitude.getInstance().init("3ccd04d1110b1f7c6da4b6a444802804");
 </script>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-89310444-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
 <body>
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
+<script>(function (d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
+    js = d.createElement(s);
+    js.id = id;
     js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1035481416567889";
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <link href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/lodash/4.16.6/lodash.min.js"></script>
 <link rel="stylesheet" href="style.css" crossorigin="anonymous">
 
 <div ng-view></div>
-
-<script src="/bower_components/angular/angular.js"></script>
-<script src="/bower_components/angular-route/angular-route.js"></script>
-<script src="/bower_components/ngInfiniteScroll/ng-infinite-scroll.js"></script>
-<script src="/assets/dev/app.js"></script>
-
-
-<!-- injector:js -->
-<script src="components/home/home.component.js"></script>
-<script src="components/products/products.component.js"></script>
-<!-- endinjector -->
+<script src="/assets/drinky.min.js"></script>
 </body>
 </html>
+.
