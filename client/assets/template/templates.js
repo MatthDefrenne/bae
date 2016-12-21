@@ -192,9 +192,6 @@ angular.module("components/home/home.view.html", []).run(["$templateCache", func
     "            </div>\n" +
     "        </div>\n" +
     "    </div>\n" +
-    "    <footer>\n" +
-    "        <p>© 2016 Company, Inc. · <a href=\"#\">Privacy</a> · <a href=\"#\">Terms</a></p>\n" +
-    "    </footer>\n" +
     "\n" +
     "</div>\n" +
     "");
