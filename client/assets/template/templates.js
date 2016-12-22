@@ -6,7 +6,7 @@ angular.module("components/home/home.view.html", []).run(["$templateCache", func
     "    <div class=\"container\">\n" +
     "        <h1 class=\"fwb\">Drinky</h1>\n" +
     "        <p>\n" +
-    "        <b>Une boisson 100% naturelle énergisante</b> qui vous offre tout ce que vous avez besoin pour être en bonne santé\n" +
+    "            <b>Une boisson  énergisante 100% naturelle</b> qui vous offre tout ce dont vous avez besoin pour être en bonne santé\n" +
     "        <p>\n" +
     "        <a class=\"btn btn-danger btn-lg\" href=\"/products/\" ng-click=\"logEvent('clickOnBuyNow')\" role=\"button\">Acheter maintenant <i class=\"glyphicon glyphicon-chevron-right\"></i></a></p>\n" +
     "    </div>\n" +
@@ -23,18 +23,18 @@ angular.module("components/home/home.view.html", []).run(["$templateCache", func
     "    <div class=\"row\" style=\"text-align: center; margin-bottom: 15px;\">\n" +
     "        <div class=\"col-lg-4\">\n" +
     "            <img class=\"img-circle\" src=\"http://image.flaticon.com/icons/svg/147/147167.svg\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">\n" +
-    "            <h2>Réduction stresse et anxiété</h2>\n" +
+    "            <h2>Réduction stress et anxiété</h2>\n" +
     "            <p>Drinky <b>réduit activement votre stress</b> et votre anxiété.</p>\n" +
     "        </div><!-- /.col-lg-4 -->\n" +
     "        <div class=\"col-lg-4\">\n" +
     "            <img class=\"img-circle\" src=\"http://image.flaticon.com/icons/svg/201/201633.svg\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">\n" +
     "            <h2>Restez concentré !</h2>\n" +
-    "            <p>Drinky est composé de principes actifs qui vous permettent de rester concentré. Il sera votre meilleur alié lors de vos examens, ou lors de travaux mentaux très intensif.</p>\n" +
+    "            <p>Drinky est composé de principes actifs qui vous permettent de rester concentré. Il sera votre meilleur allié lors de vos examens, ou lors de travaux mentaux très intensifs.</p>\n" +
     "        </div><!-- /.col-lg-4 -->\n" +
     "        <div class=\"col-lg-4\">\n" +
     "            <img class=\"img-circle\" src=\"http://image.flaticon.com/icons/svg/126/126464.svg\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">\n" +
     "            <h2>Beaucoup d'énergie !</h2>\n" +
-    "            <p><b>Drinky ne vous laissera jamais tomber lorsque vous manquez d'énergie</b>, notre formule vous maintiendra en forme toute la journée !</p>\n" +
+    "            <p><b>Drinky ne vous laissera jamais tomber lorsque vous manquerez d'énergie</b> notre formule vous maintiendra en forme toute la journée !</p>\n" +
     "        </div><!-- /.col-lg-4 -->\n" +
     "    </div><!-- /.row -->\n" +
     "\n" +
@@ -60,15 +60,17 @@ angular.module("components/home/home.view.html", []).run(["$templateCache", func
     "                        <div class=\"col-lg-4\">\n" +
     "                            <img class=\"img-circle\" src=\"http://mr-ginseng.com/wp-content/uploads/2012/01/ginkgo-biloba.jpg\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">\n" +
     "                            <h3>Ginko biloba</h3>\n" +
-    "\n" +
+    "                            <p>Réduit le stress et l'anxiété</p>\n" +
     "                        </div><!-- /.col-lg-4 -->\n" +
     "                        <div class=\"col-lg-4\">\n" +
     "                            <img class=\"img-circle\" src=\"http://mr-ginseng.com/wp-content/uploads/2012/01/rhodiola.jpg\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">\n" +
     "                            <h3>Rhodiola Rosea</h3>\n" +
+    "                            <p>Vous permet de rester mieux concentrer</p>\n" +
     "                        </div><!-- /.col-lg-4 -->\n" +
     "                        <div class=\"col-lg-4\">\n" +
     "                            <img class=\"img-circle\" src=\"https://sc01.alicdn.com/kf/HTB1qqlmJFXXXXXHXpXXq6xXFXXXx/1282587/HTB1qqlmJFXXXXXHXpXXq6xXFXXXx.jpg\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">\n" +
     "                            <h3>Coenzyme q10</h3>\n" +
+    "                            <p>Réduit la fatigue</p>\n" +
     "                        </div><!-- /.col-lg-4 -->\n" +
     "                    </div><!-- /.row -->\n" +
     "\n" +
@@ -76,16 +78,19 @@ angular.module("components/home/home.view.html", []).run(["$templateCache", func
     "                        <div class=\"col-lg-4\">\n" +
     "                            <img class=\"img-circle\" src=\"http://4.bp.blogspot.com/-A9wluzJvc6g/UBlKWRz_mhI/AAAAAAAAAIw/rhj_aibggq4/s1600/panax-ginseng-side-effects.jpg\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">\n" +
     "                            <h3>Ginseng rouge</h3>\n" +
+    "                            <p>Apporte beaucoup d'énergie tout au long de la journée</p>\n" +
     "                        </div><!-- /.col-lg-4 -->\n" +
     "\n" +
     "                        <div class=\"col-lg-4\">\n" +
     "                            <img class=\"img-circle\" src=\"http://methodes-douces-et-bien-etre.com/wp-content/uploads/2013/06/Fotolia_45194568_XS1.jpg\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">\n" +
     "                            <h3>Thé vert</h3>\n" +
+    "                            <p>Apporte de l'énergie</p>\n" +
     "                        </div><!-- /.col-lg-4 -->\n" +
     "\n" +
     "                        <div class=\"col-lg-4\">\n" +
     "                            <img class=\"img-circle\" src=\"http://konradmarkham.com/wp-content/uploads/2014/11/bigstock-vitamins-pills-and-tablets-16253030.jpg\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">\n" +
     "                            <h3>Vitamine B12 & Fer</h3>\n" +
+    "                            <p>Réduit la fatigue et bon fonctionnement du cerveau</p>\n" +
     "                        </div><!-- /.col-lg-4 -->\n" +
     "\n" +
     "                    </div>\n" +
@@ -106,12 +111,12 @@ angular.module("components/home/home.view.html", []).run(["$templateCache", func
     "            <h2 class=\"featurette-heading\">Drinky, c'est quoi ?</h2>\n" +
     "            <p class=\"lead\">\n" +
     "                Drinky c'est une boisson à la framboise de 330ml,\n" +
-    "                elle est composée de plante 100% naturelle ainsi que d'un apport journalier en vitamine B12 & Fer.\n" +
-    "                Que vous ayez un coup de moux ou que vous avez envie de consommer simplement une boisson soft, Drinky est la meilleur solution.\n" +
+    "                elle est composée de plantes 100% naturelles ainsi que d'un apport journalier en vitamine B12 & Fer.\n" +
+    "                Que vous ayez un coup de mou ou que vous avez envie de consommer simplement une boisson soft, Drinky est la meilleure solution.\n" +
     "            </p>\n" +
     "\n" +
     "            <p class=\"lead\">\n" +
-    "                <b>Drinky c'est aussi une équipe, une Startup Belge, suivez-nous sur les réseaux sociaux et voir l'avancée du projet au jour le jour :) !</b>\n" +
+    "                Drinky c'est aussi une équipe, une Startup Belge. Suivez-nous sur les réseaux sociaux pour voir l'avancée du projet au jour le jour :)\n" +
     "            </p>\n" +
     "\n" +
     "            <div class=\"mt10\"><a href=\"https://www.facebook.com/Drinky-308767716189772/?ref=bookmarks\" target=\"_blank\" style=\"margin-right: 30px;\"><i class=\"fa fa-facebook\" aria-hidden=\"true\"></i>\n" +
@@ -127,7 +132,7 @@ angular.module("components/home/home.view.html", []).run(["$templateCache", func
     "    </div>\n" +
     "\n" +
     "\n" +
-    "    <div class=\"row featurette\" ng-if=\"false\">\n" +
+    "    <div class=\"row featurette\">\n" +
     "        <hr class=\"featurette-divider\">\n" +
     "\n" +
     "        <div class=\"col-md-7\">\n" +
