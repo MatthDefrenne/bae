@@ -29,7 +29,7 @@ angular.module("components/home/home.view.html", []).run(["$templateCache", func
     "        <div class=\"col-lg-4\">\n" +
     "            <img class=\"img-circle\" src=\"http://image.flaticon.com/icons/svg/201/201633.svg\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">\n" +
     "            <h2>Restez concentré !</h2>\n" +
-    "            <p>Drinky est composé de principes actifs qui vous permettent de rester concentré. Il sera votre meilleur alié lors de vos examens, ou lors de travaux mantaux très intensif.</p>\n" +
+    "            <p>Drinky est composé de principes actifs qui vous permettent de rester concentré. Il sera votre meilleur alié lors de vos examens, ou lors de travaux mentaux très intensif.</p>\n" +
     "        </div><!-- /.col-lg-4 -->\n" +
     "        <div class=\"col-lg-4\">\n" +
     "            <img class=\"img-circle\" src=\"http://image.flaticon.com/icons/svg/126/126464.svg\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">\n" +
@@ -111,7 +111,7 @@ angular.module("components/home/home.view.html", []).run(["$templateCache", func
     "            </p>\n" +
     "\n" +
     "            <p class=\"lead\">\n" +
-    "                <b>Drinky c'est aussi une équipe, une Startup Belge, vous pouvez suivez-nous sur les réseaux sociaux et voir l'avancée du projet au jour le jour :) !</b>\n" +
+    "                <b>Drinky c'est aussi une équipe, une Startup Belge, suivez-nous sur les réseaux sociaux et voir l'avancée du projet au jour le jour :) !</b>\n" +
     "            </p>\n" +
     "\n" +
     "            <div class=\"mt10\"><a href=\"https://www.facebook.com/Drinky-308767716189772/?ref=bookmarks\" target=\"_blank\" style=\"margin-right: 30px;\"><i class=\"fa fa-facebook\" aria-hidden=\"true\"></i>\n" +

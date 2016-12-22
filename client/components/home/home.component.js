@@ -57,7 +57,12 @@ function homeComponent($scope, $interval) {
         amplitude.getInstance().logEvent(name);
     }
 
-    amplitude.getInstance().setUserId('' + Math.floor((Math.random() * 9999999) + 1));
+
+    if(!localStorage.userId) {
+        localStorage.setItem("userId", Math.floor((Math.random() * 9999999) + 1));
+        amplitude.getInstance().setUserId('' + localStorage.userId);
+        amplitude.getInstance().logEvent('firstSession');
+    }
 
     $scope.shareOnMessenger = function() {
         FB.ui({
