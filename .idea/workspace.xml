@@ -8,7 +8,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/dev/index.html" afterPath="$PROJECT_DIR$/client/assets/dev/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/prod/index.html" afterPath="$PROJECT_DIR$/client/assets/prod/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/index.html" afterPath="$PROJECT_DIR$/client/index.html" />
     </list>
     <ignored path="ChatSystemAngularJS-master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/assets/dev/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+            <state relative-caret-position="357">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -123,17 +122,17 @@
         <entry file="file://$PROJECT_DIR$/client/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="476">
-              <caret line="38" column="13" selection-start-line="28" selection-start-column="1" selection-end-line="38" selection-end-column="13" />
+              <caret line="39" column="7" selection-start-line="28" selection-start-column="1" selection-end-line="38" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/assets/prod/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+            <state relative-caret-position="374">
+              <caret line="33" column="31" selection-start-line="33" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -191,8 +190,8 @@
         <option value="$PROJECT_DIR$/client/components/products/products.component.js" />
         <option value="$PROJECT_DIR$/client/components/home/home.component.js" />
         <option value="$PROJECT_DIR$/client/index.html" />
-        <option value="$PROJECT_DIR$/client/assets/dev/index.html" />
         <option value="$PROJECT_DIR$/client/assets/prod/index.html" />
+        <option value="$PROJECT_DIR$/client/assets/dev/index.html" />
       </list>
     </option>
   </component>
@@ -519,12 +518,12 @@
       <workItem from="1482247709446" duration="21723000" />
       <workItem from="1482321296797" duration="1685000" />
       <workItem from="1482323853550" duration="11145000" />
-      <workItem from="1482394761034" duration="6127000" />
+      <workItem from="1482394761034" duration="6580000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154690000" />
+    <option name="totallyTimeSpent" value="155143000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -682,7 +681,7 @@
         <state relative-caret-position="68">
           <caret line="4" column="18284" selection-start-line="5" selection-start-column="18270" selection-end-line="5" selection-end-column="18284" />
           <folding>
-            <marker date="1482400370296" expanded="true" signature="196005:196021" ph="{...}" />
+            <marker date="1482400902140" expanded="true" signature="196005:196021" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -786,23 +785,23 @@
     <entry file="file://$PROJECT_DIR$/client/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
-          <caret line="38" column="13" selection-start-line="28" selection-start-column="1" selection-end-line="38" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/assets/dev/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+          <caret line="39" column="7" selection-start-line="28" selection-start-column="1" selection-end-line="38" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/assets/prod/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+        <state relative-caret-position="374">
+          <caret line="33" column="31" selection-start-line="33" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/assets/dev/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>
