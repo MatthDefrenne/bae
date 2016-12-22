@@ -26,6 +26,17 @@
           content="Boissons bien être, boisson energisante sans caféine, boisson energisante sans taurine, boisson bonne pour la santé, boisson sans sucre, boisson pour étudiant, boisson gratuite, boisson sans effet secondaire, boisson avec stévia, , drink healthy, reduce stress, réduire votre stress naturellement, augmenter son énergie naturellement, boisson sans caféine, ">
     <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async='async'></script>
+    <script>
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(["init", {
+            appId: "6ffab69b-9647-45c2-a7e7-f110ac1941a4",
+            autoRegister: true, /* Set to true to automatically prompt visitors */
+            notifyButton: {
+                enable: false /* Set to false to hide */
+            }
+        }]);
+    </script>
 </head>
 <script type="text/javascript">
     (function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script");r.type="text/javascript";
