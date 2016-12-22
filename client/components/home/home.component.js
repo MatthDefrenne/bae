@@ -34,7 +34,7 @@ function homeComponent($scope, $location) {
         {
             name: 'David',
             role: 'Entrepreneur',
-            photo: 'https://scontent-bru2-1.xx.fbcdn.net/v/t1.0-9/10898114_1002964543051470_5583463675089764608_n.jpg?oh=d0a62a6fc26eb2f9a4e83e95b6a65ed1&oe=58FA487B',
+            photo: 'https://scontent-bru2-1.xx.fbcdn.net/v/t1.0-9/14063994_10202150940570936_1245890838172473257_n.jpg?oh=f46c81c01cb052cc6c65d7b45271415b&oe=58EFABBA',
             text: 'On ressent les effets au niveau de "l\'anti-stress", puis le goût est vraiment très bon'
         }
     ]

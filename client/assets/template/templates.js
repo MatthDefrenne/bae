@@ -136,7 +136,7 @@ angular.module("components/home/home.view.html", []).run(["$templateCache", func
     "        <hr class=\"featurette-divider\">\n" +
     "\n" +
     "        <div class=\"col-md-7\">\n" +
-    "            <h2 class=\"featurette-heading\">Ce que les gens en disent <a style=\"font-size: 18px; margin-left: 10px\">Partager votre avis</a></h2>\n" +
+    "            <h2 class=\"featurette-heading\">Ce que les gens en disent</h2>\n" +
     "        </div>\n" +
     "        <div class=\"col-md-12 mt10\">\n" +
     "            <p class=\"well\">\n" +
