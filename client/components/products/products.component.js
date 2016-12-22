@@ -26,9 +26,11 @@ function productComponent($scope, $http, $location) {
 
     function sendOrder(order) {
         if(order.mail) {
-
             order.quantity = parseInt($scope.quantity);
-            order.sponsorship = $location.$$hash() ? $location.$$hash() : null;
+            if($location.$$hash) {
+                order.sponsorship = $location.$$hash ? $location.$$hash : null;
+            }
+
             $scope.inProgress = true;
             $http.post('/new-order/', {order: order}).success(function() {
                 $scope.order = {};
