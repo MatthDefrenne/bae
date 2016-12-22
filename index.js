@@ -56,7 +56,7 @@ function createMailToCostumers(order) {
         text: 'Votre commande Drinky', // plaintext body
         html: '<div style="background: rgba(236, 236, 236, 0.51);padding: 50px;text-align: center; font-size: 25px"><h1 style="text-align: center;">👍 Merci pour votre achat ! </h1>' +
         'Bonjour ' + order.firstname + ', nous te remercions pour ta commande de <b> ' + order.quantity  + ' </b> boisson(s) Drinky ! ' +
-        'Nous passons chez toi dans les 24h, si tu as des questions, nous y répondons avec grand plaisir sur notre page facebook :  ' +
+        'Nous passons chez toi dans les 24h, si tu as des questions, nous y répondrons avec grand plaisir sur notre page facebook :  ' +
         '<a href="https://www.facebook.com/Drinky-308767716189772/">Page facebook Drinky</a></div>'
     }
 }

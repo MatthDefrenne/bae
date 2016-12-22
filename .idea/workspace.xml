@@ -4,10 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/client/components/home/home.view.html" line="10" mnemonic="1" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1646e073-a68b-4cb3-88bb-6ae8e9508de7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
-    </list>
+    <list default="true" id="1646e073-a68b-4cb3-88bb-6ae8e9508de7" name="Default" comment="" />
     <ignored path="ChatSystemAngularJS-master.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -106,12 +103,12 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="67" column="44" selection-start-line="67" selection-start-column="44" selection-end-line="67" selection-end-column="44" />
+            <state relative-caret-position="247">
+              <caret line="58" column="83" selection-start-line="58" selection-start-column="83" selection-end-line="58" selection-end-column="83" />
               <folding>
-                <marker date="1482416810539" expanded="true" signature="1557:1628" ph="..." />
-                <marker date="1482416810539" expanded="true" signature="1557:1644" ph="..." />
-                <marker date="1482416810539" expanded="true" signature="1657:1676" ph="..." />
+                <marker date="1482416845671" expanded="true" signature="1557:1628" ph="..." />
+                <marker date="1482416845671" expanded="true" signature="1557:1644" ph="..." />
+                <marker date="1482416845671" expanded="true" signature="1657:1676" ph="..." />
               </folding>
             </state>
           </provider>
@@ -497,12 +494,12 @@
       <workItem from="1482247709446" duration="21723000" />
       <workItem from="1482321296797" duration="1685000" />
       <workItem from="1482323853550" duration="11145000" />
-      <workItem from="1482394761034" duration="12951000" />
+      <workItem from="1482394761034" duration="12971000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161514000" />
+    <option name="totallyTimeSpent" value="161534000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -515,7 +512,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24907456" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -523,7 +520,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28683037" sideWeight="0.48122686" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28683037" sideWeight="0.48122686" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -776,12 +773,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="67" column="44" selection-start-line="67" selection-start-column="44" selection-end-line="67" selection-end-column="44" />
+        <state relative-caret-position="247">
+          <caret line="58" column="83" selection-start-line="58" selection-start-column="83" selection-end-line="58" selection-end-column="83" />
           <folding>
-            <marker date="1482416810539" expanded="true" signature="1557:1628" ph="..." />
-            <marker date="1482416810539" expanded="true" signature="1557:1644" ph="..." />
-            <marker date="1482416810539" expanded="true" signature="1657:1676" ph="..." />
+            <marker date="1482416845671" expanded="true" signature="1557:1628" ph="..." />
+            <marker date="1482416845671" expanded="true" signature="1557:1644" ph="..." />
+            <marker date="1482416845671" expanded="true" signature="1657:1676" ph="..." />
           </folding>
         </state>
       </provider>
