@@ -3,7 +3,7 @@ angular.module('myApp.homeComponent', ['ngRoute'])
 
     .component('home', {
         templateUrl: '/components/home/home.view.html',
-        controller: ['$scope', '$interval', homeComponent]
+        controller: ['$scope', '$location', homeComponent]
     })
 
     .config(['$routeProvider', function ($routeProvider) {
@@ -13,9 +13,8 @@ angular.module('myApp.homeComponent', ['ngRoute'])
     }]);
 
 
-function homeComponent($scope, $interval) {
-
-
+function homeComponent($scope, $location) {
+    callFirstAmplitude()
     $scope.nextTestiomial = nextTestiomial;
     $scope.logEvent = logEvent;
 
@@ -58,11 +57,20 @@ function homeComponent($scope, $interval) {
     }
 
 
-    if(!localStorage.userId) {
-        localStorage.setItem("userId", Math.floor((Math.random() * 9999999) + 1));
-        amplitude.getInstance().setUserId('' + localStorage.userId);
-        amplitude.getInstance().logEvent('firstSession');
+    if(!_.isUndefined($location.$$hash) && $location.$$hash.length > 5) {
+        amplitude.getInstance().logEvent('comeFrom' + $location.$$hash);
+        location.hash = '';
+        location.hash.replace("#", "");
     }
+
+    function callFirstAmplitude() {
+        if(!localStorage.userId) {
+            localStorage.setItem("userId", Math.floor((Math.random() * 9999999) + 1));
+            amplitude.getInstance().setUserId('' + localStorage.userId);
+            amplitude.getInstance().logEvent('firstSessionDirectLik');
+        }
+    }
+
 
     $scope.shareOnMessenger = function() {
         FB.ui({

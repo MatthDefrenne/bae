@@ -6,7 +6,7 @@ angular.module("components/home/home.view.html", []).run(["$templateCache", func
     "    <div class=\"container\">\n" +
     "        <h1 class=\"fwb\">Drinky</h1>\n" +
     "        <p>\n" +
-    "        <b>Une boisson 100% naturelle</b> qui vous offre tout ce que vous avez besoin pour être en bonne santé\n" +
+    "        <b>Une boisson 100% naturelle énergisante</b> qui vous offre tout ce que vous avez besoin pour être en bonne santé\n" +
     "        <p>\n" +
     "        <a class=\"btn btn-danger btn-lg\" href=\"/products/\" ng-click=\"logEvent('clickOnBuyNow')\" role=\"button\">Acheter maintenant <i class=\"glyphicon glyphicon-chevron-right\"></i></a></p>\n" +
     "    </div>\n" +
@@ -75,7 +75,7 @@ angular.module("components/home/home.view.html", []).run(["$templateCache", func
     "                    <div class=\"row\" style=\"text-align: center; margin-bottom: 15px;\">\n" +
     "                        <div class=\"col-lg-4\">\n" +
     "                            <img class=\"img-circle\" src=\"http://4.bp.blogspot.com/-A9wluzJvc6g/UBlKWRz_mhI/AAAAAAAAAIw/rhj_aibggq4/s1600/panax-ginseng-side-effects.jpg\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">\n" +
-    "                            <h3>Giseng rouge</h3>\n" +
+    "                            <h3>Ginseng rouge</h3>\n" +
     "                        </div><!-- /.col-lg-4 -->\n" +
     "\n" +
     "                        <div class=\"col-lg-4\">\n" +
