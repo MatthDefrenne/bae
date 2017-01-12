@@ -21,6 +21,7 @@ app.get('*', function (req, res) {
     res.sendFile(path.resolve(file));
 });
 
+/*
 app.post('/new-order/', function(req, res) {
     var order = req.body.order;
 
@@ -41,9 +42,9 @@ app.post('/new-order/', function(req, res) {
         });
     });
 });
-
+*/
 //*////////////////////
-
+/*
 var transporter = nodemailer.createTransport('smtps://drinkybelgium@gmail.com:Killer123@smtp.gmail.com');
 
 
@@ -72,7 +73,7 @@ function createMailForOrder(order) {
         '</div>' // html body
     }
 }
-
+*/
 
 
 

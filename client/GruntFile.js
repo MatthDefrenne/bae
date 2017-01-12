@@ -14,7 +14,7 @@ module.exports = function (grunt) {
           'services/**/*.js',
           'assets/template/templates.js',
         ],
-        dest: 'assets/drinky.min.js'
+        dest: 'assets/bae.min.js'
       },
     },
     html2js: {
