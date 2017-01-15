@@ -6893,3 +6893,40 @@ body {
 body {
     font-family: 'Quicksand', sans-serif;
 }
+
+.social-media {
+    font-size: 25px;
+    margin-left: 100px;
+}
+.facebook {
+    background: #3b5a9a;
+    padding: 14px;
+    border-radius: 200px;
+    width: 50px;
+    height: 50px;
+    color: white;
+}
+.instagram {
+    background: #2f689b;
+    padding: 13px;
+    border-radius: 200px;
+    width: 50px;
+    height: 50px;
+    color: white;
+}
+.youtube {
+    background: #cc2129;
+    padding: 13px;
+    border-radius: 200px;
+    width: 50px;
+    height: 50px;
+    color: white;
+}
+.medium {
+    background: #02b875;
+    padding: 13px;
+    border-radius: 200px;
+    width: 50px;
+    height: 50px;
+    color: white;
+}
