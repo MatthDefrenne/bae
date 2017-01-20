@@ -139,32 +139,49 @@
     </div>
 </div>
 <div class="container-global-3">
-    <div class="container marketing" style="display: table-cell; vertical-align: middle; text-align: center">
+    <div class="container marketing" style="display: table-cell; vertical-align: middle; text-align: center; ">
         <div class="container" style="margin-bottom: 40px; padding-top: 20px;">
-            <h1 style="text-align: center; font-weight: bold; text-transform: uppercase; font-size: 90px">
+            <h1 style="text-align: center; font-weight: bold; text-transform: uppercase; font-size: 90px"  ng-if="!hasClickedOnProduct">
                 NOS PRODUITS
             </h1>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula
+            <p ng-if="!hasClickedOnProduct">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula
             </p>
-            <div class="row" style="margin-top: 25px">
+            <div class="row" style="margin-top: 25px" ng-if="!hasClickedOnProduct">
                 <div class="col-lg-2">
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 cursor" ng-click="clickOnProduct('BAE BRAIN')">
                     <div class="bae-sleep"></div>
                     <h1>BAE BRAIN
                     </h1>
+                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.</p>
                     <p style="font-weight: bold; font-size: 25px">2,49 Euros</p>
                 </div>
                 <div class="col-lg-1">
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 cursor" ng-click="clickOnProduct('BAE SLEEP')">
                     <div class="bae-sleep"></div>
                     <h1>BAE SLEEP
                     </h1>
+                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.</p>
                     <p style="font-weight: bold; font-size: 25px">2,49 Euros</p>
                 </div>
                 <div class="col-lg-2">
                 </div>
+            </div>
+
+            <div class="row" style="margin-top: 25px" ng-if="hasClickedOnProduct">
+                <div class="fs20 cursor" style="margin-bottom: 20px" ng-click="closeProduct()">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                    Retour aux produits
+                </div>
+                    <div class="col-md-7 col-md-push-5">
+                        <h1 style="font-size: 50px">{{name}}</h1>
+                        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                        <button class="btn btn-success full-width fs20">Acheter une {{name}}</button>
+                    </div>
+                    <div class="col-md-5 col-md-pull-7">
+                        <div class="bae-sleep"></div>
+                    </div>
             </div>
         </div>
     </div>
@@ -179,7 +196,7 @@
                 <div class="col-lg-2">
                 </div>
                 <div class="col-lg-4">
-                    <button class="btn btn-success full-width">Avoir une invitation</button>
+                    <button class="btn btn-success full-width ">Avoir une invitation</button>
                 </div>
                 <div class="col-lg-4">
                     <button class="btn btn-success full-width" ng-disabled="true">Commander une boisson Bae</button>

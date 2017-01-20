@@ -15,6 +15,8 @@ angular.module('myApp.homeComponent', ['ngRoute'])
 
 function homeComponent($scope, $location) {
 
+    $scope.hasClickedOnProduct = false;
+
     $(document).ready(function () {
         if ($(this).scrollTop() > 600) {
             $('.navbar').fadeIn();
@@ -32,5 +34,14 @@ function homeComponent($scope, $location) {
             });
         });
     });
+
+    $scope.clickOnProduct = function(name) {
+        $scope.name = name
+        $scope.hasClickedOnProduct = true
+    }
+
+    $scope.closeProduct = function() {
+        $scope.hasClickedOnProduct = false
+    }
 
 }

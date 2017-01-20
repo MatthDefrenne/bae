@@ -6990,7 +6990,7 @@ body {
  }
 
 .container-global-3 {
-    background-image: url('./img/background4.jpg'); display: table; width: 100%; height: 691px; color: white;
+    background-image: url('./img/background4.jpg'); display: table; width: 100%; height: 879px; color: white;
 }
 .container-global-4 {
     background: white;  display: table; width: 100%; height: 691px; color: #555;
@@ -7009,4 +7009,13 @@ body {
     height: 55px;
     font-size: 16px;
     font-weight: bold;
+}
+.fs20 {
+    font-size: 20px;
+}
+.cursor {
+    cursor: pointer;
+}
+.effect-ease {
+
 }
