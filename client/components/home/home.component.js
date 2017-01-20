@@ -36,12 +36,36 @@ function homeComponent($scope, $location) {
     });
 
     $scope.clickOnProduct = function(name) {
-        $scope.name = name
+        $scope.name = name;
         $scope.hasClickedOnProduct = true
+        $('html,body').animate({
+            scrollTop:$("#PRODUCT").offset().top
+        },'slow');
     }
 
     $scope.closeProduct = function() {
         $scope.hasClickedOnProduct = false
+        $('html,body').animate({
+            scrollTop:$("#PRODUCT").offset().top
+        },'slow');
+    }
+
+    $scope.GOTOWHAT = function() {
+        $('html,body').animate({
+            scrollTop:$("#WHATBAE").offset().top
+        },'slow');
+    }
+
+    $scope.GOTOPRODUCT = function() {
+        $('html,body').animate({
+            scrollTop:$("#PRODUCT").offset().top
+        },'slow');
+    }
+
+    $scope.GOTOBUY = function() {
+        $('html,body').animate({
+            scrollTop:$("#BUY").offset().top
+        },'slow');
     }
 
 }

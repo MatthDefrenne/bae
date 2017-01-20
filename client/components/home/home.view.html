@@ -11,19 +11,17 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-left">
-                <li><a data-scroll>BAE</a></li>
-                <li><a data-scroll>BAE C'EST QUOI ? </a></li>
-                <li><a data-scroll>COMMENT ?</a></li>
-                <li><a data-scroll>BAE SLEEP</a></li>
+                <li><a data-scroll class="btn-green-hover" ng-click="GOTOWHAT()">BAE C'EST QUOI ? </a></li>
+                <li><a data-scrol class="btn-blue-hover" ng-click="GOTOPRODUCT()"l>PRODUITS</a></li>
+                <li><a data-scroll class="btn-orange-hover" ng-click="GOTOBUY()">ACHETER</a></li>
                 <li><a data-scroll>CONTACT</a></li>
-                <li><a data-scroll>ACHETER</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div><!--/.container-fluid -->
 </nav>
 
 <div class="jumbotron"
-     style="width: 100%; display: table; height: 876px; background-image: url('./img/topheader.jpg'); color: white; padding-bottom: 25px;">
+     style="width: 100%; display: table; height: 900px; background-image: url('./img/topheader.jpg'); color: white; padding-bottom: 25px;">
     <div class="container"
          style="display: table-cell; vertical-align: middle; padding-left: 20%; padding-right: 20%; text-align: center">
         <h1 style="font-weight: bold; font-size: 70px">Boissons <img src="./img/logo.png"></h1>
@@ -32,14 +30,11 @@
             cursus magna. (Why)</p>
 
         <div style="margin-top: 20px">
-            <button class="btn btn-empty btn-green-hover btn-lg">BAE C'EST QUOI ?
+            <button class="btn btn-empty btn-green-hover btn-lg" ng-click="GOTOWHAT()">BAE C'EST QUOI ?
             </button>
-            <button class="btn btn-empty btn-green-hover btn-lg">COMMENT ?
+            <button class="btn btn-empty btn-blue-hover btn-lg" ng-click="GOTOPRODUCT()">NOS PRODUITS
             </button>
-
-            <button class="btn btn-empty btn-green-hover btn-lg">BAE SLEEP
-            </button>
-            <button class="btn btn-empty btn-green-hover btn-lg">ACHETER
+            <button class="btn btn-empty btn-orange-hover btn-lg" ng-click="GOTOBUY()">ACHETER
             </button>
             <button class="btn btn-empty btn-green-hover btn-lg">CONTACT
             </button>
@@ -74,7 +69,7 @@
     </div>
 </div>
 
-<div class="container-global-1">
+<div class="container-global-1" id="WHATBAE">
     <div class="container marketing" style="display: table-cell; vertical-align: middle">
         <div class="container" style="margin-bottom: 40px; ">
             <h1 style="text-align: center; font-weight: bold; text-transform: uppercase; font-size: 90px">
@@ -101,8 +96,6 @@
 </div>
 <div class="container-global-2">
     <div class="container marketing" style="padding-top: 50px;">
-
-        <!-- Three columns of text below the carousel -->
         <div class="row">
             <div class="col-lg-3">
                 <div class="img-center">
@@ -110,7 +103,6 @@
                          height="140">
                 </div>
                 <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies
-
                 </p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-1">
@@ -135,11 +127,10 @@
                 </p>
             </div><!-- /.col-lg-4 -->
         </div><!-- /.row -->
-
     </div>
 </div>
-<div class="container-global-3">
-    <div class="container marketing" style="display: table-cell; vertical-align: middle; text-align: center; ">
+<div class="container-global-3" id="PRODUCT">
+    <div class="container marketing"  style="display: table-cell; vertical-align: middle; text-align: center; ">
         <div class="container" style="margin-bottom: 40px; padding-top: 20px;">
             <h1 style="text-align: center; font-weight: bold; text-transform: uppercase; font-size: 90px"  ng-if="!hasClickedOnProduct">
                 NOS PRODUITS
@@ -168,7 +159,6 @@
                 <div class="col-lg-2">
                 </div>
             </div>
-
             <div class="row" style="margin-top: 25px" ng-if="hasClickedOnProduct">
                 <div class="fs20 cursor" style="margin-bottom: 20px" ng-click="closeProduct()">
                     <i class="fa fa-arrow-left" aria-hidden="true"></i>
@@ -177,7 +167,8 @@
                     <div class="col-md-7 col-md-push-5">
                         <h1 style="font-size: 50px">{{name}}</h1>
                         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-                        <button class="btn btn-success full-width fs20">Acheter une {{name}}</button>
+                        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                        <button class="btn btn-success full-width fs20" ng-click="GOTOBUY()">Acheter une {{name}}</button>
                     </div>
                     <div class="col-md-5 col-md-pull-7">
                         <div class="bae-sleep"></div>
@@ -186,7 +177,7 @@
         </div>
     </div>
 </div>
-<div class="container-global-4">
+<div class="container-global-4" id="BUY">
     <div class="container marketing" style="display: table-cell; vertical-align: middle">
         <div class="container" style="margin-bottom: 40px; ">
             <h1 style="text-align: center; font-weight: bold; text-transform: uppercase; font-size: 90px">
@@ -199,7 +190,7 @@
                     <button class="btn btn-success full-width ">Avoir une invitation</button>
                 </div>
                 <div class="col-lg-4">
-                    <button class="btn btn-success full-width" ng-disabled="true">Commander une boisson Bae</button>
+                    <button class="btn btn-success full-width" ng-disabled="true" title="Hello world !">Commander une boisson Bae</button>
                 </div>
                 <div class="col-lg-2">
                 </div>
@@ -209,7 +200,7 @@
 </div>
 <footer class="footer">
     <div class="container">
-        <p class="text-muted">BAE © 2016 - <a href="">CONTACT</a>
-        </p>
+        <p class="text-muted">BAE © 2016</p>
     </div>
+
 </footer>
