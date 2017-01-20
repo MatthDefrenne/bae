@@ -6937,12 +6937,14 @@ body {
 }
 
 .btn-empty {
+    font-weight: bold;
     border-color: transparent;
     border-radius: 0;
     background: transparent;
     margin-left: 20px;
     color: white;
     margin-top: 20px;
+    font-size: 25px;
 }
 
 .btn-empty:focus {
