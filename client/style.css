@@ -6993,9 +6993,13 @@ body {
     background-image: url('./img/background4.jpg'); display: table; width: 100%; height: 691px; color: white;
 }
 .container-global-4 {
-    background-image: url('./img/background3.jpg'); display: table; width: 100%; height: 691px; color: white;
+    background: white;  display: table; width: 100%; height: 691px; color: #555;
 }
 .img-center {
     width: 200px;
     margin: auto;
+}
+.bae-sleep {
+    width: 200px;
+    height: 395px;
 }
