@@ -5106,7 +5106,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 
 .navbar {
     position: relative;
-    min-height: 60px;
     margin-bottom: 20px;
     border: 1px solid transparent;
 }
@@ -5513,8 +5512,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 
 .navbar-default .navbar-nav > li > a {
     color: white;
-    font-size: 24px;
-    margin-top: 5px;
+    font-size: 18px;
 }
 
 .navbar-default .navbar-nav .blue > li > a:hover,
@@ -8508,9 +8506,7 @@ li {
 /* Smartphones (landscape) ----------- */
 @media only screen and (min-width: 320px) {
 
-    .arrow {
-        display: none;
-    }
+
 
     .bae-sleep {
         display: none;
@@ -8603,7 +8599,11 @@ iPad 3
     .h1-custom {
         font-size: 35px;
     }
+    .arrow {
+        display: none;
+    }
 }
+
 
 /* iPhone 6 ----------- */
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
@@ -8618,6 +8618,9 @@ iPad 3
     .h1-custom {
         font-size: 45px;
     }
+    .arrow {
+        display: none;
+    }
 }
 
 /* iPhone 6+ ----------- */
@@ -8629,11 +8632,17 @@ iPad 3
     .h1-custom {
         font-size: 65px;
     }
+    .arrow {
+        display: none;
+    }
 }
 
 /* Samsung Galaxy S3 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
     /* Styles */
+    .arrow {
+        display: none;
+    }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
@@ -8643,6 +8652,9 @@ iPad 3
 /* Samsung Galaxy S4 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
     /* Styles */
+    .arrow {
+        display: none;
+    }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
@@ -8656,6 +8668,9 @@ iPad 3
 
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
     /* Styles */
+    .arrow {
+        display: none;
+    }
 }
 
 .header {
