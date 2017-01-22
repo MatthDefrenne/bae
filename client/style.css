@@ -8507,6 +8507,7 @@ li {
 
 /* Smartphones (landscape) ----------- */
 @media only screen and (min-width: 320px) {
+
     .arrow {
         display: none;
     }
@@ -8553,6 +8554,7 @@ iPad 3
 /* Desktops and laptops ----------- */
 @media only screen  and (min-width: 1224px) {
     .header {
+        background: #333;
         width: 100%;
         padding-bottom: 0;
         padding-left: 20%;
@@ -8659,7 +8661,7 @@ iPad 3
 .header {
     display: table;
     height: 900px;
-    background-image: url('./img/topheader.jpg');
+    background: url('./img/topheader.jpg');
     color: white;
     padding-bottom: 25px;
     background-position: center center;

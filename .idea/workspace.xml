@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1646e073-a68b-4cb3-88bb-6ae8e9508de7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/home/home.view.html" afterPath="$PROJECT_DIR$/client/components/home/home.view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/style.css" afterPath="$PROJECT_DIR$/client/style.css" />
     </list>
     <ignored path="ChatSystemAngularJS-master.iws" />
@@ -91,8 +90,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="8558" column="21" selection-start-line="8558" selection-start-column="21" selection-end-line="8558" selection-end-column="21" />
+            <state relative-caret-position="733">
+              <caret line="8693" column="9" selection-start-line="8693" selection-start-column="9" selection-end-line="8693" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -565,12 +564,12 @@
       <workItem from="1484901538218" duration="3720000" />
       <workItem from="1484909541483" duration="14964000" />
       <workItem from="1485004271076" duration="6946000" />
-      <workItem from="1485073387204" duration="5380000" />
+      <workItem from="1485073387204" duration="6592000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="248703000" />
+    <option name="totallyTimeSpent" value="249915000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -870,8 +869,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="8558" column="21" selection-start-line="8558" selection-start-column="21" selection-end-line="8558" selection-end-column="21" />
+        <state relative-caret-position="733">
+          <caret line="8693" column="9" selection-start-line="8693" selection-start-column="9" selection-end-line="8693" selection-end-column="9" />
           <folding />
         </state>
       </provider>
