@@ -8518,7 +8518,9 @@ li {
 
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width: 320px) {
-
+    .header {
+        background: #3e3e3e;
+    }
 }
 
 /* iPads (portrait and landscape) ----------- */
@@ -8550,7 +8552,7 @@ iPad 3
 /* Desktops and laptops ----------- */
 @media only screen  and (min-width: 1224px) {
     .header {
-        background: #333;
+        background: url('./img/topheader.jpg');
         width: 100%;
         padding-bottom: 0;
         padding-left: 20%;
@@ -8594,6 +8596,7 @@ iPad 3
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
     .header {
         width: 320px;
+        background: #3e3e3e;
         padding-bottom: 0;
     }
     .h1-custom {
@@ -8602,16 +8605,19 @@ iPad 3
     .arrow {
         display: none;
     }
+
 }
 
 
 /* iPhone 6 ----------- */
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
-    /* Styles */
-}
+    .header {
+        background: #3e3e3e;
+    }   }
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
     .header {
+        background: #3e3e3e;
         width: 375px;
         padding-bottom: 0;
     }
@@ -8621,19 +8627,26 @@ iPad 3
     .arrow {
         display: none;
     }
+
 }
 
 /* iPhone 6+ ----------- */
-@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+@media only screen and (min-device-width: 410px) and (max-device-height: 730px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
     /* Styles */
+    .header {
+        background: #3e3e3e;
+    }
 }
 
-@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+@media only screen and (min-device-width: 410px) and (max-device-height: 730px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
     .h1-custom {
         font-size: 65px;
     }
     .arrow {
         display: none;
+    }
+    .header {
+        background: #3e3e3e;
     }
 }
 
@@ -8643,10 +8656,16 @@ iPad 3
     .arrow {
         display: none;
     }
+    .header {
+        background: #3e3e3e;
+    }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
     /* Styles */
+    .header {
+        background: #3e3e3e;
+    }
 }
 
 /* Samsung Galaxy S4 ----------- */
@@ -8654,6 +8673,9 @@ iPad 3
     /* Styles */
     .arrow {
         display: none;
+    }
+    .header {
+        background: #3e3e3e;
     }
 }
 
@@ -8671,12 +8693,14 @@ iPad 3
     .arrow {
         display: none;
     }
+    .header {
+        background: #3e3e3e;
+    }
 }
 
 .header {
     display: table;
     height: 900px;
-    background: url('./img/topheader.jpg');
     color: white;
     padding-bottom: 25px;
     background-position: center center;
@@ -8702,8 +8726,13 @@ iPad 3
 }
 
 .container-global-3 {
-    background-image: url('./img/background4.jpg');
     width: 100%;
+    color: white;
+}
+.container-global-1 {
+    display: table;
+    width: 100%;
+    height: 579px;
     color: white;
 }
 .footer {
@@ -8712,4 +8741,11 @@ iPad 3
     /* Set the fixed height of the footer here */
     background-color: #e0e0e0;
     color: #555;
+}
+.container-global-1 {
+    background: #5d904d;
+}
+.container-global-3
+{
+    background: #92bbc3;
 }
