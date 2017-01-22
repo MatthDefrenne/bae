@@ -8335,11 +8335,6 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
-.social-media {
-    font-size: 35px;
-    display: inline-block;
-    margin-left: 50px;
-}
 
 .table-icon {
     text-align: center;
@@ -8570,11 +8565,16 @@ iPad 3
     .button-responsive {
         display: none;
     }
+    .social-media {
+        margin-left: 50px;
+    }
 }
 
 /* Large screens ----------- */
 @media only screen  and (min-width: 1824px) {
-    /* Styles */
+    .social-media {
+        margin-left: 50px;
+    }
 }
 
 /* iPhone 4 ----------- */
@@ -8613,7 +8613,9 @@ iPad 3
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
     .header {
         background: #3e3e3e;
-    }   }
+    }
+}
+
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
     .header {
@@ -8626,6 +8628,9 @@ iPad 3
     }
     .arrow {
         display: none;
+    }
+    .social-media {
+        margin-left: 10px;
     }
 
 }
@@ -8749,3 +8754,9 @@ iPad 3
 {
     background: #92bbc3;
 }
+.social-media {
+    font-size: 35px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
