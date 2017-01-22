@@ -1,289 +1,261 @@
-angular.module('templates-main', ['components/home/home.view.html', 'components/products/products.view.html']);
+angular.module('templates-main', ['/components/home/home.view.html']);
 
-angular.module("components/home/home.view.html", []).run(["$templateCache", function($templateCache) {
-  $templateCache.put("components/home/home.view.html",
-    "<div class=\"jumbotron\">\n" +
+angular.module("/components/home/home.view.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("/components/home/home.view.html",
+    "<nav class=\"navbar navbar-default navbar-fixed-top\">\n" +
     "    <div class=\"container\">\n" +
-    "        <h1 class=\"fwb\">Drinky</h1>\n" +
-    "        <p>\n" +
-    "            <b>Une boisson  énergisante 100% naturelle</b> qui vous offre tout ce dont vous avez besoin pour être en bonne santé\n" +
-    "        <p>\n" +
-    "        <a class=\"btn btn-danger btn-lg\" href=\"/products/\" ng-click=\"logEvent('clickOnBuyNow')\" role=\"button\">Acheter maintenant <i class=\"glyphicon glyphicon-chevron-right\"></i></a></p>\n" +
+    "        <div class=\"navbar-header\">\n" +
+    "            <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\"\n" +
+    "                    aria-expanded=\"false\" aria-controls=\"navbar\">\n" +
+    "                <span class=\"sr-only\">Toggle navigation</span>\n" +
+    "                <span class=\"icon-bar\"></span>\n" +
+    "                <span class=\"icon-bar\"></span>\n" +
+    "                <span class=\"icon-bar\"></span>\n" +
+    "            </button>\n" +
+    "        </div>\n" +
+    "        <div id=\"navbar\" class=\"navbar-collapse collapse\">\n" +
+    "            <ul class=\"nav navbar-nav navbar-left\">\n" +
+    "                <li><a data-scroll class=\"btn-green-hover\" ng-click=\"GOTOWHAT()\">BAE C'EST QUOI ? </a></li>\n" +
+    "                <li><a data-scrol class=\"btn-blue-hover\" ng-click=\"GOTOPRODUCT()\">PRODUITS</a></li>\n" +
+    "                <li><a data-scroll class=\"btn-orange-hover\" ng-click=\"GOTOBUY()\">ACHETER</a></li>\n" +
+    "                <li><a data-scroll>CONTACT</a></li>\n" +
+    "            </ul>\n" +
+    "        </div><!--/.nav-collapse -->\n" +
+    "    </div><!--/.container-fluid -->\n" +
+    "</nav>\n" +
+    "\n" +
+    "<div class=\"jumbotron header\">\n" +
+    "    <div class=\"container container-header\">\n" +
+    "        <h1 style=\"font-weight: bold; font-size: 70px\">Boissons <img src=\"./img/logo.png\"></h1>\n" +
+    "        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies\n" +
+    "            vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo\n" +
+    "            cursus magna. (Why)</p>\n" +
+    "\n" +
+    "        <div style=\"margin-top: 20px\">\n" +
+    "            <button class=\"btn btn-empty btn-green-hover btn-lg\" ng-click=\"GOTOWHAT()\">BAE C'EST QUOI ?\n" +
+    "            </button>\n" +
+    "            <button class=\"btn btn-empty btn-blue-hover btn-lg\" ng-click=\"GOTOPRODUCT()\">NOS PRODUITS\n" +
+    "            </button>\n" +
+    "            <button class=\"btn btn-empty btn-orange-hover btn-lg\" ng-click=\"GOTOBUY()\">ACHETER\n" +
+    "            </button>\n" +
+    "            <button class=\"btn btn-empty btn-green-hover btn-lg\">CONTACT\n" +
+    "            </button>\n" +
+    "        </div>\n" +
+    "        <div style=\"\n" +
+    "    margin: auto; margin-top: 75px; margin-bottom: 50px\">\n" +
+    "            <div class=\"social-media \">\n" +
+    "                <div class=\"table-icon\">\n" +
+    "                    <i class=\"fa fa-facebook facebook\" aria-hidden=\"true\"></i>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "\n" +
+    "            <div class=\"social-media\">\n" +
+    "                <div class=\"table-icon\">\n" +
+    "                    <i class=\"fa fa-medium medium\" aria-hidden=\"true\"></i>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "\n" +
+    "            <div class=\"social-media \">\n" +
+    "        <span class=\"table-icon\">\n" +
+    "<i class=\"fa fa-youtube-play youtube\" aria-hidden=\"true\"></i>\n" +
+    "        </span>\n" +
+    "            </div>\n" +
+    "\n" +
+    "            <div class=\"social-media \">\n" +
+    "        <span class=\"table-icon\">\n" +
+    "        <i class=\"fa fa-instagram instagram\" aria-hidden=\"true\"></i>\n" +
+    "        </span>\n" +
+    "            </div>\n" +
+    "\n" +
+    "        </div>\n" +
     "    </div>\n" +
     "</div>\n" +
-    "<div class=\"container\" style=\"margin-top: 40px; \">\n" +
-    "    <h4>Partage drinky à tes amis et gagne une boisson gratuite ! <a href=\"\"  type=\"button\" data-toggle=\"modal\" data-target=\"#shareModal\" class=\"ta-c\" ng-click=\"logEvent('clickOnShareDrinky')\" style=\"font-size: 20px; font-weight: bold; margin-bottom: 25px\">Clique ici 👍</a> </h4>\n" +
-    "    <div style=\"margin-bottom: 20px;\n" +
-    "    text-align: center;\n" +
-    "    font-size: 30px;\n" +
-    "    font-weight: bold;\n" +
-    "    margin-top: 20px;\n" +
-    "    \">Ce que Drinky vous apporte</div>\n" +
-    "    <!-- Three columns of text below the carousel -->\n" +
-    "    <div class=\"row\" style=\"text-align: center; margin-bottom: 15px;\">\n" +
-    "        <div class=\"col-lg-4\">\n" +
-    "            <img class=\"img-circle\" src=\"http://image.flaticon.com/icons/svg/147/147167.svg\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">\n" +
-    "            <h2>Réduction stress et anxiété</h2>\n" +
-    "            <p>Drinky <b>réduit activement votre stress</b> et votre anxiété.</p>\n" +
-    "        </div><!-- /.col-lg-4 -->\n" +
-    "        <div class=\"col-lg-4\">\n" +
-    "            <img class=\"img-circle\" src=\"http://image.flaticon.com/icons/svg/201/201633.svg\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">\n" +
-    "            <h2>Restez concentré !</h2>\n" +
-    "            <p>Drinky est composé de principes actifs qui vous permettent de rester concentré. Il sera votre meilleur allié lors de vos examens, ou lors de travaux mentaux très intensifs.</p>\n" +
-    "        </div><!-- /.col-lg-4 -->\n" +
-    "        <div class=\"col-lg-4\">\n" +
-    "            <img class=\"img-circle\" src=\"http://image.flaticon.com/icons/svg/126/126464.svg\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">\n" +
-    "            <h2>Beaucoup d'énergie !</h2>\n" +
-    "            <p><b>Drinky ne vous laissera jamais tomber lorsque vous manquerez d'énergie</b> notre formule vous maintiendra en forme toute la journée !</p>\n" +
-    "        </div><!-- /.col-lg-4 -->\n" +
-    "    </div><!-- /.row -->\n" +
     "\n" +
-    "    <div type=\"button\" data-toggle=\"modal\" data-target=\"#myModal\" class=\"ta-c\">\n" +
-    "        <a ng-click=\"logEvent('clickOnIngredients')\" style=\"margin-bottom: 20px;\n" +
-    "    font-size: 20px;\n" +
-    "    font-weight: bold;\n" +
-    "    text-decoration: none;\n" +
-    "    cursor: pointer;\n" +
-    "    \">Les ingrédients de Drinky <i class=\"glyphicon glyphicon-chevron-right\"></i></a>\n" +
-    "    </div>\n" +
-    "\n" +
-    "    <!-- Modal -->\n" +
-    "    <div class=\"modal fade\" id=\"myModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\">\n" +
-    "        <div class=\"modal-dialog modal-lg\" role=\"document\">\n" +
-    "            <div class=\"modal-content\">\n" +
-    "                <div class=\"modal-header\">\n" +
-    "                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\n" +
-    "                    <h4 class=\"modal-title\">De quoi est composé Drinky ?</h4>\n" +
+    "<div class=\"container-global-1\" id=\"WHATBAE\">\n" +
+    "    <div class=\"container marketing\" style=\"display: table-cell; vertical-align: middle\">\n" +
+    "        <div class=\"container\" style=\"margin-bottom: 40px; \">\n" +
+    "            <h1 class=\"h1-custom\">Bae c'est quoi ?</h1>\n" +
+    "            <div class=\"row\">\n" +
+    "                <div class=\"col-lg-2\">\n" +
     "                </div>\n" +
-    "                <div class=\"modal-body\">\n" +
-    "                    <div class=\"row\" style=\"text-align: center; margin-bottom: 15px;\">\n" +
-    "                        <div class=\"col-lg-4\">\n" +
-    "                            <img class=\"img-circle\" src=\"http://mr-ginseng.com/wp-content/uploads/2012/01/ginkgo-biloba.jpg\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">\n" +
-    "                            <h3>Ginko biloba</h3>\n" +
-    "                            <p>Réduit le stress et l'anxiété</p>\n" +
-    "                        </div><!-- /.col-lg-4 -->\n" +
-    "                        <div class=\"col-lg-4\">\n" +
-    "                            <img class=\"img-circle\" src=\"http://mr-ginseng.com/wp-content/uploads/2012/01/rhodiola.jpg\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">\n" +
-    "                            <h3>Rhodiola Rosea</h3>\n" +
-    "                            <p>Vous permet de rester mieux concentrer</p>\n" +
-    "                        </div><!-- /.col-lg-4 -->\n" +
-    "                        <div class=\"col-lg-4\">\n" +
-    "                            <img class=\"img-circle\" src=\"https://sc01.alicdn.com/kf/HTB1qqlmJFXXXXXHXpXXq6xXFXXXx/1282587/HTB1qqlmJFXXXXXHXpXXq6xXFXXXx.jpg\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">\n" +
-    "                            <h3>Coenzyme q10</h3>\n" +
-    "                            <p>Réduit la fatigue</p>\n" +
-    "                        </div><!-- /.col-lg-4 -->\n" +
-    "                    </div><!-- /.row -->\n" +
-    "\n" +
-    "                    <div class=\"row\" style=\"text-align: center; margin-bottom: 15px;\">\n" +
-    "                        <div class=\"col-lg-4\">\n" +
-    "                            <img class=\"img-circle\" src=\"http://4.bp.blogspot.com/-A9wluzJvc6g/UBlKWRz_mhI/AAAAAAAAAIw/rhj_aibggq4/s1600/panax-ginseng-side-effects.jpg\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">\n" +
-    "                            <h3>Ginseng rouge</h3>\n" +
-    "                            <p>Apporte beaucoup d'énergie tout au long de la journée</p>\n" +
-    "                        </div><!-- /.col-lg-4 -->\n" +
-    "\n" +
-    "                        <div class=\"col-lg-4\">\n" +
-    "                            <img class=\"img-circle\" src=\"http://methodes-douces-et-bien-etre.com/wp-content/uploads/2013/06/Fotolia_45194568_XS1.jpg\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">\n" +
-    "                            <h3>Thé vert</h3>\n" +
-    "                            <p>Apporte de l'énergie</p>\n" +
-    "                        </div><!-- /.col-lg-4 -->\n" +
-    "\n" +
-    "                        <div class=\"col-lg-4\">\n" +
-    "                            <img class=\"img-circle\" src=\"http://konradmarkham.com/wp-content/uploads/2014/11/bigstock-vitamins-pills-and-tablets-16253030.jpg\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">\n" +
-    "                            <h3>Vitamine B12 & Fer</h3>\n" +
-    "                            <p>Réduit la fatigue et bon fonctionnement du cerveau</p>\n" +
-    "                        </div><!-- /.col-lg-4 -->\n" +
-    "\n" +
-    "                    </div>\n" +
+    "                <div class=\"col-lg-8\" style=\"font-size: 25px; margin-top: 25px\">\n" +
+    "                    <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh\n" +
+    "                        ultricies\n" +
+    "                        vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent\n" +
+    "                        commodo\n" +
+    "                        cursus magna. (What)</p>\n" +
+    "                    <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh\n" +
+    "                        ultricies\n" +
+    "                        cursus magna.</p>\n" +
     "                </div>\n" +
-    "                <div class=\"modal-footer\">\n" +
-    "                    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Fermer</button>\n" +
+    "                <div class=\"col-lg-2\">\n" +
     "                </div>\n" +
     "            </div>\n" +
+    "\n" +
     "        </div>\n" +
     "    </div>\n" +
-    "\n" +
-    "\n" +
-    "    <!-- START THE FEATURETTES -->\n" +
-    "    <hr class=\"featurette-divider\">\n" +
-    "\n" +
-    "    <div class=\"row featurette\">\n" +
-    "        <div class=\"col-md-7\">\n" +
-    "            <h2 class=\"featurette-heading\">Drinky, c'est quoi ?</h2>\n" +
-    "            <p class=\"lead\">\n" +
-    "                Drinky c'est une boisson à la framboise de 330ml,\n" +
-    "                elle est composée de plantes 100% naturelles ainsi que d'un apport journalier en vitamine B12 & Fer.\n" +
-    "                Que vous ayez un coup de mou ou que vous avez envie de consommer simplement une boisson soft, Drinky est la meilleure solution.\n" +
-    "            </p>\n" +
-    "\n" +
-    "            <p class=\"lead\">\n" +
-    "                Drinky c'est aussi une équipe, une Startup Belge. Suivez-nous sur les réseaux sociaux pour voir l'avancée du projet au jour le jour :)\n" +
-    "            </p>\n" +
-    "\n" +
-    "            <div class=\"mt10\"><a href=\"https://www.facebook.com/Drinky-308767716189772/?ref=bookmarks\" target=\"_blank\" style=\"margin-right: 30px;\"><i class=\"fa fa-facebook\" aria-hidden=\"true\"></i>\n" +
-    "                <b>Facebook</b></a>\n" +
-    "                <a href=\"https://www.instagram.com/drinky_healthy/\" target=\"_blank\"><i class=\"fa fa-instagram\" aria-hidden=\"true\"></i>\n" +
-    "                    <b>Instagram</b></a>\n" +
-    "            </div>\n" +
-    "\n" +
-    "        </div>\n" +
-    "        <div class=\"col-md-5\">\n" +
-    "            <img class=\"featurette-image img-responsive center-block\" src=\"./img/tea.jpg\" data-holder-rendered=\"true\">\n" +
-    "        </div>\n" +
-    "    </div>\n" +
-    "\n" +
-    "\n" +
-    "    <div class=\"row featurette\">\n" +
-    "        <hr class=\"featurette-divider\">\n" +
-    "\n" +
-    "        <div class=\"col-md-7\">\n" +
-    "            <h2 class=\"featurette-heading\">Ce que les gens en disent</h2>\n" +
-    "        </div>\n" +
-    "        <div class=\"col-md-12 mt10\">\n" +
-    "            <p class=\"well\">\n" +
-    "                <img class=\"profile-pp-100\" src=\"{{oneTestimonial.photo}}\">\n" +
-    "                <b style=\"    font-size: 30px;\">{{oneTestimonial.name}}</b>&nbsp; {{oneTestimonial.role}}<br/>\n" +
-    "                <a href=\"\" ng-click=\"nextTestiomial()\" style=\"float: right;\n" +
-    "    font-size: 30px;\n" +
-    "    position: relative;\n" +
-    "    top: -25px;\"><i class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></i>\n" +
-    "                </a>\n" +
-    "\n" +
-    "                <i style=\"font-size: 17px\">{{oneTestimonial.text}}</i></p>\n" +
-    "        </div>\n" +
-    "    </div>\n" +
-    "\n" +
-    "    </div>\n" +
-    "    <!-- Modal -->\n" +
-    "    <div class=\"modal fade\" id=\"shareModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\">\n" +
-    "        <div class=\"modal-dialog modal-lg\" role=\"document\">\n" +
-    "            <div class=\"modal-content\">\n" +
-    "                <div class=\"modal-header\">\n" +
-    "                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\n" +
-    "                    <h4 class=\"modal-title\">Partager Drinky à mes amis</h4>\n" +
-    "                </div>\n" +
-    "                <div class=\"modal-body\">\n" +
-    "                   <div><b>Pourquoi partager Drinky ? :</b></div>\n" +
-    "\n" +
-    "                    <p class=\"mt10\">Lorsque vous partager Drinky à vos amis cela permet de faire grandir notre communauté,\n" +
-    "                    de plus lorsque vous réussisez à faire partager Drinky et que votre amis achète au moins une boisson vous recevez automatiquement par mail une confirmation d'une boisson gratuite.\n" +
-    "                    </p>\n" +
-    "\n" +
-    "                    <div><b>Comment je peux partager ? :</b></div>\n" +
-    "                    <p class=\"mt10\">Pour partager Drinky à tes amis clique commence par leur envoyer un message via messenger</p>\n" +
-    "\n" +
-    "                    <div><b>Quelles conditions  ? :</b></div>\n" +
-    "                    <p class=\"mt10\" style=\"color: red \"><b>Pour pouvoir bénéficier d'un parainnage vous devez déjà avoir acheter une boisson Drinky. <a  data-dismiss=\"modal\" href=\"/products/\">Cliquer ici pour acheter Drinky</a></b></p>\n" +
-    "\n" +
-    "                    <div class=\"row\" style=\"    padding: 20px;\n" +
-    "    border: 5px solid black;\n" +
-    "    margin: 20px;\">\n" +
-    "                        <div class=\"form-group\">\n" +
-    "                            <div class=\"col-md-8\">\n" +
-    "                                <label>Étape 1 : Votre adresse email avec laquelle vous avez acheter précédement Drinky </label>\n" +
-    "                                <input  ng-model=\"emailToShare\" type=\"email\" placeholder=\"example@gmail.com\" class=\"form-control input-md\">\n" +
-    "                            </div>\n" +
-    "                        </div>\n" +
-    "                        <div class=\"form-group\">\n" +
-    "                            <div class=\"col-md-8 mt10\" >\n" +
-    "                                <label style=\"margin-right: 10px\">Étape 2 : Partager sur Facebook </label><button ng-disabled=\"!emailToShare\" class=\"btn btn-sm btn-primary\" ng-click=\"shareOnMessenger()\">Envoyer par messenger</button>\n" +
-    "                            </div>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "\n" +
-    "                </div>\n" +
-    "                <div class=\"modal-footer\">\n" +
-    "                    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Fermer</button>\n" +
-    "                </div>\n" +
-    "            </div>\n" +
-    "        </div>\n" +
-    "    </div>\n" +
-    "\n" +
     "</div>\n" +
-    "");
-}]);
-
-angular.module("components/products/products.view.html", []).run(["$templateCache", function($templateCache) {
-  $templateCache.put("components/products/products.view.html",
-    "<div class=\"container\" style=\"margin-top: 40px; \">\n" +
+    "<div class=\"container-global-2\">\n" +
+    "    <div class=\"container marketing\" style=\"padding-top: 50px;\">\n" +
+    "        <div class=\"row\">\n" +
+    "            <div class=\"col-lg-3\">\n" +
+    "                <div class=\"img-center\">\n" +
+    "                    <img class=\"img-circle\" src=\"./img/step-1.png\" alt=\"Generic placeholder image\" width=\"140\"\n" +
+    "                         height=\"140\">\n" +
+    "                </div>\n" +
+    "                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies\n" +
+    "                </p>\n" +
+    "            </div><!-- /.col-lg-4 -->\n" +
+    "            <div class=\"col-lg-1\">\n" +
+    "                <img src=\"./img/arrow2.png\" class=\"arrow\" >\n" +
+    "            </div>\n" +
+    "            <div class=\"col-lg-3\">\n" +
+    "                <div class=\"img-center\">\n" +
+    "                    <img class=\"img-circle\" src=\"./img/step-2.png\" alt=\"Generic placeholder image\" width=\"140\"\n" +
+    "                         height=\"140\">\n" +
+    "                </div>\n" +
+    "                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras\n" +
+    "                </p>\n" +
+    "            </div><!-- /.col-lg-4 -->\n" +
+    "            <div class=\"col-lg-1\">\n" +
+    "                <img src=\"./img/arrow.png\" class=\"arrow\" >\n" +
+    "            </div>\n" +
+    "            <div class=\"col-lg-3\">\n" +
+    "                <div class=\"img-center\">\n" +
+    "                    <img class=\"img-circle \" src=\"./img/step-3.png\" width=\"140\" height=\"140\">\n" +
+    "                </div>\n" +
+    "                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula\n" +
+    "                </p>\n" +
+    "            </div><!-- /.col-lg-4 -->\n" +
+    "        </div><!-- /.row -->\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "<div class=\"container-global-3\" id=\"PRODUCT\">\n" +
+    "    <div class=\"container marketing\"  style=\"display: table-cell; vertical-align: middle; text-align: center; \">\n" +
+    "        <div class=\"container\" style=\"margin-bottom: 40px; padding-top: 20px;\">\n" +
+    "            <h1 class=\"h1-custom\"  ng-if=\"!hasClickedOnProduct\">\n" +
+    "                NOS PRODUITS\n" +
+    "            </h1>\n" +
+    "            <p ng-if=\"!hasClickedOnProduct\">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula\n" +
+    "            </p>\n" +
+    "            <div class=\"row\" style=\"margin-top: 25px\" ng-if=\"!hasClickedOnProduct\">\n" +
+    "                <div class=\"col-lg-2\">\n" +
+    "                </div>\n" +
+    "                <div class=\"col-lg-3 cursor\" ng-click=\"clickOnProduct('BAE BRAIN')\">\n" +
+    "                    <div class=\"bae-sleep\"></div>\n" +
+    "                    <h1>BAE BRAIN\n" +
+    "                    </h1>\n" +
+    "                    <p class=\"lead\">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.</p>\n" +
+    "                    <p style=\"font-weight: bold; font-size: 25px\">2,49 Euros</p>\n" +
+    "                    <button class=\"button-responsive btn btn-success\">Voir la boisson</button>\n" +
+    "                </div>\n" +
+    "                <div class=\"col-lg-1\">\n" +
+    "                </div>\n" +
+    "                <div class=\"col-lg-3 cursor\" ng-click=\"clickOnProduct('BAE SLEEP')\">\n" +
+    "                    <div class=\"bae-sleep\"></div>\n" +
+    "                    <h1>BAE SLEEP\n" +
+    "                    </h1>\n" +
+    "                    <p class=\"lead\">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.</p>\n" +
+    "                    <p style=\"font-weight: bold; font-size: 25px\">2,49 Euros</p>\n" +
+    "                    <button class=\"button-responsive btn btn-success\">Voir la boisson</button>\n" +
     "\n" +
-    "    <h2>Achetez Drinky</h2>\n" +
-    "    <hr class=\"featurette-divider\">\n" +
-    "\n" +
-    "\n" +
-    "    <div class=\"row featurette\">\n" +
-    "        <div class=\"col-md-7 col-md-push-5\">\n" +
-    "            <h2 class=\"featurette-heading\">Drinky 330ml</h2>\n" +
-    "            <p class=\"lead\">Uniquement disponible en goût framboise (Pour l'instant)</p>\n" +
-    "                <select ng-model=\"quantity\" class=\"form-control\">\n" +
-    "                    <option value=\"1\">Une bouteille</option>\n" +
-    "                    <option value=\"6\">6 bouteilles</option>\n" +
-    "                    <option value=\"12\">12 bouteilles</option>\n" +
-    "                    <option value=\"24\">24 Bouteilles</option>\n" +
-    "                    <option value=\"48\">48 Bouteilles</option>\n" +
-    "                </select>\n" +
-    "            <div style=\"margin-top: 20px\"><h1>€ {{quantity * 1.25 | limitTo: 4}}</h1>  <b style=\"margin-top: 5px;\">Satisfait ou rembourser</b></div>\n" +
-    "\n" +
-    "            <button ng-click=\"logEvent('clickOnBuyDrinky')\" data-toggle=\"modal\" data-target=\"#buyModal\" class=\"btn btn-success\" style=\"width: 300px; margin-top: 10px\">Commander</button>\n" +
-    "\n" +
-    "            <div class=\"modal fade\" id=\"buyModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\">\n" +
-    "                <div class=\"modal-dialog\" role=\"document\">\n" +
-    "                    <div class=\"modal-content\">\n" +
-    "                        <div class=\"modal-header\">\n" +
-    "                            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>\n" +
-    "                            <h4 class=\"modal-title\">Commander Drinky</h4>\n" +
-    "                        </div>\n" +
-    "                        <div class=\"modal-body\">\n" +
-    "                            <form class=\"form-horizontal mt10\">\n" +
-    "                                <fieldset>\n" +
-    "                                    <div class=\"form-group\" >\n" +
-    "                                        <div class=\"col-md-6\">\n" +
-    "                                            <input name=\"name\" ng-model=\"order.name\" type=\"text\" placeholder=\"Nom\" class=\"form-control input-md\">\n" +
-    "                                        </div>\n" +
-    "                                        <div class=\"col-md-6\">\n" +
-    "                                            <input  name=\"firstname\" ng-model=\"order.firstname\" type=\"text\" placeholder=\"Prénom\" class=\"form-control input-md\">\n" +
-    "                                        </div>\n" +
-    "                                    </div>\n" +
-    "\n" +
-    "                                    <div class=\"form-group\">\n" +
-    "                                        <div class=\"col-md-12\">\n" +
-    "                                            <input  name=\"textinput\" ng-model=\"order.mail\" type=\"email\" placeholder=\"example@gmail.com\" class=\"form-control input-md\">\n" +
-    "                                        </div>\n" +
-    "                                    </div>\n" +
-    "\n" +
-    "                                    <div class=\"form-group\">\n" +
-    "                                        <div class=\"col-md-8\">\n" +
-    "                                            <input  name=\"textinput\" ng-model=\"order.adress\"  type=\"text\" placeholder=\"Adresse de livraison\" class=\"form-control input-md\">\n" +
-    "\n" +
-    "                                        </div>\n" +
-    "                                        <div class=\"col-md-4\">\n" +
-    "                                            <input  name=\"textinput\" ng-model=\"order.codepostal\" type=\"text\" placeholder=\"Code postal\" class=\"form-control input-md\">\n" +
-    "                                        </div>\n" +
-    "                                    </div>\n" +
-    "                                    <li ng-if=\"allEmpty\" style=\"color: red;\">Merci de remplire tous les champs</li>\n" +
-    "                                    <i style=\"margin-top: 25px\"><i>Une fois que vous avez envoyer une demande, votre commande est livrée en 24h entre 8h et 16h00, le payement est effectué sur place.</i></i>\n" +
-    "                                </fieldset>\n" +
-    "                            </form>\n" +
-    "                        </div>\n" +
-    "                        <div ng-if=\"error\">Une erreur est servenue</div>\n" +
-    "                        <div class=\"modal-footer\">\n" +
-    "                            <i class=\"fa fa-spinner fa-spin fa-3x fa-fw\" ng-if=\"inProgress\"></i>\n" +
-    "                            <button type=\"button\" ng-click=\"sendOrder(order)\" class=\"btn btn-success\">Envoyer</button>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
+    "                </div>\n" +
+    "                <div class=\"col-lg-2\">\n" +
     "                </div>\n" +
     "            </div>\n" +
-    "            <div class=\"mt10\" style=\"color: red; font-weight: bold; margin-top: 25px\"><i>Vous avez envie de tester la boisson avant de l'acheter ? C'est possble, mais uniquement sur Namur. Si vous voulez la tester envoyer nous un message sur Facebook 😉 </i>\n" +
+    "            <div class=\"row\" style=\"margin-top: 25px\" ng-if=\"hasClickedOnProduct\">\n" +
+    "                <div class=\"fs20 cursor\" style=\"margin-bottom: 20px\" ng-click=\"closeProduct()\">\n" +
+    "                    <i class=\"fa fa-arrow-left\" aria-hidden=\"true\"></i>\n" +
+    "                    Retour aux produits\n" +
+    "                </div>\n" +
+    "                    <div class=\"col-md-7 col-md-push-5\">\n" +
+    "                        <h1 style=\"font-size: 50px\">{{name}}</h1>\n" +
+    "                        <p class=\"lead\">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>\n" +
+    "                        <p class=\"lead\">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>\n" +
+    "                        <button class=\"btn btn-success full-width fs20\" ng-click=\"GOTOBUY()\">Acheter une {{name}}</button>\n" +
+    "                    </div>\n" +
+    "                    <div class=\"col-md-5 col-md-pull-7\">\n" +
+    "                        <div class=\"bae-sleep\"></div>\n" +
+    "                    </div>\n" +
     "            </div>\n" +
-    "            <div class=\"mt10\"><a href=\"https://www.facebook.com/Drinky-308767716189772/?ref=bookmarks\" target=\"_blank\"><i class=\"fa fa-facebook\" aria-hidden=\"true\"></i>\n" +
-    "                 Notre page Facebook\n" +
-    "            </a>\n" +
-    "            </div>\n" +
-    "        </div>\n" +
-    "\n" +
-    "        <div class=\"col-md-5 col-md-pull-7\">\n" +
-    "            <img class=\"featurette-image img-responsive center-block\" src=\"./img/tea.jpg\" data-holder-rendered=\"true\">\n" +
     "        </div>\n" +
     "    </div>\n" +
+    "</div>\n" +
+    "<div class=\"container-global-4\" id=\"BUY\">\n" +
+    "    <div class=\"container marketing\" style=\"display: table-cell; vertical-align: middle\">\n" +
+    "        <div class=\"container\">\n" +
+    "            <h1 class=\"h1-custom\">\n" +
+    "                ACHETER BAE\n" +
+    "            </h1>\n" +
+    "            <p style=\"font-weight: bold; font-size: 25px\">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula</p>\n" +
+    "            <div  class=\"row\">\n" +
+    "                <div class=\"col-lg-2\">\n" +
+    "                </div>\n" +
+    "                <div class=\"col-lg-4\">\n" +
+    "                    <button class=\"btn btn-success full-width \">Avoir une invitation</button>\n" +
+    "                </div>\n" +
+    "                <div class=\"col-lg-4\">\n" +
+    "                    <button class=\"btn btn-success full-width\" ng-disabled=\"true\" title=\"\">Commander une boisson Bae</button>\n" +
+    "                </div>\n" +
+    "                <div class=\"col-lg-2\">\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "<footer>\n" +
+    "    <div class=\"footer navbar-fixed-bottom\">\n" +
+    "        <div class=\"container\" style=\"padding-top: 20px\">\n" +
     "\n" +
-    "</div>");
+    "            <div class=\"row\" >\n" +
+    "                <div class=\"col-lg-2\">\n" +
+    "                    <ul class=\"li-grey\">\n" +
+    "                        <li><a href=\"\">A propos de nous</a></li>\n" +
+    "                        <li><a href=\"\">Général</a></li>\n" +
+    "                        <li><a href=\"\">Contactez nous</a></li>\n" +
+    "                    </ul>\n" +
+    "                </div>\n" +
+    "\n" +
+    "                <div class=\"col-lg-3\">\n" +
+    "                    <label>Envie d'être tenu au courrant ? Inscrivez-vous au newsletter !</label>\n" +
+    "                    <input type=\"email\" placeholder=\"example@domaine.com\" class=\"form-control\">\n" +
+    "                </div>\n" +
+    "\n" +
+    "                <div class=\"col-lg-6\">\n" +
+    "                    <div style=\"\n" +
+    "    margin: auto;\">\n" +
+    "                        <div class=\"social-media \">\n" +
+    "                            <div class=\"table-icon\">\n" +
+    "                                <i class=\"fa fa-facebook facebook\" aria-hidden=\"true\"></i>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                        <div class=\"social-media\">\n" +
+    "                            <div class=\"table-icon\">\n" +
+    "                                <i class=\"fa fa-medium medium\" aria-hidden=\"true\"></i>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "\n" +
+    "                        <div class=\"social-media \">\n" +
+    "        <span class=\"table-icon\">\n" +
+    "<i class=\"fa fa-youtube-play youtube\" aria-hidden=\"true\"></i>\n" +
+    "        </span>\n" +
+    "                        </div>\n" +
+    "                        <div class=\"social-media \">\n" +
+    "        <span class=\"table-icon\">\n" +
+    "        <i class=\"fa fa-instagram instagram\" aria-hidden=\"true\"></i>\n" +
+    "        </span>\n" +
+    "                        </div>\n" +
+    "\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "\n" +
+    "            </div>\n" +
+    "\n" +
+    "        </div>\n" +
+    "\n" +
+    "        <div class=\"text-center\" style=\"font-weight: bold; margin-top: 50px\">\n" +
+    "            BAE DRINKS © 2016 - 2017 <img style=\"width: 60px; margin-left: 20px; margin-bottom: 20px\" src=\"./img/logo2.png\"><span style=\"margin-left: 20px\"><b>B</b>efore <b>A</b>nyone <b>E</b>lse</span>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "</footer>");
 }]);

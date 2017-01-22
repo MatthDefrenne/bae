@@ -21,7 +21,7 @@ module.exports = function (grunt) {
       options: {
         rename: function (moduleName) {
           console.log(moduleName);
-          return moduleName.replace('../', '');
+          return moduleName.replace('../', '/');
         }
       },
       main: {
