@@ -8563,6 +8563,9 @@ iPad 3
     .button-responsive {
         display: none;
     }
+    .social-media {
+        margin-left: 30px;
+    }
 }
 
 /* Large screens ----------- */
