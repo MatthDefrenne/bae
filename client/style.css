@@ -8500,13 +8500,12 @@ li {
 /* Smartphones (landscape) ----------- */
 @media only screen and (min-width: 320px) {
 
-
-
     .bae-sleep {
         display: none;
     }
     .footer {
-        bottom: -150px;
+        bottom: -190px;
+        text-align: center;
     }
 }
 
@@ -8613,7 +8612,7 @@ iPad 3
     .header {
         background: #3e3e3e;
     }
-    .
+
 }
 
 
