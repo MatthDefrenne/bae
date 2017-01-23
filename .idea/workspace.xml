@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1646e073-a68b-4cb3-88bb-6ae8e9508de7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/home/home.view.html" afterPath="$PROJECT_DIR$/client/components/home/home.view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/style.css" afterPath="$PROJECT_DIR$/client/style.css" />
     </list>
     <ignored path="ChatSystemAngularJS-master.iws" />
@@ -27,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1511">
-              <caret line="8507" column="26" selection-start-line="8507" selection-start-column="26" selection-end-line="8507" selection-end-column="26" />
+            <state relative-caret-position="286">
+              <caret line="8718" column="15" selection-start-line="8718" selection-start-column="15" selection-end-line="8718" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -57,7 +56,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.view.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.view.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/components/home/home.view.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="393">
@@ -158,8 +157,8 @@
         <option value="$PROJECT_DIR$/client/assets/bae.min.js" />
         <option value="$PROJECT_DIR$/client/GruntFile.js" />
         <option value="$USER_HOME$/Documents/lazerio.html" />
-        <option value="$PROJECT_DIR$/client/style.css" />
         <option value="$PROJECT_DIR$/client/components/home/home.view.html" />
+        <option value="$PROJECT_DIR$/client/style.css" />
       </list>
     </option>
   </component>
@@ -553,12 +552,12 @@
       <workItem from="1485004271076" duration="6946000" />
       <workItem from="1485073387204" duration="18429000" />
       <workItem from="1485115307146" duration="3840000" />
-      <workItem from="1485167938998" duration="2560000" />
+      <workItem from="1485167938998" duration="4152000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="268152000" />
+    <option name="totallyTimeSpent" value="269744000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -570,7 +569,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-3" y="3" width="1931" height="1053" extended-state="1" />
+    <frame x="-3" y="3" width="1931" height="1053" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2497349" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -813,14 +812,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1511">
-          <caret line="8507" column="26" selection-start-line="8507" selection-start-column="26" selection-end-line="8507" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Documents/lazerio.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -865,6 +856,14 @@
             <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#footer#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#footer#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="8718" column="15" selection-start-line="8718" selection-start-column="15" selection-end-line="8718" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
