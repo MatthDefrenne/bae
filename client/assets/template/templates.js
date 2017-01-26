@@ -38,33 +38,34 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "            </button>\n" +
     "            <button class=\"btn btn-empty btn-orange-hover btn-lg\" ng-click=\"GOTOBUY()\">ACHETER\n" +
     "            </button>\n" +
-    "            <button class=\"btn btn-empty btn-green-hover btn-lg\">CONTACT\n" +
+    "            <button class=\"btn btn-empty btn-red-hover btn-lg\">CONTACT\n" +
     "            </button>\n" +
     "        </div>\n" +
     "        <div style=\"\n" +
     "    margin: auto; margin-top: 75px; margin-bottom: 50px\">\n" +
     "            <div class=\"social-media \">\n" +
+    "                <a href=\"https://www.facebook.com/BaeDrinks/?fref=ts\">\n" +
     "                <div class=\"table-icon\">\n" +
-    "                    <i class=\"fa fa-facebook facebook\" aria-hidden=\"true\"></i>\n" +
+    "                    <i class=\"fa fa-facebook facebook\"\n" +
+    "                                                                                  aria-hidden=\"true\"></i>\n" +
     "                </div>\n" +
+    "                </a>\n" +
     "            </div>\n" +
-    "\n" +
     "            <div class=\"social-media\">\n" +
+    "                <a href=\"https://medium.com/@baedrinks\">\n" +
     "                <div class=\"table-icon\">\n" +
-    "                    <i class=\"fa fa-medium medium\" aria-hidden=\"true\"></i>\n" +
+    "                     <i class=\"fa fa-medium medium\"\n" +
+    "                                                                aria-hidden=\"true\"></i>\n" +
     "                </div>\n" +
+    "                </a>\n" +
     "            </div>\n" +
-    "\n" +
     "            <div class=\"social-media \">\n" +
+    "                <a href=\"https://www.instagram.com/baedrinks/\">\n" +
     "        <span class=\"table-icon\">\n" +
-    "<i class=\"fa fa-youtube-play youtube\" aria-hidden=\"true\"></i>\n" +
-    "        </span>\n" +
-    "            </div>\n" +
+    "                <i class=\"fa fa-instagram instagram\" aria-hidden=\"true\"></i>\n" +
     "\n" +
-    "            <div class=\"social-media \">\n" +
-    "        <span class=\"table-icon\">\n" +
-    "        <i class=\"fa fa-instagram instagram\" aria-hidden=\"true\"></i>\n" +
     "        </span>\n" +
+    "                </a>\n" +
     "            </div>\n" +
     "\n" +
     "        </div>\n" +
@@ -107,7 +108,7 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "                </p>\n" +
     "            </div><!-- /.col-lg-4 -->\n" +
     "            <div class=\"col-lg-1\">\n" +
-    "                <img src=\"./img/arrow2.png\" class=\"arrow\" >\n" +
+    "                <img src=\"./img/arrow2.png\" class=\"arrow\">\n" +
     "            </div>\n" +
     "            <div class=\"col-lg-3\">\n" +
     "                <div class=\"img-center\">\n" +
@@ -118,7 +119,7 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "                </p>\n" +
     "            </div><!-- /.col-lg-4 -->\n" +
     "            <div class=\"col-lg-1\">\n" +
-    "                <img src=\"./img/arrow.png\" class=\"arrow\" >\n" +
+    "                <img src=\"./img/arrow.png\" class=\"arrow\">\n" +
     "            </div>\n" +
     "            <div class=\"col-lg-3\">\n" +
     "                <div class=\"img-center\">\n" +
@@ -131,12 +132,13 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "    </div>\n" +
     "</div>\n" +
     "<div class=\"container-global-3\" id=\"PRODUCT\">\n" +
-    "    <div class=\"container marketing\"  style=\"display: table-cell; vertical-align: middle; text-align: center; \">\n" +
+    "    <div class=\"container marketing\" style=\"display: table-cell; vertical-align: middle; text-align: center; \">\n" +
     "        <div class=\"container\" style=\"margin-bottom: 40px; padding-top: 20px;\">\n" +
-    "            <h1 class=\"h1-custom\"  ng-if=\"!hasClickedOnProduct\">\n" +
+    "            <h1 class=\"h1-custom\" ng-if=\"!hasClickedOnProduct\">\n" +
     "                NOS PRODUITS\n" +
     "            </h1>\n" +
-    "            <p ng-if=\"!hasClickedOnProduct\">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula\n" +
+    "            <p ng-if=\"!hasClickedOnProduct\">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget\n" +
+    "                quam. Vestibulum id ligula\n" +
     "            </p>\n" +
     "            <div class=\"row\" style=\"margin-top: 25px\" ng-if=\"!hasClickedOnProduct\">\n" +
     "                <div class=\"col-lg-2\">\n" +
@@ -145,7 +147,8 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "                    <div class=\"bae-sleep\"></div>\n" +
     "                    <h1>BAE BRAIN\n" +
     "                    </h1>\n" +
-    "                    <p class=\"lead\">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.</p>\n" +
+    "                    <p class=\"lead\">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis\n" +
+    "                        euismod semper.</p>\n" +
     "                    <p style=\"font-weight: bold; font-size: 25px\">2,49 Euros</p>\n" +
     "                    <button class=\"button-responsive btn btn-success\">Voir la boisson</button>\n" +
     "                </div>\n" +
@@ -155,7 +158,8 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "                    <div class=\"bae-sleep\"></div>\n" +
     "                    <h1>BAE SLEEP\n" +
     "                    </h1>\n" +
-    "                    <p class=\"lead\">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.</p>\n" +
+    "                    <p class=\"lead\">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis\n" +
+    "                        euismod semper.</p>\n" +
     "                    <p style=\"font-weight: bold; font-size: 25px\">2,49 Euros</p>\n" +
     "                    <button class=\"button-responsive btn btn-success\">Voir la boisson</button>\n" +
     "\n" +
@@ -168,15 +172,19 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "                    <i class=\"fa fa-arrow-left\" aria-hidden=\"true\"></i>\n" +
     "                    Retour aux produits\n" +
     "                </div>\n" +
-    "                    <div class=\"col-md-7 col-md-push-5\">\n" +
-    "                        <h1 style=\"font-size: 50px\">{{name}}</h1>\n" +
-    "                        <p class=\"lead\">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>\n" +
-    "                        <p class=\"lead\">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>\n" +
-    "                        <button class=\"btn btn-success full-width fs20\" ng-click=\"GOTOBUY()\">Acheter une {{name}}</button>\n" +
-    "                    </div>\n" +
-    "                    <div class=\"col-md-5 col-md-pull-7\">\n" +
-    "                        <div class=\"bae-sleep\"></div>\n" +
-    "                    </div>\n" +
+    "                <div class=\"col-md-7 col-md-push-5\">\n" +
+    "                    <h1 style=\"font-size: 50px\">{{name}}</h1>\n" +
+    "                    <p class=\"lead\">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis\n" +
+    "                        euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus,\n" +
+    "                        tellus ac cursus commodo.</p>\n" +
+    "                    <p class=\"lead\">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis\n" +
+    "                        euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus,\n" +
+    "                        tellus ac cursus commodo.</p>\n" +
+    "                    <button class=\"btn btn-success full-width fs20\" ng-click=\"GOTOBUY()\">Acheter une {{name}}</button>\n" +
+    "                </div>\n" +
+    "                <div class=\"col-md-5 col-md-pull-7\">\n" +
+    "                    <div class=\"bae-sleep\"></div>\n" +
+    "                </div>\n" +
     "            </div>\n" +
     "        </div>\n" +
     "    </div>\n" +
@@ -187,15 +195,17 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "            <h1 class=\"h1-custom\">\n" +
     "                ACHETER BAE\n" +
     "            </h1>\n" +
-    "            <p style=\"font-weight: bold; font-size: 25px\">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula</p>\n" +
-    "            <div  class=\"row\">\n" +
+    "            <p style=\"font-weight: bold; font-size: 25px\">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in,\n" +
+    "                egestas eget quam. Vestibulum id ligula</p>\n" +
+    "            <div class=\"row\">\n" +
     "                <div class=\"col-lg-2\">\n" +
     "                </div>\n" +
     "                <div class=\"col-lg-4\">\n" +
-    "                    <button class=\"btn btn-success full-width \">Avoir une invitation</button>\n" +
+    "                    <button class=\"btn btn-success full-width  \" ng-disabled=\"true\" title=\"Les invitations serons ouverte très prochainement\">Avoir une invitation</button>\n" +
     "                </div>\n" +
     "                <div class=\"col-lg-4\">\n" +
-    "                    <button class=\"btn btn-success full-width\" ng-disabled=\"true\" title=\"\">Commander une boisson Bae</button>\n" +
+    "                    <button class=\"btn btn-success full-width\" ng-disabled=\"true\" title=\"La commande de boisson bae n'est pas encore disponible\">Commander une boisson Bae\n" +
+    "                    </button>\n" +
     "                </div>\n" +
     "                <div class=\"col-lg-2\">\n" +
     "                </div>\n" +
@@ -207,7 +217,7 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "    <div class=\"footer navbar-fixed-bottom\">\n" +
     "        <div class=\"container\" style=\"padding-top: 20px\">\n" +
     "\n" +
-    "            <div class=\"row\" >\n" +
+    "            <div class=\"row\">\n" +
     "                <div class=\"col-lg-2\">\n" +
     "                    <ul class=\"li-grey\">\n" +
     "                        <li><a href=\"\">A propos de nous</a></li>\n" +
@@ -225,25 +235,28 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "                    <div style=\"\n" +
     "    margin: auto;\">\n" +
     "                        <div class=\"social-media \">\n" +
+    "                            <a href=\"https://www.facebook.com/BaeDrinks/?fref=ts\">\n" +
     "                            <div class=\"table-icon\">\n" +
-    "                                <i class=\"fa fa-facebook facebook\" aria-hidden=\"true\"></i>\n" +
+    "                              <i class=\"fa fa-facebook facebook\"\n" +
+    "                                                                                         aria-hidden=\"true\"></i>\n" +
     "                            </div>\n" +
+    "                            </a>\n" +
     "                        </div>\n" +
     "                        <div class=\"social-media\">\n" +
+    "                            <a href=\"https://medium.com/@baedrinks\">\n" +
     "                            <div class=\"table-icon\">\n" +
-    "                                <i class=\"fa fa-medium medium\" aria-hidden=\"true\"></i>\n" +
+    "                                <i class=\"fa fa-medium medium\"\n" +
+    "                                                                            aria-hidden=\"true\"></i>\n" +
     "                            </div>\n" +
+    "                            </a>\n" +
     "                        </div>\n" +
+    "                        <div class=\"social-media \">\n" +
+    "                            <a href=\"https://www.instagram.com/baedrinks/\">\n" +
+    "        <span class=\"table-icon\">\n" +
+    "               <i class=\"fa fa-instagram instagram\" aria-hidden=\"true\"></i>\n" +
     "\n" +
-    "                        <div class=\"social-media \">\n" +
-    "        <span class=\"table-icon\">\n" +
-    "<i class=\"fa fa-youtube-play youtube\" aria-hidden=\"true\"></i>\n" +
     "        </span>\n" +
-    "                        </div>\n" +
-    "                        <div class=\"social-media \">\n" +
-    "        <span class=\"table-icon\">\n" +
-    "        <i class=\"fa fa-instagram instagram\" aria-hidden=\"true\"></i>\n" +
-    "        </span>\n" +
+    "                            </a>\n" +
     "                        </div>\n" +
     "\n" +
     "                    </div>\n" +
@@ -254,7 +267,8 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "        </div>\n" +
     "\n" +
     "        <div class=\"text-center\" style=\"font-weight: bold; margin-top: 50px\">\n" +
-    "            BAE DRINKS © 2016 - 2017 <img style=\"width: 60px; margin-left: 20px; margin-bottom: 20px\" src=\"./img/logo2.png\"><span style=\"margin-left: 20px\"><b>B</b>efore <b>A</b>nyone <b>E</b>lse</span>\n" +
+    "            BAE DRINKS © 2017 <img style=\"width: 60px; margin-left: 20px; margin-bottom: 20px\"\n" +
+    "                                   src=\"./img/logo2.png\"><span style=\"margin-left: 20px\"><b>B</b>efore <b>A</b>nyone <b>E</b>lse</span>\n" +
     "        </div>\n" +
     "    </div>\n" +
     "</footer>");
