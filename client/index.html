@@ -12,6 +12,11 @@
     <!-- Hotjar Tracking Code for http://localhost:3000/ -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="description" content="BaeDrinks help you to relax, beat insomnia and improve your sleep quality, NATURALLY">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="/">
     <title>Bae | Boissons naturelles</title>
 
@@ -21,10 +26,11 @@
     <script>
         var OneSignal = window.OneSignal || [];
         OneSignal.push(["init", {
-            appId: "6a5793bc-30e6-4d40-b0d0-2cef4e1fdc94",
-            autoRegister: false,
+            appId: "70a3cdc9-e39b-43ef-8821-d54538fc8cf2",
+            subdomainName: 'BaeDrinks',
+            autoRegister: true, /* Set to true to automatically prompt visitors */
             notifyButton: {
-                enable: true /* Set to false to hide */
+                enable: false /* Set to false to hide */
             }
         }]);
     </script>
@@ -47,16 +53,33 @@
 </script>
 <body>
 <div id="fb-root"></div>
-<div ng-view></div>
-<script src="/assets/bae.min.js"></script>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1035481416567889";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <link href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
       crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/lodash/4.16.6/lodash.min.js"></script>
-<link rel="stylesheet" href="style_m.css" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css" crossorigin="anonymous">
 
+<div ng-view></div>
+
+<script src="/bower_components/angular/angular.js"></script>
+<script src="/bower_components/angular-route/angular-route.js"></script>
+<script src="/bower_components/ngInfiniteScroll/ng-infinite-scroll.js"></script>
+<script src="/assets/dev/app.js"></script>
+
+
+<!-- injector:js -->
+<script src="components/home/home.component.js"></script>
+<!-- endinjector -->
 </body>
 </html>
 .

@@ -12,8 +12,8 @@
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-left">
                 <li><a data-scroll class="btn-green-hover" ng-click="GOTOWHAT()">WHAT IS BAE ?</a></li>
-                <li><a data-scrol class="btn-blue-hover" ng-click="GOTOPRODUCT()">PRODUCTS</a></li>
-                <li><a data-scroll class="btn-orange-hover" ng-click="GOTOBUY()">BUY BAE</a></li>
+                <li><a data-scrol class="btn-blue-hover" ng-click="GOTOPRODUCT()">OUR BAE DRINKS</a></li>
+                <li><a data-scroll class="btn-orange-hover" ng-click="GOTOBUY()">ORDER BAE</a></li>
                 <li><a data-scroll>CONTACT</a></li>
             </ul>
         </div><!--/.nav-collapse -->
@@ -22,15 +22,14 @@
 
 <div class="jumbotron header">
     <div class="container container-header">
-        <h1 style="font-weight: bold; font-size: 70px">Boissons <img src="./img/logo.png"></h1>
-        <p>All BaeDrinks products are naturally designed to help people improve their life experience</p>
+        <img src="./img/logo.png">
 
-        <div style="margin-top: 20px">
+        <div style="margin-top: 40px">
             <button class="btn btn-empty btn-green-hover btn-lg" ng-click="GOTOWHAT()">WHAT IS BAE  ?
             </button>
-            <button class="btn btn-empty btn-blue-hover btn-lg" ng-click="GOTOPRODUCT()">PRODUCTS
+            <button class="btn btn-empty btn-blue-hover btn-lg" ng-click="GOTOPRODUCT()">OUR BAE DRINKS
             </button>
-            <button class="btn btn-empty btn-orange-hover btn-lg" ng-click="GOTOBUY()">BUY BAE
+            <button class="btn btn-empty btn-orange-hover btn-lg" ng-click="GOTOBUY()">ORDER BAE
             </button>
             <button class="btn btn-empty btn-red-hover btn-lg">CONTACT
             </button>
@@ -69,15 +68,19 @@
 <div class="container-global-1" id="WHATBAE">
     <div class="container marketing" style="display: table-cell; vertical-align: middle">
         <div class="container" style="margin-bottom: 40px; ">
-            <h1 class="h1-custom">WHAT IS BAE ?</h1>
+            <h1 class="h1-custom">WHAT IS BAE DRINKS ?</h1>
             <div class="row">
                 <div class="col-lg-2">
                 </div>
                 <div class="col-lg-8" style="font-size: 25px; margin-top: 25px">
-                    <p>We believe that Nature has always taught us, how to stay healthy and strong. In everything we do,
-                        we believe that Nature has something to teach us, to do it Better and Simpler.
-                        <p>
-                        All BaeDrinks Products are Naturally designed to help people improve their life experience.</p>
+                    <p>At Bae we Listen carefully to the nature
+                        to help people improve their lifestyle
+
+                        Nature has always taught us how to stay safe and healthy. Everytime we deviate
+                        from the natural schema, things go missy and our lifestyle quality decreases!
+
+                        <p style="margin-top: 20px;">At bae, we analyze how things happen naturally, then we design natural
+                        drinks based on that, to help people improve their lifestyle quality.</p>
                 </div>
                 <div class="col-lg-2">
                 </div>
@@ -86,88 +89,36 @@
         </div>
     </div>
 </div>
-<div class="container-global-2">
-    <div class="container marketing" style="padding-top: 50px;">
-        <div class="row">
-            <div class="col-lg-3">
-                <div class="img-center">
-                    <img class="img-circle" src="./img/step-1.png" alt="Generic placeholder image" width="140"
-                         height="140">
-                </div>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies
-                </p>
-            </div><!-- /.col-lg-4 -->
-            <div class="col-lg-1">
-                <img src="./img/arrow2.png" class="arrow">
-            </div>
-            <div class="col-lg-3">
-                <div class="img-center">
-                    <img class="img-circle" src="./img/step-2.png" alt="Generic placeholder image" width="140"
-                         height="140">
-                </div>
-                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras
-                </p>
-            </div><!-- /.col-lg-4 -->
-            <div class="col-lg-1">
-                <img src="./img/arrow.png" class="arrow">
-            </div>
-            <div class="col-lg-3">
-                <div class="img-center">
-                    <img class="img-circle " src="./img/step-3.png" width="140" height="140">
-                </div>
-                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula
-                </p>
-            </div><!-- /.col-lg-4 -->
-        </div><!-- /.row -->
-    </div>
-</div>
 <div class="container-global-3" id="PRODUCT">
     <div class="container marketing" style="display: table-cell; vertical-align: middle; text-align: center; ">
         <div class="container" style="margin-bottom: 40px; padding-top: 20px;">
             <h1 class="h1-custom" ng-if="!hasClickedOnProduct">
-                OUR PRODUCTS
+               BAE SLEEP
             </h1>
-            <p ng-if="!hasClickedOnProduct">Discover fully natural products
-            </p>
-            <div class="row" style="margin-top: 25px" ng-if="!hasClickedOnProduct">
-                <div class="col-lg-2">
-                </div>
-                <div class="col-lg-3 cursor" ng-click="clickOnProduct('BAE BRAIN')">
-                    <div class="bae-sleep"></div>
-                    <h1>BAE BRAIN
-                    </h1>
-                    <p class="lead">Focus + memory</p>
-                    <p style="font-weight: bold; font-size: 25px">2,49 Euros</p>
-                    <button class="button-responsive btn btn-success">Voir la boisson</button>
-                </div>
-                <div class="col-lg-1">
-                </div>
-                <div class="col-lg-3 cursor" ng-click="clickOnProduct('BAE SLEEP')">
-                    <div class="bae-sleep"></div>
-                    <h1>BAE SLEEP
-                    </h1>
-                    <p class="lead">Sleep + relaxe</p>
-                    <p style="font-weight: bold; font-size: 25px">2,49 Euros</p>
-                    <button class="button-responsive btn btn-success">Voir la boisson</button>
-
-                </div>
-                <div class="col-lg-2">
-                </div>
-            </div>
-            <div class="row" style="margin-top: 25px" ng-if="hasClickedOnProduct">
-                <div class="fs20 cursor" style="margin-bottom: 20px" ng-click="closeProduct()">
+            <div class="row" style="margin-top: 25px" >
+                <div class="fs20 cursor" style="margin-bottom: 20px" ng-click="closeProduct()" ng-if="false">
                     <i class="fa fa-arrow-left" aria-hidden="true"></i>
                     Retour aux produits
                 </div>
                 <div class="col-md-7 col-md-push-5">
-                    <h1 style="font-size: 50px">{{name}}</h1>
-                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis
-                        euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus,
-                        tellus ac cursus commodo.</p>
-                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis
-                        euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus,
-                        tellus ac cursus commodo.</p>
-                    <button class="btn btn-success full-width fs20" ng-click="GOTOBUY()">Acheter une {{name}}</button>
+                    <p class="lead">
+                        Do you want to relax and take a nap ? Do you hardly find sleep overnights ?
+                        At Bae we thought about you, we studied how your body and specially your brain
+                        works, then we designed a tasty drink to help you relax and sleep.
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+                            <p>Melatonine</p>
+                        </div><!-- /.col-lg-4 -->
+                        <div class="col-lg-6">
+                            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+                            <p>Flavor</p>
+                        </div><!-- /.col-lg-4 -->
+                    </div><!-- /.row -->
+
+
+                    <button class="btn btn-success full-width fs20" ng-click="GOTOBUY()">Acheter une bae sleep</button>
                 </div>
                 <div class="col-md-5 col-md-pull-7">
                     <div class="bae-sleep"></div>
