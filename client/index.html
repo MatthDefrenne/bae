@@ -9,25 +9,48 @@
 <html lang="fr" ng-app="myApp" class="no-js"> <!--<![endif]-->
 <head>
 
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:402742,hjsv:5};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+
+
     <!-- Hotjar Tracking Code for http://localhost:3000/ -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="UTF-8">
-    <meta name="description" content="BaeDrinks help you to relax, beat insomnia and improve your sleep quality, NATURALLY">
-    <meta name="keywords" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="/">
-    <title>Bae | Boissons naturelles</title>
+    <meta name="description" content="Les boissons baedrinks sont conçus pour aider les gens à améliorer leur expérience de vie : Sommeil, travail, sport,...">
+    <meta name="keywords" content="sommeil, boissons naturelles, somnifère naturelle, somnifère, baedrinks, bae, brain, natural drink,">.
+    <meta name="author" content="baedrinks" />
 
+    <!---- FACEBOOK ---->
+
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Baedrinks - boisson somnifère naturelle" />
+    <meta property="og:image" content="/img/topheader.jpg" />
+    <meta property="og:url" content="https://www.baedrinks.com/" />
+    <meta property="og:description" content="Les boissons baedrinks sont conçus pour aider les gens à améliorer leur expérience de vie : Sommeil, travail, sport,..." />
+    <!---- Twitter ---->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Baedrinks - boisson somnifère naturelle" />
+    <meta name="twitter:description" content="Les boissons baedrinks sont conçus pour aider les gens à améliorer leur expérience de vie : Sommeil, travail, sport,..." />
+    <meta name="twitter:image" content="/img/logo.png" />
+
+    <base href="/">
+    <title>Baedrinks - boisson somnifère naturelle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async='async'></script>
     <script>
         var OneSignal = window.OneSignal || [];
         OneSignal.push(["init", {
-            appId: "70a3cdc9-e39b-43ef-8821-d54538fc8cf2",
-            subdomainName: 'BaeDrinks',
-            autoRegister: true, /* Set to true to automatically prompt visitors */
+            appId: "6a5793bc-30e6-4d40-b0d0-2cef4e1fdc94",
+            autoRegister: true,
             notifyButton: {
                 enable: false /* Set to false to hide */
             }
@@ -47,19 +70,13 @@
         m.parentNode.insertBefore(a, m)
     })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-    ga('create', 'UA-89310444-1', 'auto');
+    ga('create', 'UA-90241724-1', 'auto');
     ga('send', 'pageview');
 </script>
 <body>
 <div id="fb-root"></div>
-<script>(function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1035481416567889";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+<div ng-view></div>
+<script src="/assets/bae.min.js"></script>
 <link href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
       crossorigin="anonymous">
@@ -68,17 +85,6 @@
 <script src="https://cdn.jsdelivr.net/lodash/4.16.6/lodash.min.js"></script>
 <link rel="stylesheet" href="style.css" crossorigin="anonymous">
 
-<div ng-view></div>
-
-<script src="/bower_components/angular/angular.js"></script>
-<script src="/bower_components/angular-route/angular-route.js"></script>
-<script src="/bower_components/ngInfiniteScroll/ng-infinite-scroll.js"></script>
-<script src="/assets/dev/app.js"></script>
-
-
-<!-- injector:js -->
-<script src="components/home/home.component.js"></script>
-<!-- endinjector -->
 </body>
 </html>
 .

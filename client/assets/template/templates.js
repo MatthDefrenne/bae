@@ -15,9 +15,9 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "        </div>\n" +
     "        <div id=\"navbar\" class=\"navbar-collapse collapse\">\n" +
     "            <ul class=\"nav navbar-nav navbar-left\">\n" +
-    "                <li><a data-scroll class=\"btn-green-hover\" ng-click=\"GOTOWHAT()\">WHAT IS BAE ?</a></li>\n" +
-    "                <li><a data-scrol class=\"btn-blue-hover\" ng-click=\"GOTOPRODUCT()\">PRODUCTS</a></li>\n" +
-    "                <li><a data-scroll class=\"btn-orange-hover\" ng-click=\"GOTOBUY()\">BUY BAE</a></li>\n" +
+    "                <li><a data-scroll class=\"btn-green-hover\" title=\"WHAT IS BAE ?\" ng-click=\"GOTOWHAT()\">WHAT IS BAE ?</a></li>\n" +
+    "                <li><a data-scrol class=\"btn-blue-hover\" title=\"OUR BAE DRINKS\" ng-click=\"GOTOPRODUCT()\">OUR BAE DRINKS</a></li>\n" +
+    "                <li><a data-scroll class=\"btn-orange-hover\" title=\"ORDER BAE\" ng-click=\"GOTOBUY()\">ORDER BAE</a></li>\n" +
     "                <li><a data-scroll>CONTACT</a></li>\n" +
     "            </ul>\n" +
     "        </div><!--/.nav-collapse -->\n" +
@@ -26,17 +26,17 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "\n" +
     "<div class=\"jumbotron header\">\n" +
     "    <div class=\"container container-header\">\n" +
-    "        <h1 style=\"font-weight: bold; font-size: 70px\">Boissons <img src=\"./img/logo.png\"></h1>\n" +
-    "        <p>All BaeDrinks products are naturally designed to help people improve their life experience</p>\n" +
     "\n" +
-    "        <div style=\"margin-top: 20px\">\n" +
-    "            <button class=\"btn btn-empty btn-green-hover btn-lg\" ng-click=\"GOTOWHAT()\">WHAT IS BAE  ?\n" +
+    "            <img alt=\"baedrink - improve your self naturaly\" style=\"width: 80%\" src=\"./img/logo.png\">\n" +
+    "\n" +
+    "        <div style=\"margin-top: 40px\">\n" +
+    "            <button class=\"btn btn-empty btn-green-hover btn-lg\" href=\"WHATBAE\" title=\"WHAT IS BAE ?\" ng-click=\"GOTOWHAT()\">WHAT IS BAE  ?\n" +
     "            </button>\n" +
-    "            <button class=\"btn btn-empty btn-blue-hover btn-lg\" ng-click=\"GOTOPRODUCT()\">PRODUCTS\n" +
+    "            <button class=\"btn btn-empty btn-blue-hover btn-lg\" href=\"PRODUCT\" title=\"OUR BAE DRINKS\" ng-click=\"GOTOPRODUCT()\">OUR BAE DRINKS\n" +
     "            </button>\n" +
-    "            <button class=\"btn btn-empty btn-orange-hover btn-lg\" ng-click=\"GOTOBUY()\">BUY BAE\n" +
+    "            <button class=\"btn btn-empty btn-orange-hover btn-lg\" href=\"BUY\" title=\"ORDER BAE\" ng-click=\"GOTOBUY()\">ORDER BAE\n" +
     "            </button>\n" +
-    "            <button class=\"btn btn-empty btn-red-hover btn-lg\">CONTACT\n" +
+    "            <button class=\"btn btn-empty btn-red-hover btn-lg\" title=\"CONTACT\">CONTACT\n" +
     "            </button>\n" +
     "        </div>\n" +
     "        <div style=\"\n" +
@@ -73,15 +73,19 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "<div class=\"container-global-1\" id=\"WHATBAE\">\n" +
     "    <div class=\"container marketing\" style=\"display: table-cell; vertical-align: middle\">\n" +
     "        <div class=\"container\" style=\"margin-bottom: 40px; \">\n" +
-    "            <h1 class=\"h1-custom\">WHAT IS BAE ?</h1>\n" +
+    "            <h1 class=\"h1-custom\">WHAT IS BAE DRINKS ?</h1>\n" +
     "            <div class=\"row\">\n" +
     "                <div class=\"col-lg-2\">\n" +
     "                </div>\n" +
     "                <div class=\"col-lg-8\" style=\"font-size: 25px; margin-top: 25px\">\n" +
-    "                    <p>We believe that Nature has always taught us, how to stay healthy and strong. In everything we do,\n" +
-    "                        we believe that Nature has something to teach us, to do it Better and Simpler.\n" +
-    "                        <p>\n" +
-    "                        All BaeDrinks Products are Naturally designed to help people improve their life experience.</p>\n" +
+    "                    <p>At Bae we Listen carefully to the nature\n" +
+    "                        to help people improve their lifestyle\n" +
+    "\n" +
+    "                        Nature has always taught us how to stay safe and healthy. Everytime we deviate\n" +
+    "                        from the natural schema, things go missy and our lifestyle quality decreases!\n" +
+    "\n" +
+    "                        <p style=\"margin-top: 20px;\">At bae, we analyze how things happen naturally, then we design natural\n" +
+    "                        drinks based on that, to help people improve their lifestyle quality.</p>\n" +
     "                </div>\n" +
     "                <div class=\"col-lg-2\">\n" +
     "                </div>\n" +
@@ -90,88 +94,36 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "        </div>\n" +
     "    </div>\n" +
     "</div>\n" +
-    "<div class=\"container-global-2\">\n" +
-    "    <div class=\"container marketing\" style=\"padding-top: 50px;\">\n" +
-    "        <div class=\"row\">\n" +
-    "            <div class=\"col-lg-3\">\n" +
-    "                <div class=\"img-center\">\n" +
-    "                    <img class=\"img-circle\" src=\"./img/step-1.png\" alt=\"Generic placeholder image\" width=\"140\"\n" +
-    "                         height=\"140\">\n" +
-    "                </div>\n" +
-    "                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies\n" +
-    "                </p>\n" +
-    "            </div><!-- /.col-lg-4 -->\n" +
-    "            <div class=\"col-lg-1\">\n" +
-    "                <img src=\"./img/arrow2.png\" class=\"arrow\">\n" +
-    "            </div>\n" +
-    "            <div class=\"col-lg-3\">\n" +
-    "                <div class=\"img-center\">\n" +
-    "                    <img class=\"img-circle\" src=\"./img/step-2.png\" alt=\"Generic placeholder image\" width=\"140\"\n" +
-    "                         height=\"140\">\n" +
-    "                </div>\n" +
-    "                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras\n" +
-    "                </p>\n" +
-    "            </div><!-- /.col-lg-4 -->\n" +
-    "            <div class=\"col-lg-1\">\n" +
-    "                <img src=\"./img/arrow.png\" class=\"arrow\">\n" +
-    "            </div>\n" +
-    "            <div class=\"col-lg-3\">\n" +
-    "                <div class=\"img-center\">\n" +
-    "                    <img class=\"img-circle \" src=\"./img/step-3.png\" width=\"140\" height=\"140\">\n" +
-    "                </div>\n" +
-    "                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula\n" +
-    "                </p>\n" +
-    "            </div><!-- /.col-lg-4 -->\n" +
-    "        </div><!-- /.row -->\n" +
-    "    </div>\n" +
-    "</div>\n" +
     "<div class=\"container-global-3\" id=\"PRODUCT\">\n" +
     "    <div class=\"container marketing\" style=\"display: table-cell; vertical-align: middle; text-align: center; \">\n" +
     "        <div class=\"container\" style=\"margin-bottom: 40px; padding-top: 20px;\">\n" +
     "            <h1 class=\"h1-custom\" ng-if=\"!hasClickedOnProduct\">\n" +
-    "                OUR PRODUCTS\n" +
+    "               BAE SLEEP\n" +
     "            </h1>\n" +
-    "            <p ng-if=\"!hasClickedOnProduct\">Discover fully natural products\n" +
-    "            </p>\n" +
-    "            <div class=\"row\" style=\"margin-top: 25px\" ng-if=\"!hasClickedOnProduct\">\n" +
-    "                <div class=\"col-lg-2\">\n" +
-    "                </div>\n" +
-    "                <div class=\"col-lg-3 cursor\" ng-click=\"clickOnProduct('BAE BRAIN')\">\n" +
-    "                    <div class=\"bae-sleep\"></div>\n" +
-    "                    <h1>BAE BRAIN\n" +
-    "                    </h1>\n" +
-    "                    <p class=\"lead\">Focus + memory</p>\n" +
-    "                    <p style=\"font-weight: bold; font-size: 25px\">2,49 Euros</p>\n" +
-    "                    <button class=\"button-responsive btn btn-success\">Voir la boisson</button>\n" +
-    "                </div>\n" +
-    "                <div class=\"col-lg-1\">\n" +
-    "                </div>\n" +
-    "                <div class=\"col-lg-3 cursor\" ng-click=\"clickOnProduct('BAE SLEEP')\">\n" +
-    "                    <div class=\"bae-sleep\"></div>\n" +
-    "                    <h1>BAE SLEEP\n" +
-    "                    </h1>\n" +
-    "                    <p class=\"lead\">Sleep + relaxe</p>\n" +
-    "                    <p style=\"font-weight: bold; font-size: 25px\">2,49 Euros</p>\n" +
-    "                    <button class=\"button-responsive btn btn-success\">Voir la boisson</button>\n" +
-    "\n" +
-    "                </div>\n" +
-    "                <div class=\"col-lg-2\">\n" +
-    "                </div>\n" +
-    "            </div>\n" +
-    "            <div class=\"row\" style=\"margin-top: 25px\" ng-if=\"hasClickedOnProduct\">\n" +
-    "                <div class=\"fs20 cursor\" style=\"margin-bottom: 20px\" ng-click=\"closeProduct()\">\n" +
+    "            <div class=\"row\" style=\"margin-top: 25px\" >\n" +
+    "                <div class=\"fs20 cursor\" style=\"margin-bottom: 20px\" ng-click=\"closeProduct()\" ng-if=\"false\">\n" +
     "                    <i class=\"fa fa-arrow-left\" aria-hidden=\"true\"></i>\n" +
     "                    Retour aux produits\n" +
     "                </div>\n" +
     "                <div class=\"col-md-7 col-md-push-5\">\n" +
-    "                    <h1 style=\"font-size: 50px\">{{name}}</h1>\n" +
-    "                    <p class=\"lead\">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis\n" +
-    "                        euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus,\n" +
-    "                        tellus ac cursus commodo.</p>\n" +
-    "                    <p class=\"lead\">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis\n" +
-    "                        euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus,\n" +
-    "                        tellus ac cursus commodo.</p>\n" +
-    "                    <button class=\"btn btn-success full-width fs20\" ng-click=\"GOTOBUY()\">Acheter une {{name}}</button>\n" +
+    "                    <p class=\"lead\">\n" +
+    "                        Do you want to relax and take a nap ? Do you hardly find sleep overnights ?\n" +
+    "                        At Bae we thought about you, we studied how your body and specially your brain\n" +
+    "                        works, then we designed a tasty drink to help you relax and sleep.\n" +
+    "\n" +
+    "                    <div class=\"row\">\n" +
+    "                        <div class=\"col-lg-6\">\n" +
+    "                            <img class=\"img-circle\" src=\"data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">\n" +
+    "                            <p>Melatonine</p>\n" +
+    "                        </div><!-- /.col-lg-4 -->\n" +
+    "                        <div class=\"col-lg-6\">\n" +
+    "                            <img class=\"img-circle\" src=\"data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">\n" +
+    "                            <p>Flavor</p>\n" +
+    "                        </div><!-- /.col-lg-4 -->\n" +
+    "                    </div><!-- /.row -->\n" +
+    "\n" +
+    "\n" +
+    "                    <button class=\"btn btn-success full-width fs20\" ng-click=\"GOTOBUY()\">buy a bae sleep</button>\n" +
     "                </div>\n" +
     "                <div class=\"col-md-5 col-md-pull-7\">\n" +
     "                    <div class=\"bae-sleep\"></div>\n" +
