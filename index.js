@@ -9,7 +9,7 @@ var bodyParser = require('body-parser')
 
 
 var port = process.env.PORT || 8080;
-
+app.use(require('prerender-node').set('prerenderToken', 'mwXTCGiIIIlSwxvPB2BP'));
 app.use(helmet());
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
