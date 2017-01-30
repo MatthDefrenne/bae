@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1646e073-a68b-4cb3-88bb-6ae8e9508de7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/bae.min.js" afterPath="$PROJECT_DIR$/client/assets/bae.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/dev/index.html" afterPath="$PROJECT_DIR$/client/assets/dev/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/prod/index.html" afterPath="$PROJECT_DIR$/client/assets/prod/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/assets/template/templates.js" afterPath="$PROJECT_DIR$/client/assets/template/templates.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/home/home.view.html" afterPath="$PROJECT_DIR$/client/components/home/home.view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/index.html" afterPath="$PROJECT_DIR$/client/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/robot.txt" afterPath="$PROJECT_DIR$/client/robot.txt" />
     </list>
     <ignored path="ChatSystemAngularJS-master.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,10 +65,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/assets/prod/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
+            <state relative-caret-position="-759">
               <caret line="17" column="60" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
               <folding />
             </state>
@@ -126,11 +120,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="465">
+              <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -194,9 +188,9 @@
         <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/client/components/home/home.view.html" />
         <option value="$PROJECT_DIR$/client/robot.txt" />
-        <option value="$PROJECT_DIR$/client/index.html" />
         <option value="$PROJECT_DIR$/client/assets/prod/index.html" />
         <option value="$PROJECT_DIR$/client/assets/dev/index.html" />
+        <option value="$PROJECT_DIR$/client/index.html" />
       </list>
     </option>
   </component>
@@ -571,12 +565,12 @@
       <workItem from="1485631972310" duration="2317000" />
       <workItem from="1485696118898" duration="5599000" />
       <workItem from="1485768378242" duration="5866000" />
-      <workItem from="1485788029174" duration="1648000" />
+      <workItem from="1485788029174" duration="1712000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="299078000" />
+    <option name="totallyTimeSpent" value="299142000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -820,14 +814,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/img/topheader.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -898,8 +884,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/assets/prod/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
+        <state relative-caret-position="-759">
           <caret line="17" column="60" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
           <folding />
         </state>
       </provider>
