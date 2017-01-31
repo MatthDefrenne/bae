@@ -1,4 +1,4 @@
-angular.module('templates-main', ['/components/contact/contact.view.html', '/components/home/home.view.html']);
+angular.module('templates-main', ['/components/contact/contact.view.html', '/components/home/home.view.html', '/components/invitations/invitations.view.html']);
 
 angular.module("/components/contact/contact.view.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("/components/contact/contact.view.html",
@@ -24,40 +24,43 @@ angular.module("/components/contact/contact.view.html", []).run(["$templateCache
     "    </div><!--/.container-fluid -->\n" +
     "</nav>\n" +
     "\n" +
+    "<div class=\"background-contact\">\n" +
+    "    <div class=\"container\" style=\"margin-top: 50px; padding-top: 50px\">\n" +
+    "        <h1>Contactez-nous</h1>\n" +
+    "        <p>Vous avez une question ou vous souhaitez nous signaler quelque chose? Nous sommes là pour vous aider ...</p>\n" +
+    "        <hr>\n" +
+    "        <form class=\"form-horizontal\" role=\"form\" method=\"post\">\n" +
+    "            <div class=\"form-group\">\n" +
+    "                <label for=\"name\" class=\"col-sm-2 control-label\">Nom & Prénom</label>\n" +
+    "                <div class=\"col-sm-3\">\n" +
+    "                    <input type=\"text\" class=\"form-control\"  name=\"name\" placeholder=\"Prénom\" value=\"\">\n" +
+    "                </div>\n" +
     "\n" +
-    "        <div class=\"container\" style=\"margin-top: 100px\">\n" +
-    "            <h1>Contactez-nous</h1>\n" +
-    "            <p>Vous avez une question ou vous souhaitez nous signaler quelque chose? Nous sommes là pour vous aider ...</p>\n" +
-    "            <form class=\"form-horizontal\" role=\"form\" method=\"post\" style=\"margin-top: 50px\">\n" +
-    "                <div class=\"form-group\">\n" +
-    "                    <label for=\"name\" class=\"col-sm-2 control-label\">Nom & Prénom</label>\n" +
-    "                    <div class=\"col-sm-3\">\n" +
-    "                        <input type=\"text\" class=\"form-control\"  name=\"name\" placeholder=\"Prénom\" value=\"\">\n" +
-    "                    </div>\n" +
+    "                <div class=\"col-sm-3\">\n" +
+    "                    <input type=\"text\" class=\"form-control\"  name=\"name\" placeholder=\"Nom\" value=\"\">\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "            <div class=\"form-group\">\n" +
+    "                <label for=\"email\" class=\"col-sm-2 control-label\">Email</label>\n" +
+    "                <div class=\"col-sm-10\">\n" +
+    "                    <input type=\"email\" class=\"form-control\" id=\"email\" name=\"email\" placeholder=\"example@domain.com\" value=\"\">\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "            <div class=\"form-group\">\n" +
+    "                <label for=\"message\" class=\"col-sm-2 control-label\">Message</label>\n" +
+    "                <div class=\"col-sm-10\">\n" +
+    "                    <textarea class=\"form-control\" rows=\"4\" name=\"message\"></textarea>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "            <div class=\"form-group\">\n" +
+    "                <div class=\"col-sm-10 col-sm-offset-2\">\n" +
+    "                    <input id=\"submit\" name=\"submit\" type=\"submit\" value=\"Envoyer\" class=\"btn btn-primary\">\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "        </form>\n" +
+    "    </div>\n" +
+    "</div>\n" +
     "\n" +
-    "                    <div class=\"col-sm-3\">\n" +
-    "                        <input type=\"text\" class=\"form-control\"  name=\"name\" placeholder=\"Nom\" value=\"\">\n" +
-    "                    </div>\n" +
-    "                </div>\n" +
-    "                <div class=\"form-group\">\n" +
-    "                    <label for=\"email\" class=\"col-sm-2 control-label\">Email</label>\n" +
-    "                    <div class=\"col-sm-10\">\n" +
-    "                        <input type=\"email\" class=\"form-control\" id=\"email\" name=\"email\" placeholder=\"example@domain.com\" value=\"\">\n" +
-    "                    </div>\n" +
-    "                </div>\n" +
-    "                <div class=\"form-group\">\n" +
-    "                    <label for=\"message\" class=\"col-sm-2 control-label\">Message</label>\n" +
-    "                    <div class=\"col-sm-10\">\n" +
-    "                        <textarea class=\"form-control\" rows=\"4\" name=\"message\"></textarea>\n" +
-    "                    </div>\n" +
-    "                </div>\n" +
-    "                <div class=\"form-group\">\n" +
-    "                    <div class=\"col-sm-10 col-sm-offset-2\">\n" +
-    "                        <input id=\"submit\" name=\"submit\" type=\"submit\" value=\"Envoyer\" class=\"btn btn-primary\">\n" +
-    "                    </div>\n" +
-    "                </div>\n" +
-    "            </form>\n" +
-    "        </div>\n" +
     "\n" +
     "<footer>\n" +
     "    <div class=\"footer navbar-fixed-bottom\">\n" +
@@ -200,7 +203,7 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "    </div>\n" +
     "</div>\n" +
     "<div class=\"container-global-3\" id=\"PRODUCT\">\n" +
-    "    <div class=\"container marketing\" style=\"display: table-cell; vertical-align: middle; text-align: center; \">\n" +
+    "    <div class=\"container marketing\" style=\"display: table-cell; vertical-align: middle; \">\n" +
     "        <div class=\"container\" style=\"margin-bottom: 40px; padding-top: 20px;\">\n" +
     "            <h1 class=\"h1-custom\" ng-if=\"!hasClickedOnProduct\">\n" +
     "                BaeSleep\n" +
@@ -212,13 +215,14 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "                </div>\n" +
     "                <div class=\"col-md-7 col-md-push-5\">\n" +
     "                    <p class=\"lead\">\n" +
-    "                        Insomnie ou nuit blanche sont un problème pour vous, et vous avez besoin de détente et de relaxation ?\n" +
+    "                       Problème d'insomnie ou nuit blanche ? Ou vous voulez tout simplement vous détendre et de vous relaxez?\n" +
     "                        Chez Bae nous avons pensé à vous, nous avons analysé minutieusement comment votre corps et cerveau\n" +
-    "                        fonctionne pour que vous entrez dans le sommeil et la détente, nous avons ensuite conçu BaeSleep basée sur\n" +
+    "                        fonctionne pour que vous entrez dans le sommeil et la détente.\n" +
+    "                        </p>\n" +
+    "\n" +
+    "                        <p class=\"lead\">Nous avons ensuite conçu BaeSleep basée sur\n" +
     "                        le même principe avec un goût pêche délicieux pour vous aider à vous détendre, vous relaxer et améliorer votre\n" +
-    "                        qualité de sommeil.\n" +
-    "\n" +
-    "\n" +
+    "                        qualité de sommeil.</p>\n" +
     "                        <div class=\"row\">\n" +
     "                        <div class=\"col-lg-6\">\n" +
     "                            <img class=\"img-circle\" src=\"data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">\n" +
@@ -244,19 +248,19 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "    <div class=\"container marketing\" style=\"display: table-cell; vertical-align: middle\">\n" +
     "        <div class=\"container\">\n" +
     "            <h1 class=\"h1-custom\">\n" +
-    "               ACHTER UNE BOISSON\n" +
+    "               ACHETER UNE BOISSON\n" +
     "            </h1>\n" +
     "            <p class=\"b-s25\">Vous désirez acheter une de nos boissons ? Pour l'instant les commandes et les invitations ne sont pas ouvertes,\n" +
     "                restez informez sur nos réseaux sociaux pour l'ouverture des invitations, et tentez de remportez une boissons bae sleep gratuitement !</p>\n" +
-    "            <div class=\"row\">\n" +
+    "            <div class=\"row\" ng-if=\"false\">\n" +
     "                <div class=\"col-lg-2\">\n" +
     "                </div>\n" +
     "                <div class=\"col-lg-4\">\n" +
-    "                    <a class=\"btn btn-success full-width\" ng-disabled=\"true\" >Avoir une invitation</a>\n" +
+    "                    <button class=\"btn btn-success full-width fs20\" ng-disabled=\"true\" >Avoir une invitation</button>\n" +
     "                </div>\n" +
     "                <div class=\"col-lg-4\">\n" +
-    "                    <a class=\"btn btn-success full-width\" ng-disabled=\"true\" >Commander une boisson Bae\n" +
-    "                    </a>\n" +
+    "                    <button class=\"btn btn-success full-width fs20\" ng-disabled=\"true\" >Commander une boisson Bae\n" +
+    "                    </button>\n" +
     "                </div>\n" +
     "                <div class=\"col-lg-2\">\n" +
     "                </div>\n" +
@@ -286,6 +290,123 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "                                <i class=\"fa fa-medium medium\"\n" +
     "                                                                            aria-hidden=\"true\"></i>\n" +
     "                            </div>\n" +
+    "                            </a>\n" +
+    "                        </div>\n" +
+    "                        <div class=\"social-media \">\n" +
+    "                            <a href=\"https://www.instagram.com/baedrinks/\">\n" +
+    "        <span class=\"table-icon\">\n" +
+    "               <i class=\"fa fa-instagram instagram\" aria-hidden=\"true\"></i>\n" +
+    "\n" +
+    "        </span>\n" +
+    "                            </a>\n" +
+    "                        </div>\n" +
+    "\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "\n" +
+    "            </div>\n" +
+    "\n" +
+    "        </div>\n" +
+    "\n" +
+    "        <div class=\"text-center\" style=\"font-weight: bold; margin-top: 50px\">\n" +
+    "            <p>  BAE DRINKS © 2017 All Rights Reserved. </p>\n" +
+    "            <p><b>B</b>efore <b>A</b>nyone <b>E</b>lse</span></p>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "</footer>");
+}]);
+
+angular.module("/components/invitations/invitations.view.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("/components/invitations/invitations.view.html",
+    "<nav class=\"navbar navbar-default navbar-fixed-top navbar-orange\">\n" +
+    "    <div class=\"container-fluid\">\n" +
+    "        <div class=\"navbar-header\">\n" +
+    "            <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\n" +
+    "                <span class=\"sr-only\">Toggle navigation</span>\n" +
+    "                <span class=\"icon-bar\"></span>\n" +
+    "                <span class=\"icon-bar\"></span>\n" +
+    "                <span class=\"icon-bar\"></span>\n" +
+    "            </button>\n" +
+    "        </div>\n" +
+    "        <div id=\"navbar\" class=\"navbar-collapse collapse\">\n" +
+    "            <div class=\"container\">\n" +
+    "                <ul class=\"nav navbar-nav\">\n" +
+    "                    <li><a href=\"/\"><i class=\"fa fa-arrow-left\" aria-hidden=\"true\"></i> Retour</a></li>\n" +
+    "                    <li><a class=\"header-link\">BAEDRINKS - RECEVOIR UNE INVITATION</a></li>\n" +
+    "                </ul>\n" +
+    "            </div>\n" +
+    "\n" +
+    "        </div><!--/.nav-collapse -->\n" +
+    "    </div><!--/.container-fluid -->\n" +
+    "</nav>\n" +
+    "<div class=\"background\">\n" +
+    "    <div class=\"container \" style=\"margin-top: 50px; padding-top: 50px\">\n" +
+    "        <h1>Recevoir mon iventation</h1>\n" +
+    "        <h4>Dépêche toi, il ne reste plus que <b>66</b> invitations disponible !</h4>\n" +
+    "        <hr>\n" +
+    "        <form class=\"form-horizontal\" role=\"form\" method=\"post\" style=\"margin-top: 50px\">\n" +
+    "            <div class=\"form-group\">\n" +
+    "                <label for=\"name\" class=\"col-sm-2 control-label\">Nom & Prénom : </label>\n" +
+    "                <div class=\"col-sm-3\">\n" +
+    "                    <input type=\"text\" class=\"form-control\"  name=\"name\" placeholder=\"Prénom\" value=\"\">\n" +
+    "                </div>\n" +
+    "\n" +
+    "                <div class=\"col-sm-3\">\n" +
+    "                    <input type=\"text\" class=\"form-control\"  name=\"name\" placeholder=\"Nom\" value=\"\">\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "            <div class=\"form-group\">\n" +
+    "                <label for=\"email\" class=\"col-sm-2 control-label\">Email : </label>\n" +
+    "                <div class=\"col-sm-10\">\n" +
+    "                    <input type=\"email\" class=\"form-control\" id=\"email\" name=\"email\" placeholder=\"example@domain.com\" value=\"\">\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "            <div class=\"form-group\">\n" +
+    "                <label for=\"name\" class=\"col-sm-2 control-label\">Livraison : </label>\n" +
+    "                <div class=\"col-sm-5\">\n" +
+    "                    <input type=\"text\" class=\"form-control\"  name=\"name\" placeholder=\"Adresse\" value=\"\">\n" +
+    "                </div>\n" +
+    "\n" +
+    "                <div class=\"col-sm-3\">\n" +
+    "                    <input type=\"text\" class=\"form-control\"  name=\"name\" placeholder=\"code postal\" value=\"\">\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "            <div class=\"form-group\">\n" +
+    "                <div class=\"col-sm-10 col-sm-offset-2\">\n" +
+    "                    <input id=\"submit\" name=\"submit\" type=\"submit\" value=\"Envoyer\" class=\"btn btn-warning\">\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "        </form>\n" +
+    "        <div class=\"row\">\n" +
+    "\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "<footer>\n" +
+    "    <div class=\"footer navbar-fixed-bottom\">\n" +
+    "        <div class=\"container\" style=\"padding-top: 20px\">\n" +
+    "\n" +
+    "            <div class=\"row\">\n" +
+    "                <div class=\"col-lg-12\">\n" +
+    "                    <div style=\"\n" +
+    "    margin: auto;\">\n" +
+    "                        <div class=\"social-media \">\n" +
+    "                            <a href=\"https://www.facebook.com/BaeDrinks/?fref=ts\">\n" +
+    "                                <div class=\"table-icon\">\n" +
+    "                                    <i class=\"fa fa-facebook facebook\"\n" +
+    "                                       aria-hidden=\"true\"></i>\n" +
+    "                                </div>\n" +
+    "                            </a>\n" +
+    "                        </div>\n" +
+    "                        <div class=\"social-media\">\n" +
+    "                            <a href=\"https://medium.com/@baedrinks\">\n" +
+    "                                <div class=\"table-icon\">\n" +
+    "                                    <i class=\"fa fa-medium medium\"\n" +
+    "                                       aria-hidden=\"true\"></i>\n" +
+    "                                </div>\n" +
     "                            </a>\n" +
     "                        </div>\n" +
     "                        <div class=\"social-media \">\n" +
