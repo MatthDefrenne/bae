@@ -14,5 +14,6 @@ angular.module('myApp.contactComponent', ['ngRoute'])
 
 function contactComponent($scope, $location, $rootScope) {
 
+    window.scrollTo(500, 0);
 
 }
