@@ -12,6 +12,7 @@
     "fs": "0.0.1-security",
     "gzippo": "^0.2.0",
     "helmet": "^3.1.0",
+    "mysql": "^2.13.0",
     "nodemailer": "^2.7.0",
     "prerender-node": "^2.7.0"
   }

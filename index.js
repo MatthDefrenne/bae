@@ -5,10 +5,24 @@ var compression = require('compression');
 var helmet = require('helmet');
 var nodemailer = require('nodemailer');
 var bodyParser = require('body-parser')
-
-
-
+var mysql      = require('mysql');
+var connection = mysql.createConnection({
+    host     : '137.74.164.253',
+    user     : 'root',
+    password : 'dcx299JV',
+    database : 'baedrinks'
+});
 var port = process.env.PORT || 8080;
+
+connection.connect(function(err) {
+    if (err) {
+        console.error('error connecting: ' + err.stack);
+        return;
+    }
+
+    console.log('connected as id ' + connection.threadId);
+});
+
 app.use(require('prerender-node').set('prerenderToken', 'mwXTCGiIIIlSwxvPB2BP'));
 app.use(helmet());
 app.use(bodyParser.urlencoded({ extended: false }))
