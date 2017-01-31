@@ -8,28 +8,29 @@ angular.module('myApp.homeComponent', ['ngRoute'])
 
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/', {
-            template: '<home></home>'
+            template: '<home></home>',
         });
     }]);
 
 
 function homeComponent($scope, $location) {
 
+
     $scope.hasClickedOnProduct = false;
 
     $(document).ready(function () {
         if ($(this).scrollTop() > 600) {
-            $('.navbar').fadeIn();
+            $('#nav').fadeIn();
         } else {
-            $('.navbar').fadeOut();
+            $('#nav').fadeOut();
         }
 
         $(function () {
             $(window).scroll(function () {
                 if ($(this).scrollTop() > 600) {
-                    $('.navbar').fadeIn();
+                    $('#nav').fadeIn();
                 } else {
-                    $('.navbar').fadeOut();
+                    $('#nav').fadeOut();
                 }
             });
         });

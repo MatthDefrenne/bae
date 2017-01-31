@@ -8449,11 +8449,11 @@ body {
 
 
 .container-global-4 {
-    background: white;
+    background-image: url('./img/background3.jpg');
     display: table;
     width: 100%;
-    height: 691px;
-    color: #555;
+    height: 790px;
+    color: white;
 }
 
 .img-center {
@@ -8749,8 +8749,8 @@ iPad 3
     position: absolute;
     width: 100%;
     /* Set the fixed height of the footer here */
-    background-color: #e0e0e0;
-    color: #555;
+    background-color: #212121;
+    color: white;
 }
 .container-global-1 {
     background: url('./img/background.jpg');
@@ -8760,8 +8760,20 @@ iPad 3
     background: url('./img/background4.jpg');
 }
 
+.navbar-red {
+    background-color: #cd2a2f;
+}
+
 .social-media {
     font-size: 35px;
     display: inline-block;
     margin-top: 25px;
+}
+.header-link {
+    cursor: default;
+    font-size: 28px;
+    font-weight: bold;
+}
+.b-s25 {
+    font-weight: bold; font-size: 25px"
 }

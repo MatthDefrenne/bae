@@ -1,8 +1,115 @@
-angular.module('templates-main', ['/components/home/home.view.html']);
+angular.module('templates-main', ['/components/contact/contact.view.html', '/components/home/home.view.html']);
+
+angular.module("/components/contact/contact.view.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("/components/contact/contact.view.html",
+    "<nav class=\"navbar navbar-default navbar-fixed-top navbar-red\">\n" +
+    "    <div class=\"container-fluid\">\n" +
+    "        <div class=\"navbar-header\">\n" +
+    "            <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\n" +
+    "                <span class=\"sr-only\">Toggle navigation</span>\n" +
+    "                <span class=\"icon-bar\"></span>\n" +
+    "                <span class=\"icon-bar\"></span>\n" +
+    "                <span class=\"icon-bar\"></span>\n" +
+    "            </button>\n" +
+    "        </div>\n" +
+    "        <div id=\"navbar\" class=\"navbar-collapse collapse\">\n" +
+    "            <div class=\"container\">\n" +
+    "                <ul class=\"nav navbar-nav\">\n" +
+    "                    <li><a href=\"/\"><i class=\"fa fa-arrow-left\" aria-hidden=\"true\"></i> Retour</a></li>\n" +
+    "                    <li><a class=\"header-link\">BAEDRINKS - CONTACT</a></li>\n" +
+    "                </ul>\n" +
+    "            </div>\n" +
+    "\n" +
+    "        </div><!--/.nav-collapse -->\n" +
+    "    </div><!--/.container-fluid -->\n" +
+    "</nav>\n" +
+    "\n" +
+    "\n" +
+    "        <div class=\"container\" style=\"margin-top: 100px\">\n" +
+    "            <h1>Contactez-nous</h1>\n" +
+    "            <p>Vous avez une question ou vous souhaitez nous signaler quelque chose? Nous sommes là pour vous aider ...</p>\n" +
+    "            <form class=\"form-horizontal\" role=\"form\" method=\"post\" style=\"margin-top: 50px\">\n" +
+    "                <div class=\"form-group\">\n" +
+    "                    <label for=\"name\" class=\"col-sm-2 control-label\">Nom & Prénom</label>\n" +
+    "                    <div class=\"col-sm-3\">\n" +
+    "                        <input type=\"text\" class=\"form-control\"  name=\"name\" placeholder=\"Prénom\" value=\"\">\n" +
+    "                    </div>\n" +
+    "\n" +
+    "                    <div class=\"col-sm-3\">\n" +
+    "                        <input type=\"text\" class=\"form-control\"  name=\"name\" placeholder=\"Nom\" value=\"\">\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "                <div class=\"form-group\">\n" +
+    "                    <label for=\"email\" class=\"col-sm-2 control-label\">Email</label>\n" +
+    "                    <div class=\"col-sm-10\">\n" +
+    "                        <input type=\"email\" class=\"form-control\" id=\"email\" name=\"email\" placeholder=\"example@domain.com\" value=\"\">\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "                <div class=\"form-group\">\n" +
+    "                    <label for=\"message\" class=\"col-sm-2 control-label\">Message</label>\n" +
+    "                    <div class=\"col-sm-10\">\n" +
+    "                        <textarea class=\"form-control\" rows=\"4\" name=\"message\"></textarea>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "                <div class=\"form-group\">\n" +
+    "                    <div class=\"col-sm-10 col-sm-offset-2\">\n" +
+    "                        <input id=\"submit\" name=\"submit\" type=\"submit\" value=\"Envoyer\" class=\"btn btn-primary\">\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "            </form>\n" +
+    "        </div>\n" +
+    "\n" +
+    "<footer>\n" +
+    "    <div class=\"footer navbar-fixed-bottom\">\n" +
+    "        <div class=\"container\" style=\"padding-top: 20px\">\n" +
+    "\n" +
+    "            <div class=\"row\">\n" +
+    "                <div class=\"col-lg-12\">\n" +
+    "                    <div style=\"\n" +
+    "    margin: auto;\">\n" +
+    "                        <div class=\"social-media \">\n" +
+    "                            <a href=\"https://www.facebook.com/BaeDrinks/?fref=ts\">\n" +
+    "                                <div class=\"table-icon\">\n" +
+    "                                    <i class=\"fa fa-facebook facebook\"\n" +
+    "                                       aria-hidden=\"true\"></i>\n" +
+    "                                </div>\n" +
+    "                            </a>\n" +
+    "                        </div>\n" +
+    "                        <div class=\"social-media\">\n" +
+    "                            <a href=\"https://medium.com/@baedrinks\">\n" +
+    "                                <div class=\"table-icon\">\n" +
+    "                                    <i class=\"fa fa-medium medium\"\n" +
+    "                                       aria-hidden=\"true\"></i>\n" +
+    "                                </div>\n" +
+    "                            </a>\n" +
+    "                        </div>\n" +
+    "                        <div class=\"social-media \">\n" +
+    "                            <a href=\"https://www.instagram.com/baedrinks/\">\n" +
+    "        <span class=\"table-icon\">\n" +
+    "               <i class=\"fa fa-instagram instagram\" aria-hidden=\"true\"></i>\n" +
+    "\n" +
+    "        </span>\n" +
+    "                            </a>\n" +
+    "                        </div>\n" +
+    "\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "\n" +
+    "            </div>\n" +
+    "\n" +
+    "        </div>\n" +
+    "\n" +
+    "        <div class=\"text-center\" style=\"font-weight: bold; margin-top: 50px\">\n" +
+    "            <p>  BAE DRINKS © 2017 All Rights Reserved. </p>\n" +
+    "            <p><b>B</b>efore <b>A</b>nyone <b>E</b>lse</span></p>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "</footer>");
+}]);
 
 angular.module("/components/home/home.view.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("/components/home/home.view.html",
-    "<nav class=\"navbar navbar-default navbar-fixed-top\">\n" +
+    "<nav class=\"navbar navbar-default navbar-fixed-top\" id=\"nav\">\n" +
     "    <div class=\"container\">\n" +
     "        <div class=\"navbar-header\">\n" +
     "            <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\"\n" +
@@ -12,13 +119,14 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "                <span class=\"icon-bar\"></span>\n" +
     "                <span class=\"icon-bar\"></span>\n" +
     "            </button>\n" +
+    "            <a class=\"navbar-brand\" href=\"#\">BAEDRINKS</a>\n" +
     "        </div>\n" +
     "        <div id=\"navbar\" class=\"navbar-collapse collapse\">\n" +
     "            <ul class=\"nav navbar-nav navbar-left\">\n" +
     "                <li><a data-scroll class=\"btn-green-hover\" title=\"WHAT IS BAE ?\" ng-click=\"GOTOWHAT()\">WHAT IS BAE ?</a></li>\n" +
     "                <li><a data-scrol class=\"btn-blue-hover\" title=\"OUR BAE DRINKS\" ng-click=\"GOTOPRODUCT()\">OUR BAE DRINKS</a></li>\n" +
     "                <li><a data-scroll class=\"btn-orange-hover\" title=\"ORDER BAE\" ng-click=\"GOTOBUY()\">ORDER BAE</a></li>\n" +
-    "                <li><a data-scroll>CONTACT</a></li>\n" +
+    "                <li><a data-scroll title=\"Contact us\" href=\"/contact/\">CONTACT US</a></li>\n" +
     "            </ul>\n" +
     "        </div><!--/.nav-collapse -->\n" +
     "    </div><!--/.container-fluid -->\n" +
@@ -36,13 +144,13 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "            </button>\n" +
     "            <button class=\"btn btn-empty btn-orange-hover btn-lg\" href=\"BUY\" title=\"ORDER BAE\" ng-click=\"GOTOBUY()\">ORDER BAE\n" +
     "            </button>\n" +
-    "            <button class=\"btn btn-empty btn-red-hover btn-lg\" title=\"CONTACT\">CONTACT\n" +
-    "            </button>\n" +
+    "            <a class=\"btn btn-empty btn-red-hover btn-lg\" href=\"/contact/\" title=\"CONTACT\">CONTACT\n" +
+    "            </a>\n" +
     "        </div>\n" +
     "        <div style=\"\n" +
     "    margin: auto; margin-top: 75px; margin-bottom: 50px\">\n" +
     "            <div class=\"social-media \">\n" +
-    "                <a href=\"https://www.facebook.com/BaeDrinks/?fref=ts\">\n" +
+    "                <a title=\"Facebook\" href=\"https://www.facebook.com/BaeDrinks/?fref=ts\">\n" +
     "                <div class=\"table-icon\">\n" +
     "                    <i class=\"fa fa-facebook facebook\"\n" +
     "                                                                                  aria-hidden=\"true\"></i>\n" +
@@ -50,7 +158,7 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "                </a>\n" +
     "            </div>\n" +
     "            <div class=\"social-media\">\n" +
-    "                <a href=\"https://medium.com/@baedrinks\">\n" +
+    "                <a title=\"Medium\" href=\"https://medium.com/@baedrinks\">\n" +
     "                <div class=\"table-icon\">\n" +
     "                     <i class=\"fa fa-medium medium\"\n" +
     "                                                                aria-hidden=\"true\"></i>\n" +
@@ -58,7 +166,7 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "                </a>\n" +
     "            </div>\n" +
     "            <div class=\"social-media \">\n" +
-    "                <a href=\"https://www.instagram.com/baedrinks/\">\n" +
+    "                <a title=\"Instagram\" href=\"https://www.instagram.com/baedrinks/\">\n" +
     "        <span class=\"table-icon\">\n" +
     "                <i class=\"fa fa-instagram instagram\" aria-hidden=\"true\"></i>\n" +
     "\n" +
@@ -138,7 +246,7 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "            <h1 class=\"h1-custom\">\n" +
     "               BUY BAE\n" +
     "            </h1>\n" +
-    "            <p style=\"font-weight: bold; font-size: 25px\">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in,\n" +
+    "            <p class=\"b-s25\">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in,\n" +
     "                egestas eget quam. Vestibulum id ligula</p>\n" +
     "            <div class=\"row\">\n" +
     "                <div class=\"col-lg-2\">\n" +
@@ -161,20 +269,7 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "        <div class=\"container\" style=\"padding-top: 20px\">\n" +
     "\n" +
     "            <div class=\"row\">\n" +
-    "                <div class=\"col-lg-2\">\n" +
-    "                    <ul class=\"li-grey\">\n" +
-    "                        <li><a href=\"\">A propos de nous</a></li>\n" +
-    "                        <li><a href=\"\">Général</a></li>\n" +
-    "                        <li><a href=\"\">Contactez nous</a></li>\n" +
-    "                    </ul>\n" +
-    "                </div>\n" +
-    "\n" +
-    "                <div class=\"col-lg-3\">\n" +
-    "                    <label>Envie d'être tenu au courrant ? Inscrivez-vous au newsletter !</label>\n" +
-    "                    <input type=\"email\" placeholder=\"example@domaine.com\" class=\"form-control\">\n" +
-    "                </div>\n" +
-    "\n" +
-    "                <div class=\"col-lg-6\">\n" +
+    "                <div class=\"col-lg-12\">\n" +
     "                    <div style=\"\n" +
     "    margin: auto;\">\n" +
     "                        <div class=\"social-media \">\n" +
@@ -210,8 +305,8 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "        </div>\n" +
     "\n" +
     "        <div class=\"text-center\" style=\"font-weight: bold; margin-top: 50px\">\n" +
-    "            BAE DRINKS © 2017 <img style=\"width: 60px; margin-left: 20px; margin-bottom: 20px\"\n" +
-    "                                   src=\"./img/logo2.png\"><span style=\"margin-left: 20px\"><b>B</b>efore <b>A</b>nyone <b>E</b>lse</span>\n" +
+    "            <p>  BAE DRINKS © 2017 All Rights Reserved. </p>\n" +
+    "            <p><b>B</b>efore <b>A</b>nyone <b>E</b>lse</span></p>\n" +
     "        </div>\n" +
     "    </div>\n" +
     "</footer>");

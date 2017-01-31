@@ -2,6 +2,7 @@
 angular.module('myApp', [
     'ngRoute',
     'myApp.homeComponent',
+    'myApp.contactComponent',
 ])
 .config(['$locationProvider', '$routeProvider', '$logProvider', function ($locationProvider, $routeProvider, $logProvider) {
     $locationProvider.hashPrefix('!');

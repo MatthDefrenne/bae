@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top" id="nav">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
@@ -8,13 +8,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+            <a class="navbar-brand" href="#">BAEDRINKS</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-left">
                 <li><a data-scroll class="btn-green-hover" title="WHAT IS BAE ?" ng-click="GOTOWHAT()">WHAT IS BAE ?</a></li>
                 <li><a data-scrol class="btn-blue-hover" title="OUR BAE DRINKS" ng-click="GOTOPRODUCT()">OUR BAE DRINKS</a></li>
                 <li><a data-scroll class="btn-orange-hover" title="ORDER BAE" ng-click="GOTOBUY()">ORDER BAE</a></li>
-                <li><a data-scroll>CONTACT</a></li>
+                <li><a data-scroll title="Contact us" href="/contact/">CONTACT US</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div><!--/.container-fluid -->
@@ -32,13 +33,13 @@
             </button>
             <button class="btn btn-empty btn-orange-hover btn-lg" href="BUY" title="ORDER BAE" ng-click="GOTOBUY()">ORDER BAE
             </button>
-            <button class="btn btn-empty btn-red-hover btn-lg" title="CONTACT">CONTACT
-            </button>
+            <a class="btn btn-empty btn-red-hover btn-lg" href="/contact/" title="CONTACT">CONTACT
+            </a>
         </div>
         <div style="
     margin: auto; margin-top: 75px; margin-bottom: 50px">
             <div class="social-media ">
-                <a href="https://www.facebook.com/BaeDrinks/?fref=ts">
+                <a title="Facebook" href="https://www.facebook.com/BaeDrinks/?fref=ts">
                 <div class="table-icon">
                     <i class="fa fa-facebook facebook"
                                                                                   aria-hidden="true"></i>
@@ -46,7 +47,7 @@
                 </a>
             </div>
             <div class="social-media">
-                <a href="https://medium.com/@baedrinks">
+                <a title="Medium" href="https://medium.com/@baedrinks">
                 <div class="table-icon">
                      <i class="fa fa-medium medium"
                                                                 aria-hidden="true"></i>
@@ -54,7 +55,7 @@
                 </a>
             </div>
             <div class="social-media ">
-                <a href="https://www.instagram.com/baedrinks/">
+                <a title="Instagram" href="https://www.instagram.com/baedrinks/">
         <span class="table-icon">
                 <i class="fa fa-instagram instagram" aria-hidden="true"></i>
 
@@ -134,7 +135,7 @@
             <h1 class="h1-custom">
                BUY BAE
             </h1>
-            <p style="font-weight: bold; font-size: 25px">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in,
+            <p class="b-s25">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in,
                 egestas eget quam. Vestibulum id ligula</p>
             <div class="row">
                 <div class="col-lg-2">
@@ -157,20 +158,7 @@
         <div class="container" style="padding-top: 20px">
 
             <div class="row">
-                <div class="col-lg-2">
-                    <ul class="li-grey">
-                        <li><a href="">A propos de nous</a></li>
-                        <li><a href="">Général</a></li>
-                        <li><a href="">Contactez nous</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3">
-                    <label>Envie d'être tenu au courrant ? Inscrivez-vous au newsletter !</label>
-                    <input type="email" placeholder="example@domaine.com" class="form-control">
-                </div>
-
-                <div class="col-lg-6">
+                <div class="col-lg-12">
                     <div style="
     margin: auto;">
                         <div class="social-media ">
@@ -206,8 +194,8 @@
         </div>
 
         <div class="text-center" style="font-weight: bold; margin-top: 50px">
-            BAE DRINKS © 2017 <img style="width: 60px; margin-left: 20px; margin-bottom: 20px"
-                                   src="./img/logo2.png"><span style="margin-left: 20px"><b>B</b>efore <b>A</b>nyone <b>E</b>lse</span>
+            <p>  BAE DRINKS © 2017 All Rights Reserved. </p>
+            <p><b>B</b>efore <b>A</b>nyone <b>E</b>lse</span></p>
         </div>
     </div>
 </footer>
