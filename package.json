@@ -12,7 +12,11 @@
     "fs": "0.0.1-security",
     "gzippo": "^0.2.0",
     "helmet": "^3.1.0",
+    "ipware": "^1.0.0",
+    "js-sha1": "^0.4.1",
+    "md5": "^2.2.1",
     "mysql": "^2.13.0",
+    "node-code-generator": "^1.0.3",
     "nodemailer": "^2.7.0",
     "prerender-node": "^2.7.0"
   }

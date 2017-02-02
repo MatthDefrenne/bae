@@ -25,42 +25,41 @@
         <h1>Recevoir mon iventation</h1>
         <h4>Dépêche toi, il ne reste plus que <b>66</b> invitations disponible !</h4>
         <hr>
-        <form class="form-horizontal" role="form" method="post" style="margin-top: 50px">
+        <li ng-if="error" style="color: red">Vous ne pouvez pas obtenir qu'une seul boisson par email / adresse ip</li>
+        <form class="form-horizontal" role="form" method="post" style="margin-top: 50px" >
             <div class="form-group">
-                <label for="name" class="col-sm-2 control-label">Nom & Prénom : </label>
+                <label class="col-sm-2 control-label">Nom & Prénom : </label>
                 <div class="col-sm-3">
-                    <input type="text" class="form-control"  name="name" placeholder="Prénom" value="">
+                    <input type="text" class="form-control" ng-model="invitation.firstname" placeholder="Prénom">
                 </div>
-
                 <div class="col-sm-3">
-                    <input type="text" class="form-control"  name="name" placeholder="Nom" value="">
+                    <input type="text" class="form-control"  ng-model="invitation.lastname"  placeholder="Nom">
                 </div>
             </div>
             <div class="form-group">
                 <label for="email" class="col-sm-2 control-label">Email : </label>
                 <div class="col-sm-10">
-                    <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="">
+                    <input type="email" class="form-control" ng-model="invitation.email" id="email" placeholder="example@domain.com" value="" required>
                 </div>
             </div>
             <div class="form-group">
-                <label for="name" class="col-sm-2 control-label">Livraison : </label>
+                <label class="col-sm-2 control-label">Livraison : </label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control"  name="name" placeholder="Adresse" value="">
+                    <input type="text" class="form-control" ng-model="invitation.adress"  name="name" placeholder="Adresse">
                 </div>
 
                 <div class="col-sm-3">
-                    <input type="text" class="form-control"  name="name" placeholder="code postal" value="">
+                    <input type="text" class="form-control"  name="name" ng-model="invitation.postal" placeholder="code postal">
                 </div>
             </div>
+
             <div class="form-group">
                 <div class="col-sm-10 col-sm-offset-2">
-                    <input id="submit" name="submit" type="submit" value="Envoyer" class="btn btn-warning">
+                    <input id="submit" name="submit" type="submit" value="Envoyer" class="btn btn-warning" ng-if="!inProgress" ng-click="sendInvitation(invitation)">
+                    <a  type="submit"  class="btn btn-warning" ng-if="inProgress"><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i></a>
                 </div>
             </div>
         </form>
-        <div class="row">
-
-        </div>
     </div>
 </div>
 

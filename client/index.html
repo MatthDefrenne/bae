@@ -9,9 +9,11 @@
 <html lang="fr" ng-app="myApp" class="no-js"> <!--<![endif]-->
 <head>
 
+
     <meta name="fragment" content="!">
     <!-- Hotjar Tracking Code for http://localhost:3000/ -->
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Toutes les boissons BaeDrinks sont naturellement conçues pour aider les gens à améliorer la qualité de leur bien-être">
     <meta name="keywords" content="sommeil, boissons naturelles, somnifère naturelle, somnifère, baedrinks, bae, brain, natural drink, se relaxer, bien-être">
     <meta name="author" content="baedrinks" />
@@ -30,6 +32,7 @@
 
     <base href="/">
     <title>Baedrinks - boisson somnifère naturelle</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async='async'></script>
@@ -37,6 +40,7 @@
         var OneSignal = window.OneSignal || [];
         OneSignal.push(["init", {
             appId: "70a3cdc9-e39b-43ef-8821-d54538fc8cf2",
+            subdomainName: 'BaeDrinks',
             autoRegister: true,
             notifyButton: {
                 enable: false /* Set to false to hide */
@@ -62,8 +66,6 @@
 </script>
 <body>
 <div id="fb-root"></div>
-<div ng-view></div>
-<script src="/assets/bae.min.js"></script>
 <link href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
       crossorigin="anonymous">
@@ -72,6 +74,19 @@
 <script src="https://cdn.jsdelivr.net/lodash/4.16.6/lodash.min.js"></script>
 <link rel="stylesheet" href="style.css" crossorigin="anonymous">
 
+<div ng-view></div>
+
+<script src="/bower_components/angular/angular.js"></script>
+<script src="/bower_components/angular-route/angular-route.js"></script>
+<script src="/bower_components/ngInfiniteScroll/ng-infinite-scroll.js"></script>
+<script src="/assets/dev/app.js"></script>
+
+
+<!-- injector:js -->
+<script src="components/contact/contact.component.js"></script>
+<script src="components/home/home.component.js"></script>
+<script src="components/invitations/invitations.component.js"></script>
+<!-- endinjector -->
 </body>
 </html>
 .

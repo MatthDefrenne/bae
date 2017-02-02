@@ -4,93 +4,74 @@ var path = require('path');
 var compression = require('compression');
 var helmet = require('helmet');
 var nodemailer = require('nodemailer');
-var bodyParser = require('body-parser')
-var mysql      = require('mysql');
+var bodyParser = require('body-parser');
+var mysql = require('mysql');
+var md5 = require('md5');
+var getIP = require('ipware')().get_ip;
+
 var connection = mysql.createConnection({
-    host     : '137.74.164.253',
-    user     : 'root',
-    password : 'dcx299JV',
-    database : 'baedrinks'
+    host: '137.74.164.253',
+    user: 'root',
+    password: 'dcx299JV',
+    database: 'baedrinks'
 });
+
 var port = process.env.PORT || 8080;
 
-connection.connect(function(err) {
+connection.connect(function (err) {
     if (err) {
         console.error('error connecting: ' + err.stack);
         return;
     }
-
     console.log('connected as id ' + connection.threadId);
 });
 
 app.use(require('prerender-node').set('prerenderToken', 'mwXTCGiIIIlSwxvPB2BP'));
 app.use(helmet());
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.json());
 app.use(compression());
 app.use(express.static("client"));
 
-app.get('*', function (req, res) {
+app.get('*', index);
+app.post('/invitation/', invitations);
+
+
+function index(req, res) {
     var file = __dirname + "/client/index.html";
     res.sendFile(path.resolve(file));
-});
+}
 
-/*
-app.post('/new-order/', function(req, res) {
-    var order = req.body.order;
+function invitations(req, res) {
 
-    var mailOrder = createMailForOrder(order);
-    var mailToCostumers = createMailToCostumers(order)
+    var ipInfo = getIP(req);
+    console.log(ipInfo);
 
-    transporter.sendMail(mailOrder, function(error, info){
-        if(error){
-            res.json(400);
-            return console.log(error);
+    var invitation = {
+        lastname: req.body.invitation.lastname,
+        firstname: req.body.invitation.firstname,
+        email: req.body.invitation.email,
+        adress: req.body.invitation.adress,
+        postal: req.body.invitation.postal,
+        code: md5(req.body.invitation.email + req.body.invitation.firstname),
+        ip: ipInfo.clientIp
+    };
+
+
+    connection.query('SELECT * FROM users WHERE email = ? AND ip = ?', [req.body.invitation.email, ipInfo.clientIp], function (error, results, fields) {
+        if (results.length === 0) {
+            connection.query('INSERT INTO users SET ?', invitation, function (error, results, fields) {
+                if (error) throw error;
+                res.status(200).end();
+            });
+        } else {
+            res.status(500).end();
         }
-        transporter.sendMail(mailToCostumers, function(error, info){
-            if(error){
-                res.json(400);
-                return console.log(error);
-            }
-            res.json(200);
-        });
     });
-});
-*/
-//*////////////////////
-/*
-var transporter = nodemailer.createTransport('smtps://drinkybelgium@gmail.com:Killer123@smtp.gmail.com');
-
-
-
-function createMailToCostumers(order) {
-    return {
-        from: 'Drinky <drinkybelgium@gmail.com>', // sender address
-        to: order.mail, // list of receivers
-        subject: 'Drinky', // Subject line
-        text: 'Votre commande Drinky', // plaintext body
-        html: '<div style="background: rgba(236, 236, 236, 0.51);padding: 50px;text-align: center; font-size: 25px"><h1 style="text-align: center;">👍 Merci pour votre achat ! </h1>' +
-        'Bonjour ' + order.firstname + ', nous te remercions pour ta commande de <b> ' + order.quantity  + ' </b> boisson(s) Drinky ! ' +
-        'Nous passons chez toi dans les 24h, si tu as des questions, nous y répondrons avec grand plaisir sur notre page facebook :  ' +
-        '<a href="https://www.facebook.com/Drinky-308767716189772/">Page facebook Drinky</a></div>'
-    }
 }
 
-function createMailForOrder(order) {
-    return {
-        from: 'Drinky <drinkybelgium@gmail.com>', // sender address
-        to: 'drinkybelgium@gmail.com', // list of receivers
-        subject: 'Commande', // Subject line
-        text: 'Commande', // plaintext body
-        html: '<div>' +
-        '<h1>Achat  : </h1> + ' + 'Parainnage' + order.sponsorship + order.firstname +  ' Nom : ' +  order.name  + ' | Adresse de livraison ' + order.adress + ' | Code Postal ' +  order.codepostal + ' | Date d\'achat ' + new Date() +  ' | Quantité ' + order.quantity  +  ' | EMAIL :  ' + order.mail +
-        '</div>' // html body
-    }
-}
-*/
-
-
-
-app.listen(port, function() {
+function start() {
     console.log('Our app is running on http://localhost:' + port);
-});
+}
+
+app.listen(port, start);
