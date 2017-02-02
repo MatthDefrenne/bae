@@ -50,7 +50,7 @@ function invitations(req, res) {
         email: req.body.invitation.email,
         adress: req.body.invitation.adress,
         postal: req.body.invitation.postal,
-        code: md5(req.body.invitation.email + req.body.invitation.firstname),
+        code: md5(req.body.invitation.email + req.body.invitation.lastname),
     };
 
     connection.query('SELECT * FROM users WHERE email = ?', [req.body.invitation.email], function (error, results, fields) {
