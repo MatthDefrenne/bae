@@ -58,7 +58,7 @@ function invitations(req, res) {
     };
 
 
-    connection.query('SELECT * FROM users WHERE email = ? AND ip = ?', [req.body.invitation.email, ipInfo.clientIp], function (error, results, fields) {
+    connection.query('SELECT * FROM users WHERE email = ? OR ip = ?', [req.body.invitation.email, invitation.ip], function (error, results, fields) {
         if (results.length === 0) {
             connection.query('INSERT INTO users SET ?', invitation, function (error, results, fields) {
                 if (error) throw error;
