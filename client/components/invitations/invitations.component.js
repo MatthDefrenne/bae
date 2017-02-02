@@ -26,7 +26,6 @@ function invitationsComponent($scope, $location, $http) {
         }).catch(function(error) {
             $scope.inProgress = false;
             $scope.error = true;
-            $scope.invitation = {};
             console.log(error);
         })
     }

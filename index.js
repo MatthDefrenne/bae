@@ -44,9 +44,6 @@ function index(req, res) {
 
 function invitations(req, res) {
 
-    var ipInfo = getIP(req);
-    console.log(ipInfo);
-
     var invitation = {
         lastname: req.body.invitation.lastname,
         firstname: req.body.invitation.firstname,
@@ -54,11 +51,9 @@ function invitations(req, res) {
         adress: req.body.invitation.adress,
         postal: req.body.invitation.postal,
         code: md5(req.body.invitation.email + req.body.invitation.firstname),
-        ip: ipInfo.clientIp
     };
 
-
-    connection.query('SELECT * FROM users WHERE email = ? OR ip = ?', [req.body.invitation.email, invitation.ip], function (error, results, fields) {
+    connection.query('SELECT * FROM users WHERE email = ?', [req.body.invitation.email], function (error, results, fields) {
         if (results.length === 0) {
             connection.query('INSERT INTO users SET ?', invitation, function (error, results, fields) {
                 if (error) throw error;
