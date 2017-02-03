@@ -23,33 +23,52 @@
 <div class="background">
     <div class="container " style="margin-top: 50px; padding-top: 50px">
         <h1>Recevoir mon iventation</h1>
-        <h4>Dépêche toi, il ne reste plus que <b>66</b> invitations disponible !</h4>
+        <h4>Dépêche toi, il ne reste plus que <b>{{totalInvitation}}</b> invitations disponible !</h4>
         <hr>
         <li ng-if="error" style="color: red">Cette adresse email est déjà utilisée !</li>
-        <form class="form-horizontal" role="form" method="post" style="margin-top: 50px" >
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Nom & Prénom : </label>
-                <div class="col-sm-3">
-                    <input type="text" class="form-control" ng-model="invitation.firstname" placeholder="Prénom">
-                </div>
-                <div class="col-sm-3">
-                    <input type="text" class="form-control"  ng-model="invitation.lastname"  placeholder="Nom">
-                </div>
-            </div>
+        <li ng-if="errorslabel" style="color: red">Tous les champs doivent être remplis !</li>
+        <div ng-if="sucess" style="    color: #33ff4e;
+             border: 1px solid #33ff4e;
+             padding: 10px;">
+                Félécitation, vous avez validez votre invitation pour recevoir une des 100 bae sleep disponible. Une confirmation à été envoyé par mail ! Merci et à bientôt :)
+        </div>
+        <form class="form-horizontal" role="form" method="post" style="margin-top: 50px" ng-if="!sucess">
             <div class="form-group">
                 <label for="email" class="col-sm-2 control-label">Email : </label>
                 <div class="col-sm-10">
-                    <input type="email" class="form-control" ng-model="invitation.email" id="email" placeholder="example@domain.com" value="" required>
+                    <input type="email" class="form-control" ng-model="invitation.email" id="email" placeholder="example@domain.com"  required >
                 </div>
             </div>
             <div class="form-group">
+                <label class="col-sm-2 control-label">Votre image de participation : </label>
+                <div class="col-sm-7">
+                    <div style="    color: #ffa333;
+    border: 1px solid #ffa333;
+    padding: 7px;">Pour nous envoyer votre image il suffit de se rendre sur <a href="https://fr.imgbb.com/" target="_blank">cette page</a> et de télécharger votre image et ainsi de récuperer le lien de l'image et le collez dans la case juste à coter
+                         </div>
+                </div>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" placeholder="lien de votre image" ng-model="invitation.imageURL" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Nom & Prénom : </label>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" ng-model="invitation.firstname" placeholder="Prénom" required>
+                </div>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control"  ng-model="invitation.lastname"  placeholder="Nom" required>
+                </div>
+            </div>
+
+            <div class="form-group">
                 <label class="col-sm-2 control-label">Livraison : </label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" ng-model="invitation.adress"  name="name" placeholder="Adresse">
+                    <input type="text" class="form-control" ng-model="invitation.adress"  name="name" placeholder="Adresse" required>
                 </div>
 
                 <div class="col-sm-3">
-                    <input type="text" class="form-control"  name="name" ng-model="invitation.postal" placeholder="code postal">
+                    <input type="text" class="form-control"  name="name" ng-model="invitation.postal" placeholder="code postal" required>
                 </div>
             </div>
 

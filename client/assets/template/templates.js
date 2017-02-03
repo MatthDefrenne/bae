@@ -131,15 +131,13 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "                <li><a data-scroll class=\"btn-orange-hover\" title=\"ORDER BAE\" ng-click=\"GOTOBUY()\">COMMANDER</a></li>\n" +
     "                <li><a data-scroll title=\"Contact us\" href=\"/contact/\">CONTACTEZ-NOUS</a></li>\n" +
     "            </ul>\n" +
-    "        </div><!--/.nav-collapse -->\n" +
-    "    </div><!--/.container-fluid -->\n" +
+    "        </div>\n" +
+    "    </div>\n" +
     "</nav>\n" +
     "\n" +
     "<div class=\"jumbotron header\">\n" +
     "    <div class=\"container container-header\">\n" +
-    "\n" +
     "            <img alt=\"baedrink - improve your self naturaly\" style=\"width: 80%\" src=\"./img/logo.png\">\n" +
-    "\n" +
     "        <div style=\"margin-top: 40px\">\n" +
     "            <button class=\"btn btn-empty btn-green-hover btn-lg\" href=\"WHATBAE\" title=\"WHAT IS BAE ?\" ng-click=\"GOTOWHAT()\">C’EST QUOI BAE ?\n" +
     "            </button>\n" +
@@ -232,10 +230,11 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "                            <img class=\"img-circle\" src=\"data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==\" alt=\"Generic placeholder image\" width=\"140\" height=\"140\">\n" +
     "                            <p>Flavor</p>\n" +
     "                        </div><!-- /.col-lg-4 -->\n" +
-    "                    </div><!-- /.row -->\n" +
+    "                            <button class=\"btn btn-danger full-width fs20\" ng-click=\"GOTOBUY()\">Acheter une boissons BAE SLEEP</button>\n" +
+    "\n" +
+    "                        </div><!-- /.row -->\n" +
     "\n" +
     "\n" +
-    "                    <button class=\"btn btn-success full-width fs20\" ng-click=\"GOTOBUY()\">Acheter une boissons BAE SLEEP</button>\n" +
     "                </div>\n" +
     "                <div class=\"col-md-5 col-md-pull-7\">\n" +
     "                    <div class=\"bae-sleep\"></div>\n" +
@@ -342,44 +341,62 @@ angular.module("/components/invitations/invitations.view.html", []).run(["$templ
     "<div class=\"background\">\n" +
     "    <div class=\"container \" style=\"margin-top: 50px; padding-top: 50px\">\n" +
     "        <h1>Recevoir mon iventation</h1>\n" +
-    "        <h4>Dépêche toi, il ne reste plus que <b>66</b> invitations disponible !</h4>\n" +
+    "        <h4>Dépêche toi, il ne reste plus que <b>{{totalInvitation}}</b> invitations disponible !</h4>\n" +
     "        <hr>\n" +
-    "        <form class=\"form-horizontal\" role=\"form\" method=\"post\" style=\"margin-top: 50px\">\n" +
-    "            <div class=\"form-group\">\n" +
-    "                <label for=\"name\" class=\"col-sm-2 control-label\">Nom & Prénom : </label>\n" +
-    "                <div class=\"col-sm-3\">\n" +
-    "                    <input type=\"text\" class=\"form-control\"  name=\"name\" placeholder=\"Prénom\" value=\"\">\n" +
-    "                </div>\n" +
-    "\n" +
-    "                <div class=\"col-sm-3\">\n" +
-    "                    <input type=\"text\" class=\"form-control\"  name=\"name\" placeholder=\"Nom\" value=\"\">\n" +
-    "                </div>\n" +
-    "            </div>\n" +
+    "        <li ng-if=\"error\" style=\"color: red\">Cette adresse email est déjà utilisée !</li>\n" +
+    "        <li ng-if=\"errorslabel\" style=\"color: red\">Tous les champs doivent être remplis !</li>\n" +
+    "        <div ng-if=\"sucess\" style=\"    color: #33ff4e;\n" +
+    "             border: 1px solid #33ff4e;\n" +
+    "             padding: 10px;\">\n" +
+    "                Félécitation, vous avez validez votre invitation pour recevoir une des 100 bae sleep disponible. Une confirmation à été envoyé par mail ! Merci et à bientôt :)\n" +
+    "        </div>\n" +
+    "        <form class=\"form-horizontal\" role=\"form\" method=\"post\" style=\"margin-top: 50px\" ng-if=\"!sucess\">\n" +
     "            <div class=\"form-group\">\n" +
     "                <label for=\"email\" class=\"col-sm-2 control-label\">Email : </label>\n" +
     "                <div class=\"col-sm-10\">\n" +
-    "                    <input type=\"email\" class=\"form-control\" id=\"email\" name=\"email\" placeholder=\"example@domain.com\" value=\"\">\n" +
+    "                    <input type=\"email\" class=\"form-control\" ng-model=\"invitation.email\" id=\"email\" placeholder=\"example@domain.com\"  required >\n" +
     "                </div>\n" +
     "            </div>\n" +
     "            <div class=\"form-group\">\n" +
-    "                <label for=\"name\" class=\"col-sm-2 control-label\">Livraison : </label>\n" +
+    "                <label class=\"col-sm-2 control-label\">Votre image de participation : </label>\n" +
+    "                <div class=\"col-sm-7\">\n" +
+    "                    <div style=\"    color: #ffa333;\n" +
+    "    border: 1px solid #ffa333;\n" +
+    "    padding: 7px;\">Pour nous envoyer votre image il suffit de se rendre sur <a href=\"https://fr.imgbb.com/\" target=\"_blank\">cette page</a> et de télécharger votre image et ainsi de récuperer le lien de l'image et le collez dans la case juste à coter\n" +
+    "                         </div>\n" +
+    "                </div>\n" +
+    "                <div class=\"col-sm-3\">\n" +
+    "                    <input type=\"text\" class=\"form-control\" placeholder=\"lien de votre image\" ng-model=\"invitation.imageURL\" required>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "            <div class=\"form-group\">\n" +
+    "                <label class=\"col-sm-2 control-label\">Nom & Prénom : </label>\n" +
+    "                <div class=\"col-sm-3\">\n" +
+    "                    <input type=\"text\" class=\"form-control\" ng-model=\"invitation.firstname\" placeholder=\"Prénom\" required>\n" +
+    "                </div>\n" +
+    "                <div class=\"col-sm-3\">\n" +
+    "                    <input type=\"text\" class=\"form-control\"  ng-model=\"invitation.lastname\"  placeholder=\"Nom\" required>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "\n" +
+    "            <div class=\"form-group\">\n" +
+    "                <label class=\"col-sm-2 control-label\">Livraison : </label>\n" +
     "                <div class=\"col-sm-5\">\n" +
-    "                    <input type=\"text\" class=\"form-control\"  name=\"name\" placeholder=\"Adresse\" value=\"\">\n" +
+    "                    <input type=\"text\" class=\"form-control\" ng-model=\"invitation.adress\"  name=\"name\" placeholder=\"Adresse\" required>\n" +
     "                </div>\n" +
     "\n" +
     "                <div class=\"col-sm-3\">\n" +
-    "                    <input type=\"text\" class=\"form-control\"  name=\"name\" placeholder=\"code postal\" value=\"\">\n" +
+    "                    <input type=\"text\" class=\"form-control\"  name=\"name\" ng-model=\"invitation.postal\" placeholder=\"code postal\" required>\n" +
     "                </div>\n" +
     "            </div>\n" +
+    "\n" +
     "            <div class=\"form-group\">\n" +
     "                <div class=\"col-sm-10 col-sm-offset-2\">\n" +
-    "                    <input id=\"submit\" name=\"submit\" type=\"submit\" value=\"Envoyer\" class=\"btn btn-warning\">\n" +
+    "                    <input id=\"submit\" name=\"submit\" type=\"submit\" value=\"Envoyer\" class=\"btn btn-warning\" ng-if=\"!inProgress\" ng-click=\"sendInvitation(invitation)\">\n" +
+    "                    <a  type=\"submit\"  class=\"btn btn-warning\" ng-if=\"inProgress\"><i class=\"fa fa-spinner fa-spin fa-3x fa-fw\"></i></a>\n" +
     "                </div>\n" +
     "            </div>\n" +
     "        </form>\n" +
-    "        <div class=\"row\">\n" +
-    "\n" +
-    "        </div>\n" +
     "    </div>\n" +
     "</div>\n" +
     "\n" +
