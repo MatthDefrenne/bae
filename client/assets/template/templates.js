@@ -364,9 +364,9 @@ angular.module("/components/invitations/invitations.view.html", []).run(["$templ
     "                    <div ng-if=\"inProgressUploadImage\"><i class=\"fa fa-spinner fa-pulse fa-3x fa-fw\"></i>\n" +
     "                    </div>\n" +
     "                    <div  style=\"    color: #33ff4e;\n" +
-    "             border: 1px solid #33ff4e;\n" +
     "             padding: 10px;\" ng-if=\"imageURL\">\n" +
-    "                        Votre image à bien été ajoutée.\n" +
+    "                        Votre image à bien été ajoutée. <i class=\"fa fa-check\" aria-hidden=\"true\"></i>\n" +
+    "\n" +
     "                    </div>\n" +
     "                    <a class=\"btn btn-primary\" ng-click=\"openTakePhoto()\" ng-if=\"!imageURL && !inProgressUploadImage\">Cliquez ici pour télécharger votre image de participation</a>\n" +
     "                </div>\n" +

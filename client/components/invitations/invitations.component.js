@@ -56,7 +56,6 @@ function invitationsComponent($scope, $timeout, $http) {
 
 
     function openTakePhoto() {
-        $scope.inProgressUploadImage = true;
         filepicker.pick(
             {
                 mimetype: 'image/*',
@@ -64,8 +63,9 @@ function invitationsComponent($scope, $timeout, $http) {
                 services: ['COMPUTER', 'FACEBOOK', 'INSTAGRAM', 'GOOGLE_DRIVE', 'DROPBOX']
             },
             function(image){
-                $scope.inProgressUploadImage = false;
-                $scope.imageURL = image.url
+                $timeout(function() {
+                    $scope.imageURL = image.url
+                })
             },
             function(FPError){
                 console.log(FPError.toString());
