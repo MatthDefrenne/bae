@@ -16,12 +16,14 @@ function invitationsComponent($scope, $timeout, $http) {
 
     window.scrollTo(500, 0);
     $scope.sendInvitation = sendInvitation;
-
+    $scope.openTakePhoto = openTakePhoto;
+    $scope.imageURL = false;
+    $scope.inProgressUploadImage = false;
     function sendInvitation(invitation) {
         $scope.error = false;
         $scope.errorslabel = false;
         if(!invitation
-            || !invitation.imageURL
+            || !$scope.imageURL
             || !invitation.email
             || !invitation.firstname
             || !invitation.adress
@@ -30,6 +32,7 @@ function invitationsComponent($scope, $timeout, $http) {
             $scope.errorslabel = true;
         } else {
             $scope.inProgress = true;
+            invitation.imageURL = $scope.imageURL;
             $http.post('/api/invitation/',{invitation: invitation}).success(function(response) {
                 $scope.sucess = true;
                 $scope.inProgress = false;
@@ -49,6 +52,24 @@ function invitationsComponent($scope, $timeout, $http) {
         $http.get('/api/total-invitation/').success(function(count) {
             $scope.totalInvitation = 100 - count;
         })
+    }
+
+
+    function openTakePhoto() {
+        $scope.inProgressUploadImage = true;
+        filepicker.pick(
+            {
+                mimetype: 'image/*',
+                container: 'window',
+                services: ['COMPUTER', 'FACEBOOK', 'INSTAGRAM', 'GOOGLE_DRIVE', 'DROPBOX']
+            },
+            function(image){
+                $scope.inProgressUploadImage = false;
+                $scope.imageURL = image.url
+            },
+            function(FPError){
+                console.log(FPError.toString());
+            });
     }
 
 }

@@ -24,7 +24,7 @@ module.exports = function (connection) {
         connection.query('SELECT * FROM users WHERE email = ?', [req.body.invitation.email], function (error, results, fields) {
             if (results.length === 0) {
                 connection.query('INSERT INTO users SET ?', invitation, function (error, results, fields) {
-                    sendMail([{"email": req.body.invitation.email}], "BaeDrinks", "matthieu.defrenne@outlook.fr", "Matthieu Defrenne", invitation);
+                    sendMail([{"email": req.body.invitation.email}], "Confirmation d'invitation", "matthieu.defrenne@outlook.fr", "BaeDrinks", invitation);
                     if (error) throw error;
                     res.status(200).end();
                 });
@@ -49,9 +49,8 @@ module.exports = function (connection) {
                 "FromEmail": from,
                 "FromName": fromName,
                 "Subject": subject,
-                "Html-part": "<h3>Bonjour " + info.firstname + ", bienvenue chez BaeDrinks!</h3> Voici votre code de participation : <br/><div style='border: 1px solid black;padding: 10px;width: 350px;text-align: center; margin-top: 10px'> <b>" + info.code + "</b></div> " +
-                "<h4>gardez le bien jusqu'au jour de l'ouverture des commandes pour gagner une boisson gratuite ! " +
-                "N'oubliez pas de nous rejoindre sur les réseaux sociaux pour être tenu au courrant de ce qu'il se passe. Merci et à bientôt :)</h4> ",
+                "Html-part": "<h3>Bonjour " + info.firstname + ", bienvenue chez BaeDrinks!</h3> Retrouvez ci-dessous votre code de participation pour gagner une boisson gratuite bae sleep ! : " +
+                "<div style='border: 1px solid black;padding: 10px;width: 350px;text-align: center; margin-top: 10px;'> <b>" + info.code + "</b></div> ",
                 "Recipients": arrayToSend
             })
 

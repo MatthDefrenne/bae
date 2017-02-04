@@ -359,14 +359,16 @@ angular.module("/components/invitations/invitations.view.html", []).run(["$templ
     "            </div>\n" +
     "            <div class=\"form-group\">\n" +
     "                <label class=\"col-sm-2 control-label\">Votre image de participation : </label>\n" +
-    "                <div class=\"col-sm-7\">\n" +
-    "                    <div style=\"    color: #ffa333;\n" +
-    "    border: 1px solid #ffa333;\n" +
-    "    padding: 7px;\">Pour nous envoyer votre image il suffit de se rendre sur <a href=\"https://fr.imgbb.com/\" target=\"_blank\">cette page</a> et de télécharger votre image et ainsi de récuperer le lien de l'image et le collez dans la case juste à coter\n" +
-    "                         </div>\n" +
-    "                </div>\n" +
-    "                <div class=\"col-sm-3\">\n" +
-    "                    <input type=\"text\" class=\"form-control\" placeholder=\"lien de votre image\" ng-model=\"invitation.imageURL\" required>\n" +
+    "                <div class=\"col-sm-3\" >\n" +
+    "\n" +
+    "                    <div ng-if=\"inProgressUploadImage\"><i class=\"fa fa-spinner fa-pulse fa-3x fa-fw\"></i>\n" +
+    "                    </div>\n" +
+    "                    <div  style=\"    color: #33ff4e;\n" +
+    "             border: 1px solid #33ff4e;\n" +
+    "             padding: 10px;\" ng-if=\"imageURL\">\n" +
+    "                        Votre image à bien été ajoutée.\n" +
+    "                    </div>\n" +
+    "                    <a class=\"btn btn-primary\" ng-click=\"openTakePhoto()\" ng-if=\"!imageURL && !inProgressUploadImage\">Cliquez ici pour télécharger votre image de participation</a>\n" +
     "                </div>\n" +
     "            </div>\n" +
     "            <div class=\"form-group\">\n" +
