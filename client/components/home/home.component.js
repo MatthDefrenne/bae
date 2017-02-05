@@ -3,7 +3,7 @@ angular.module('myApp.homeComponent', ['ngRoute'])
 
     .component('home', {
         templateUrl: '/components/home/home.view.html',
-        controller: ['$scope', '$location', homeComponent]
+        controller: ['$scope', '$http', homeComponent]
     })
 
     .config(['$routeProvider', function ($routeProvider) {
@@ -13,7 +13,7 @@ angular.module('myApp.homeComponent', ['ngRoute'])
     }]);
 
 
-function homeComponent($scope, $location) {
+function homeComponent($scope, $http) {
 
 
     $scope.hasClickedOnProduct = false;
@@ -67,6 +67,14 @@ function homeComponent($scope, $location) {
         $('html,body').animate({
             scrollTop:$("#BUY").offset().top
         },'slow');
+    }
+    getTotalInvitation();
+
+    function getTotalInvitation() {
+        $scope.totalInvitation = 0;
+        $http.get('/api/total-invitation/').success(function(count) {
+            $scope.totalInvitation = 100 - count;
+        })
     }
 
 }

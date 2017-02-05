@@ -7,7 +7,6 @@ var nodemailer = require('nodemailer');
 var bodyParser = require('body-parser');
 var mysql = require('mysql');
 var md5 = require('md5');
-require('./mail');
 
 var connection = mysql.createConnection({
     host: '137.74.164.253',

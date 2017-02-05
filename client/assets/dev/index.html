@@ -21,6 +21,7 @@
     <meta property="og:title" content="Baedrinks - boisson somnifère naturelle" />
     <meta property="og:image" content="/img/logo.png" />
     <meta property="og:url" content="https://www.baedrinks.com/" />
+    <meta property="og:type" content="website"/>
     <meta property="og:description" content="Toutes les boissons BaeDrinks sont naturellement conçues pour aider les gens à améliorer la qualité de leur bien-être" />
 
 
@@ -35,12 +36,11 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async='async'></script>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
     <script>
         var OneSignal = window.OneSignal || [];
         OneSignal.push(["init", {
             appId: "70a3cdc9-e39b-43ef-8821-d54538fc8cf2",
-            subdomainName: 'BaeDrinks',
             autoRegister: true,
             notifyButton: {
                 enable: false /* Set to false to hide */
@@ -48,6 +48,27 @@
         }]);
     </script>
 </head>
+<div class="hidden">
+    <script type="text/javascript">
+        <!--//--><![CDATA[//><!--
+        var images = []
+        function preload() {
+            for (i = 0; i < preload.arguments.length; i++) {
+                images[i] = new Image()
+                images[i].src = preload.arguments[i]
+            }
+        }
+        preload(
+                "http://localhost:8080/img/logo.png",
+                "http://localhost:8080/img/contact.jpg",
+                "http://localhost:8080/img/topheader.jpg",
+                "http://localhost:8080/img/background2.jpg",
+                "http://localhost:8080/img/background4.jpg",
+                "http://localhost:8080/img/background.jpg"
+        )
+        //--><!]]>
+    </script>
+</div>
 <script>
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;

@@ -17,6 +17,7 @@ function invitationsComponent($scope, $timeout, $http) {
     window.scrollTo(500, 0);
     $scope.sendInvitation = sendInvitation;
     $scope.openTakePhoto = openTakePhoto;
+
     $scope.imageURL = false;
     $scope.inProgressUploadImage = false;
     function sendInvitation(invitation) {

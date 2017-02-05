@@ -127,7 +127,7 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "        <div id=\"navbar\" class=\"navbar-collapse collapse\">\n" +
     "            <ul class=\"nav navbar-nav navbar-left\">\n" +
     "                <li><a data-scroll class=\"btn-green-hover\" title=\"WHAT IS BAE ?\" ng-click=\"GOTOWHAT()\">C’EST QUOI BAE ? </a></li>\n" +
-    "                <li><a data-scrol class=\"btn-blue-hover\" title=\"OUR BAE DRINKS\" ng-click=\"GOTOPRODUCT()\">NOS BAEDRINKS</a></li>\n" +
+    "                <li><a data-scrol class=\"btn-blue-hover\" title=\"OUR BAE DRINKS\" ng-click=\"GOTOPRODUCT()\">NOS BOISSONS</a></li>\n" +
     "                <li><a data-scroll class=\"btn-orange-hover\" title=\"ORDER BAE\" ng-click=\"GOTOBUY()\">COMMANDER</a></li>\n" +
     "                <li><a data-scroll title=\"Contact us\" href=\"/contact/\">CONTACTEZ-NOUS</a></li>\n" +
     "            </ul>\n" +
@@ -141,7 +141,7 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "        <div style=\"margin-top: 40px\">\n" +
     "            <button class=\"btn btn-empty btn-green-hover btn-lg\" href=\"WHATBAE\" title=\"WHAT IS BAE ?\" ng-click=\"GOTOWHAT()\">C’EST QUOI BAE ?\n" +
     "            </button>\n" +
-    "            <button class=\"btn btn-empty btn-blue-hover btn-lg\" href=\"PRODUCT\" title=\"OUR BAE DRINKS\" ng-click=\"GOTOPRODUCT()\">NOS BAEDRINKS\n" +
+    "            <button class=\"btn btn-empty btn-blue-hover btn-lg\" href=\"PRODUCT\" title=\"OUR BAE DRINKS\" ng-click=\"GOTOPRODUCT()\">NOS BOISSONS\n" +
     "            </button>\n" +
     "            <button class=\"btn btn-empty btn-orange-hover btn-lg\" href=\"BUY\" title=\"ORDER BAE\" ng-click=\"GOTOBUY()\">COMMANDER\n" +
     "            </button>\n" +
@@ -251,7 +251,7 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "            </h1>\n" +
     "            <p class=\"b-s25\">Vous désirez acheter une de nos boissons ? Pour l'instant les commandes et les invitations ne sont pas ouvertes,\n" +
     "                restez informez sur nos réseaux sociaux pour l'ouverture des invitations, et tentez de remportez une boissons bae sleep gratuitement !</p>\n" +
-    "            <div class=\"row\" ng-if=\"false\">\n" +
+    "            <div class=\"row\">\n" +
     "                <div class=\"col-lg-2\">\n" +
     "                </div>\n" +
     "                <div class=\"col-lg-4\">\n" +
@@ -365,10 +365,10 @@ angular.module("/components/invitations/invitations.view.html", []).run(["$templ
     "                    </div>\n" +
     "                    <div  style=\"    color: #33ff4e;\n" +
     "             padding: 10px;\" ng-if=\"imageURL\">\n" +
-    "                        Votre image à bien été ajoutée. <i class=\"fa fa-check\" aria-hidden=\"true\"></i>\n" +
-    "\n" +
+    "                        Votre image a bien été ajoutée. <i class=\"fa fa-check\" aria-hidden=\"true\"></i>\n" +
     "                    </div>\n" +
-    "                    <a class=\"btn btn-primary\" ng-click=\"openTakePhoto()\" ng-if=\"!imageURL && !inProgressUploadImage\">Cliquez ici pour télécharger votre image de participation</a>\n" +
+    "                    <a class=\"btn btn-primary\" ng-click=\"openTakePhoto()\" ng-if=\"!imageURL && !inProgressUploadImage\">\n" +
+    "                        Cliquez ici pour télécharger votre image</a>\n" +
     "                </div>\n" +
     "            </div>\n" +
     "            <div class=\"form-group\">\n" +

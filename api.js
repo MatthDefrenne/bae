@@ -24,7 +24,8 @@ module.exports = function (connection) {
         connection.query('SELECT * FROM users WHERE email = ?', [req.body.invitation.email], function (error, results, fields) {
             if (results.length === 0) {
                 connection.query('INSERT INTO users SET ?', invitation, function (error, results, fields) {
-                    sendMail([{"email": req.body.invitation.email}], "Confirmation d'invitation", "matthieu.defrenne@outlook.fr", "BaeDrinks", invitation);
+                    sendMailToCostumers(invitation);
+                    sendMailToBaeDrinks(invitation);
                     if (error) throw error;
                     res.status(200).end();
                 });
@@ -42,15 +43,14 @@ module.exports = function (connection) {
         });
     }
 
-    function sendMail(arrayToSend, subject, from, fromName, info) {
+    function sendMail(arrayToSend, subject, from, fromName, msg) {
         var request = Mailjet
             .post("send")
             .request({
                 "FromEmail": from,
                 "FromName": fromName,
                 "Subject": subject,
-                "Html-part": "<h3>Bonjour " + info.firstname + ", bienvenue chez BaeDrinks!</h3> Retrouvez ci-dessous votre code de participation pour gagner une boisson gratuite bae sleep ! : " +
-                "<div style='border: 1px solid black;padding: 10px;width: 350px;text-align: center; margin-top: 10px;'> <b>" + info.code + "</b></div> ",
+                "Html-part": msg,
                 "Recipients": arrayToSend
             })
 
@@ -61,6 +61,23 @@ module.exports = function (connection) {
             .catch(function (err) {
                 console.log(err.statusCode)
             })
+    }
+
+    function sendMailToCostumers(invitation) {
+        sendMail([{"email": invitation.email}], "Confirmation d'invitation", "matthieu.defrenne@outlook.fr", "BaeDrinks",
+            "<h3>Bonjour " + invitation.firstname + ", bienvenue chez BaeDrinks!</h3> Retrouvez ci-dessous votre code avec le lien de participation pour gagner une boisson gratuite bae sleep, gardez le bien ! " +
+            "<div style='border: 1px solid black;padding: 10px;width: 350px;text-align: center; margin-top: 10px;'> <b><a href='https://www.baedrinks.com/order/#' " +  invitation.code + "></a></b></div> ");
+    }
+
+    function sendMailToBaeDrinks(invitation) {
+        sendMail([{"email": "matthieu.defrenne@gmail.com"}], "COMMANDE", "matthieu.defrenne@outlook.fr", "BaeDrinks" + invitation.firstname, "" +
+            invitation.firstname + "<br/>" +
+            invitation.lastname + "<br/>" +
+            invitation.adress + "<br/>" +
+            invitation.postal + "<br/>" +
+            invitation.code + "<br/>" +
+            invitation.email + "<br/>"
+        );
     }
 
 
