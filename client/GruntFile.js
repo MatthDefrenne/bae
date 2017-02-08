@@ -77,7 +77,8 @@ module.exports = function (grunt) {
               '!bower_components/**/*.js',
               '!node_modules/**/*.js',
               '!app.js',
-              '!GruntFile.js'
+              '!OneSignalSDKUpdaterWorker.js',
+              '!OneSignalSDKWorker.js'
             ]
           }
         ]

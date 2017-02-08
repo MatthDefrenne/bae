@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">BAEDRINKS</a>
+            <a class="navbar-brand" href="#" ng-click="GOTOTOP()"><b>BAEDRINKS</b></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-left">
@@ -135,17 +135,22 @@
             <h1 class="h1-custom">
                ACHETER UNE BOISSON
             </h1>
-            <p class="b-s25">Vous désirez acheter une de nos boissons ? Pour l'instant les commandes et les invitations ne sont pas ouvertes,
-                restez informez sur nos réseaux sociaux pour l'ouverture des invitations, et tentez de remportez une boissons bae sleep gratuitement !</p>
-            <div class="row">
+            <p class="b-s25">Vous désirez acheter une de nos BaeDrinks ? Pour l’instant les commandes ne sont pas encore ouvertes !
+                Restez Informés de l’ouverture des commandes et de nos nouveautés en saisissant votre mail et en nous suivant sur nos réseaux sociaux</p>
+            <div ng-if="success">
+                <div  style="    color: #33ff4e; text-align: center;
+              padding: 10px;" ng-if="success">
+                    Merci pour votre participation, nous revenons vers vous très prochainement ! <i class="fa fa-check" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 20px" ng-if="!success">
                 <div class="col-lg-2">
                 </div>
                 <div class="col-lg-4">
-                    <button class="btn btn-success full-width fs20" ng-disabled="true" >Avoir une invitation</button>
+                    <input type="text" ng-model="email" placeholder="example@domain.com" class="form-control" required>
                 </div>
                 <div class="col-lg-4">
-                    <button class="btn btn-success full-width fs20" ng-disabled="true" >Commander une boisson Bae
-                    </button>
+                    <button class="btn btn-success" ng-click="sendMail(email)" type="submit" ng-disabled="!email">Envoyer mon adresse mail</button>
                 </div>
                 <div class="col-lg-2">
                 </div>

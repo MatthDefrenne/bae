@@ -16,6 +16,8 @@ angular.module('myApp.homeComponent', ['ngRoute'])
 function homeComponent($scope, $http) {
 
 
+    $scope.sendMail = sendMail;
+
     $scope.hasClickedOnProduct = false;
 
     $(document).ready(function () {
@@ -57,6 +59,12 @@ function homeComponent($scope, $http) {
         },'slow');
     }
 
+    $scope.GOTOTOP = function() {
+        $('html,body').animate({
+            scrollTop:$("#nav").offset().top
+        },'slow');
+    }
+
     $scope.GOTOPRODUCT = function() {
         $('html,body').animate({
             scrollTop:$("#PRODUCT").offset().top
@@ -74,6 +82,13 @@ function homeComponent($scope, $http) {
         $scope.totalInvitation = 0;
         $http.get('/api/total-invitation/').success(function(count) {
             $scope.totalInvitation = 100 - count;
+        })
+    }
+
+    function sendMail(email) {
+        $scope.success = false;
+        $http.post('/api/mail/', {email: email}).success(function(count) {
+            $scope.success = true;
         })
     }
 

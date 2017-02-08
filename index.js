@@ -35,6 +35,9 @@ app.use(compression());
 app.use(express.static("client"));
 
 app.post('/api/invitation/', api.invitations);
+app.post('/api/order/', api.newOrder);
+app.post('/api/mail/', api.saveEmail);
+app.get('/api/user/', api.getUserWithCode);
 app.get('/api/total-invitation/', api.getTotalSubscribe);
 app.get('*', index);
 

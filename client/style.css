@@ -1601,7 +1601,7 @@ h6 .small,
 
 h1,
 .h1 {
-    font-size: 36px;
+    font-size: 60px;
 }
 
 h2,
@@ -8328,7 +8328,7 @@ html {
 }
 
 body {
-    font-family: 'Quicksand', sans-serif;
+            font-family: 'Quicksand', sans-serif;
 }
 
 .table-icon {
@@ -8555,7 +8555,7 @@ iPad 3
         display: inherit;
     }
     .h1-custom {
-        font-size: 80px;
+        font-size: 100px;
     }
     .container-global-3 {
         display: table;
@@ -8566,6 +8566,7 @@ iPad 3
     .social-media {
         margin-left: 30px;
     }
+
 }
 
 /* Large screens ----------- */
@@ -8587,6 +8588,9 @@ iPad 3
     .header {
         width: 500px;
     }
+    .btn-empty {
+        width: 100%;
+    }
 
 }
 
@@ -8599,7 +8603,9 @@ iPad 3
     .h1-custom {
         font-size: 35px;
     }
-
+    .btn-empty {
+        width: 100%;
+    }
 
     .social-media {
         margin-left: 10px;
@@ -8764,6 +8770,11 @@ iPad 3
 .navbar-orange {
     background-color: rgba(255, 141, 0, 0.8);
 }
+
+.navbar-blue {
+    background-color: #2c66cd;
+}
+
 
 .social-media {
     font-size: 35px;

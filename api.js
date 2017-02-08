@@ -5,7 +5,10 @@ module.exports = function (connection) {
 
     return {
         invitations: invitations,
-        getTotalSubscribe: getTotalSubscribe
+        getTotalSubscribe: getTotalSubscribe,
+        getUserWithCode: getUserWithCode,
+        newOrder: newOrder,
+        saveEmail: saveEmail
     };
 
     function invitations(req, res) {
@@ -80,5 +83,34 @@ module.exports = function (connection) {
         );
     }
 
+    function getUserWithCode(req, res) {
+        var code = req.param('code');
+        connection.query('SELECT * FROM users WHERE code = ?', [code], function (error, results, fields) {
+            if (results.length != 0) {
+                res.json(results[0]).status(200).end();
+            } else {
+                res.status(500).end();
+            }
+        });
+    }
+
+    function newOrder(req, res) {
+        var order = req.body.order;
+        updateCode(order.email);
+        res.status(200).end();
+    }
+
+    function updateCode(email) {
+        connection.query('UPDATE users SET code = ? WHERE email = ?', ['', email], function (error, results, fields) {
+            if (error) throw error;
+        });
+    }
+
+    function saveEmail(req, res) {
+        connection.query('INSERT INTO email SET ?', [req.body], function (error, results, fields) {
+            if (error) throw error;
+            res.status(200).end();
+        });
+    }
 
 };

@@ -1,4 +1,4 @@
-angular.module('templates-main', ['/components/contact/contact.view.html', '/components/home/home.view.html', '/components/invitations/invitations.view.html']);
+angular.module('templates-main', ['/components/contact/contact.view.html', '/components/home/home.view.html', '/components/invitations/invitations.view.html', '/components/order/order.view.html']);
 
 angular.module("/components/contact/contact.view.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("/components/contact/contact.view.html",
@@ -122,7 +122,7 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "                <span class=\"icon-bar\"></span>\n" +
     "                <span class=\"icon-bar\"></span>\n" +
     "            </button>\n" +
-    "            <a class=\"navbar-brand\" href=\"#\">BAEDRINKS</a>\n" +
+    "            <a class=\"navbar-brand\" href=\"#\" ng-click=\"GOTOTOP()\"><b>BAEDRINKS</b></a>\n" +
     "        </div>\n" +
     "        <div id=\"navbar\" class=\"navbar-collapse collapse\">\n" +
     "            <ul class=\"nav navbar-nav navbar-left\">\n" +
@@ -249,17 +249,16 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "            <h1 class=\"h1-custom\">\n" +
     "               ACHETER UNE BOISSON\n" +
     "            </h1>\n" +
-    "            <p class=\"b-s25\">Vous désirez acheter une de nos boissons ? Pour l'instant les commandes et les invitations ne sont pas ouvertes,\n" +
-    "                restez informez sur nos réseaux sociaux pour l'ouverture des invitations, et tentez de remportez une boissons bae sleep gratuitement !</p>\n" +
+    "            <p class=\"b-s25\">Vous désirez acheter une de nos BaeDrinks ? Pour l’instant les commandes ne sont pas encore ouvertes !\n" +
+    "                Restez Informés de l’ouverture des commandes et de nos nouveautés en saisissant votre mail et en nous suivant sur nos réseaux sociaux</p>\n" +
     "            <div class=\"row\">\n" +
     "                <div class=\"col-lg-2\">\n" +
     "                </div>\n" +
     "                <div class=\"col-lg-4\">\n" +
-    "                    <button class=\"btn btn-success full-width fs20\" ng-disabled=\"true\" >Avoir une invitation</button>\n" +
+    "                    <input type=\"text\" ng-model=\"email\" placeholder=\"example@domain.com\">\n" +
     "                </div>\n" +
     "                <div class=\"col-lg-4\">\n" +
-    "                    <button class=\"btn btn-success full-width fs20\" ng-disabled=\"true\" >Commander une boisson Bae\n" +
-    "                    </button>\n" +
+    "                    <button class=\"btn btn-success full-width fs20\" ng-click=\"sendMail(email)\" >Envoyer</button>\n" +
     "                </div>\n" +
     "                <div class=\"col-lg-2\">\n" +
     "                </div>\n" +
@@ -408,6 +407,130 @@ angular.module("/components/invitations/invitations.view.html", []).run(["$templ
     "    <div class=\"footer navbar-fixed-bottom\">\n" +
     "        <div class=\"container\" style=\"padding-top: 20px\">\n" +
     "\n" +
+    "            <div class=\"row\">\n" +
+    "                <div class=\"col-lg-12\">\n" +
+    "                    <div style=\"\n" +
+    "    margin: auto;\">\n" +
+    "                        <div class=\"social-media \">\n" +
+    "                            <a href=\"https://www.facebook.com/BaeDrinks/?fref=ts\">\n" +
+    "                                <div class=\"table-icon\">\n" +
+    "                                    <i class=\"fa fa-facebook facebook\"\n" +
+    "                                       aria-hidden=\"true\"></i>\n" +
+    "                                </div>\n" +
+    "                            </a>\n" +
+    "                        </div>\n" +
+    "                        <div class=\"social-media\">\n" +
+    "                            <a href=\"https://medium.com/@baedrinks\">\n" +
+    "                                <div class=\"table-icon\">\n" +
+    "                                    <i class=\"fa fa-medium medium\"\n" +
+    "                                       aria-hidden=\"true\"></i>\n" +
+    "                                </div>\n" +
+    "                            </a>\n" +
+    "                        </div>\n" +
+    "                        <div class=\"social-media \">\n" +
+    "                            <a href=\"https://www.instagram.com/baedrinks/\">\n" +
+    "        <span class=\"table-icon\">\n" +
+    "               <i class=\"fa fa-instagram instagram\" aria-hidden=\"true\"></i>\n" +
+    "\n" +
+    "        </span>\n" +
+    "                            </a>\n" +
+    "                        </div>\n" +
+    "\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "\n" +
+    "            </div>\n" +
+    "\n" +
+    "        </div>\n" +
+    "\n" +
+    "        <div class=\"text-center\" style=\"font-weight: bold; margin-top: 50px\">\n" +
+    "            <p>  BAE DRINKS © 2017 All Rights Reserved. </p>\n" +
+    "            <p><b>B</b>efore <b>A</b>nyone <b>E</b>lse</span></p>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "</footer>");
+}]);
+
+angular.module("/components/order/order.view.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("/components/order/order.view.html",
+    "<nav class=\"navbar navbar-default navbar-fixed-top navbar-blue\">\n" +
+    "    <div class=\"container-fluid\">\n" +
+    "        <div class=\"navbar-header\">\n" +
+    "            <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\n" +
+    "                <span class=\"sr-only\">Toggle navigation</span>\n" +
+    "                <span class=\"icon-bar\"></span>\n" +
+    "                <span class=\"icon-bar\"></span>\n" +
+    "                <span class=\"icon-bar\"></span>\n" +
+    "            </button>\n" +
+    "        </div>\n" +
+    "        <div id=\"navbar\" class=\"navbar-collapse collapse\">\n" +
+    "            <div class=\"container\">\n" +
+    "                <ul class=\"nav navbar-nav\">\n" +
+    "                    <li><a href=\"/\"><i class=\"fa fa-arrow-left\" aria-hidden=\"true\"></i> Retour</a></li>\n" +
+    "                    <li><a class=\"header-link\">BAEDRINKS - RECEVOIR UNE BOISSON</a></li>\n" +
+    "                </ul>\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "</nav>\n" +
+    "<div class=\"background\">\n" +
+    "    <div class=\"container \" style=\"margin-top: 50px; padding-top: 50px\">\n" +
+    "        <h1>Commande BAESLEEP</h1>\n" +
+    "        <hr>\n" +
+    "        <form  class=\"form-horizontal\" role=\"form\" method=\"post\" style=\"margin-top: 50px\" ng-if=\"!sucess\">\n" +
+    "            <li ng-if=\"error\" style=\"color: red\">Ce code n'existe pas !</li>\n" +
+    "            <div class=\"form-group\">\n" +
+    "                <label for=\"email\" class=\"col-sm-2 control-label\">Code de participation :</label>\n" +
+    "                <div class=\"col-sm-10\">\n" +
+    "                    <input type=\"text\" class=\"form-control\" ng-model=\"order.code\" ng-change=\"newOrder()\"  placeholder=\"Code d'invitation bae\"  required ng-if=\"!success\">\n" +
+    "                       <div  style=\"    color: #33ff4e;\n" +
+    "             padding: 10px;\" ng-if=\"success\">\n" +
+    "                    {{order.code}} -  code validé ! <i class=\"fa fa-check\" aria-hidden=\"true\"></i>\n" +
+    "                </div>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "            <div class=\"form-group\">\n" +
+    "                <label for=\"email\" class=\"col-sm-2 control-label\">Email : </label>\n" +
+    "                <div class=\"col-sm-10\">\n" +
+    "                    <input type=\"email\" class=\"form-control\" ng-model=\"order.email\" id=\"email\" placeholder=\"example@domain.com\"  required >\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "            <div class=\"form-group\">\n" +
+    "                <label class=\"col-sm-2 control-label\">Nom & Prénom : </label>\n" +
+    "                <div class=\"col-sm-3\">\n" +
+    "                    <input type=\"text\" class=\"form-control\" ng-model=\"order.firstname\" placeholder=\"Prénom\" required>\n" +
+    "                </div>\n" +
+    "                <div class=\"col-sm-3\">\n" +
+    "                    <input type=\"text\" class=\"form-control\"  ng-model=\"order.lastname\"  placeholder=\"Nom\" required>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "\n" +
+    "            <div class=\"form-group\">\n" +
+    "                <label class=\"col-sm-2 control-label\">Livraison : </label>\n" +
+    "                <div class=\"col-sm-5\">\n" +
+    "                    <input type=\"text\" class=\"form-control\" ng-model=\"order.adress\"  name=\"name\" placeholder=\"Adresse\" required>\n" +
+    "                </div>\n" +
+    "\n" +
+    "                <div class=\"col-sm-3\">\n" +
+    "                    <input type=\"text\" class=\"form-control\"  name=\"name\" ng-model=\"order.postal\" placeholder=\"code postal\" required>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "\n" +
+    "            <div class=\"form-group\">\n" +
+    "                <div class=\"col-sm-10 col-sm-offset-2\">\n" +
+    "                    <li style=\"margin-bottom: 20px; color: #78a9ff; font-size: 18px; border: 1px solid #78a9ff; padding: 10px\"><i class=\"fa fa-exclamation-triangle\" aria-hidden=\"true\"></i> Avant de valider votre commande soyez sur de votre adresse de livraison. Les commandes sont effectuées gratuitement à Namur, Belgique, directement envoyer via la poste.</li>\n" +
+    "\n" +
+    "                    <input id=\"submit\" name=\"submit\" type=\"submit\" value=\"Commander\" class=\"btn btn-primary btn-lg\" ng-if=\"!inProgress\" ng-click=\"sendOrder(order)\">\n" +
+    "                    <a  type=\"submit\"  class=\"btn btn-warning\" ng-if=\"inProgress\"><i class=\"fa fa-spinner fa-spin fa-3x fa-fw\"></i></a>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "        </form>\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "\n" +
+    "<footer>\n" +
+    "    <div class=\"footer navbar-fixed-bottom\">\n" +
+    "        <div class=\"container\" style=\"padding-top: 20px\">\n" +
     "            <div class=\"row\">\n" +
     "                <div class=\"col-lg-12\">\n" +
     "                    <div style=\"\n" +
