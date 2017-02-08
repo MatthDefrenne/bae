@@ -1,5 +1,6 @@
 var Mailjet = require('node-mailjet').connect('36a3d81be137f529167c7d0231fce037', '192a40d8e4f50aef301882e97a531413');
 var md5 = require('md5');
+const EMAIL = "baedrinks@gmail.com"
 
 module.exports = function (connection) {
 
@@ -8,7 +9,8 @@ module.exports = function (connection) {
         getTotalSubscribe: getTotalSubscribe,
         getUserWithCode: getUserWithCode,
         newOrder: newOrder,
-        saveEmail: saveEmail
+        saveEmail: saveEmail,
+        contactUS: contactUS
     };
 
     function invitations(req, res) {
@@ -73,7 +75,7 @@ module.exports = function (connection) {
     }
 
     function sendMailToBaeDrinks(invitation) {
-        sendMail([{"email": "matthieu.defrenne@gmail.com"}], "COMMANDE", "matthieu.defrenne@outlook.fr", "BaeDrinks" + invitation.firstname, "" +
+        sendMail([{"email": EMAIL}], "COMMANDE", "matthieu.defrenne@outlook.fr", "BaeDrinks" + invitation.firstname, "" +
             invitation.firstname + "<br/>" +
             invitation.lastname + "<br/>" +
             invitation.adress + "<br/>" +
@@ -111,6 +113,16 @@ module.exports = function (connection) {
             if (error) throw error;
             res.status(200).end();
         });
+    }
+
+    function contactUS(req, res) {
+        var contactUS = req.body.contactUS;
+        sendMail([{"email": EMAIL}], "Contact", "matthieu.defrenne@outlook.fr", "Contact US " + contactUS.firstname, "" +
+            "" +  contactUS.message +
+            "" +
+            "" +
+            "");
+        res.status(200).end();
     }
 
 };

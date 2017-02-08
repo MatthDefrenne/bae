@@ -27,9 +27,7 @@
         <hr>
         <li ng-if="error" style="color: red">Cette adresse email est déjà utilisée !</li>
         <li ng-if="errorslabel" style="color: red">Tous les champs doivent être remplis !</li>
-        <div ng-if="sucess" style="    color: #33ff4e;
-             border: 1px solid #33ff4e;
-             padding: 10px;">
+        <div class="alert alert-success">
                 Félécitation, vous avez validez votre invitation pour recevoir une des 100 bae sleep disponible. Une confirmation à été envoyé par mail ! Merci et à bientôt :)
         </div>
         <form class="form-horizontal" role="form" method="post" style="margin-top: 50px" ng-if="!sucess">

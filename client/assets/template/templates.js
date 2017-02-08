@@ -187,11 +187,8 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "                <div class=\"col-lg-2\">\n" +
     "                </div>\n" +
     "                <div class=\"col-lg-8\" style=\"font-size: 25px; margin-top: 25px\">\n" +
-    "                    <p>La nature nous a toujours enseigné comment rester en bonne santé. A chaque fois que nous dévions du processus naturel,\n" +
-    "                        la qualité de notre bien-être diminue. </p>\n" +
-    "\n" +
-    "                        Chez Bae, nous analysons comment les choses se passent naturellement\n" +
-    "                        dans la nature, ensuite nous concevons des boissons naturelles BaeDrinks, et ainsi aider les gens à améliorer les différents aspects de leur bien-être.</>\n" +
+    "                    <p>La nature nous a toujours enseigné comment rester en bonne santé. A chaque fois que nous dévions du processus naturel, la qualité de notre bien-être diminue.</p>\n" +
+    "                    <p>Chez Bae, nous analysons minutieusement comment les choses se passent naturellement, ensuite nous concevons des boissons naturelles BaeDrinks inspirées de nos analyses pour aider les gens à améliorer la qualité de leur bien-être.</p>\n" +
     "                </div>\n" +
     "                <div class=\"col-lg-2\">\n" +
     "                </div>\n" +
@@ -213,13 +210,11 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "                </div>\n" +
     "                <div class=\"col-md-7 col-md-push-5\">\n" +
     "                    <p class=\"lead\">\n" +
-    "                       Problème d'insomnie ou nuit blanche ? Ou vous voulez tout simplement vous détendre et de vous relaxez?\n" +
-    "                        Chez Bae nous avons pensé à vous, nous avons analysé minutieusement comment votre corps et cerveau\n" +
-    "                        fonctionne pour que vous entrez dans le sommeil et la détente.\n" +
-    "                        </p>\n" +
-    "\n" +
-    "                        <p class=\"lead\">Nous avons ensuite conçu BaeSleep basée sur\n" +
-    "                        le même principe avec un goût pêche délicieux pour vous aider à vous détendre, vous relaxer et améliorer votre\n" +
+    "                        Problème d’insomnie ou nuit blanche? Vous voulez tout simplement vous détendre et vous relaxer? Chez Bae nous avons pensé à vous!\n" +
+    "                        Nous avons analysé en détail comment votre corps et cerveau fonctionne pour que vous entrez dans le sommeil et la détente.\n" +
+    "                    </p>\n" +
+    "                    <p class=\"lead\">\n" +
+    "                        Nous avons concu BaeSleep inspirée de cette analyse, avec un goût pêche délicieux pour vous aider à vous détendre, vous relaxer et améliorer votre qualité de sommeil.\n" +
     "                        qualité de sommeil.</p>\n" +
     "                        <div class=\"row\">\n" +
     "                        <div class=\"col-lg-6\">\n" +
@@ -233,8 +228,6 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "                            <button class=\"btn btn-danger full-width fs20\" ng-click=\"GOTOBUY()\">Acheter une boissons BAE SLEEP</button>\n" +
     "\n" +
     "                        </div><!-- /.row -->\n" +
-    "\n" +
-    "\n" +
     "                </div>\n" +
     "                <div class=\"col-md-5 col-md-pull-7\">\n" +
     "                    <div class=\"bae-sleep\"></div>\n" +
@@ -251,14 +244,20 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "            </h1>\n" +
     "            <p class=\"b-s25\">Vous désirez acheter une de nos BaeDrinks ? Pour l’instant les commandes ne sont pas encore ouvertes !\n" +
     "                Restez Informés de l’ouverture des commandes et de nos nouveautés en saisissant votre mail et en nous suivant sur nos réseaux sociaux</p>\n" +
-    "            <div class=\"row\">\n" +
+    "            <div ng-if=\"success\">\n" +
+    "                <div  style=\"    color: #33ff4e; text-align: center;\n" +
+    "              padding: 10px;\" ng-if=\"success\">\n" +
+    "                    Merci pour votre participation, nous revenons vers vous très prochainement ! <i class=\"fa fa-check\" aria-hidden=\"true\"></i>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "            <div class=\"row\" style=\"margin-top: 20px\" ng-if=\"!success\">\n" +
     "                <div class=\"col-lg-2\">\n" +
     "                </div>\n" +
     "                <div class=\"col-lg-4\">\n" +
-    "                    <input type=\"text\" ng-model=\"email\" placeholder=\"example@domain.com\">\n" +
+    "                    <input type=\"text\" ng-model=\"email\" placeholder=\"example@domain.com\" class=\"form-control\" required>\n" +
     "                </div>\n" +
     "                <div class=\"col-lg-4\">\n" +
-    "                    <button class=\"btn btn-success full-width fs20\" ng-click=\"sendMail(email)\" >Envoyer</button>\n" +
+    "                    <button class=\"btn btn-success\" ng-click=\"sendMail(email)\" type=\"submit\" ng-disabled=\"!email\">Envoyer mon adresse mail</button>\n" +
     "                </div>\n" +
     "                <div class=\"col-lg-2\">\n" +
     "                </div>\n" +

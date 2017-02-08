@@ -12,8 +12,10 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-left">
-                <li><a data-scroll class="btn-green-hover" title="WHAT IS BAE ?" ng-click="GOTOWHAT()">C’EST QUOI BAE ? </a></li>
-                <li><a data-scrol class="btn-blue-hover" title="OUR BAE DRINKS" ng-click="GOTOPRODUCT()">NOS BOISSONS</a></li>
+                <li><a data-scroll class="btn-green-hover" title="WHAT IS BAE ?" ng-click="GOTOWHAT()">C’EST QUOI BAE
+                    ? </a></li>
+                <li><a data-scrol class="btn-blue-hover" title="OUR BAE DRINKS" ng-click="GOTOPRODUCT()">NOS
+                    BOISSONS</a></li>
                 <li><a data-scroll class="btn-orange-hover" title="ORDER BAE" ng-click="GOTOBUY()">COMMANDER</a></li>
                 <li><a data-scroll title="Contact us" href="/contact/">CONTACTEZ-NOUS</a></li>
             </ul>
@@ -23,13 +25,16 @@
 
 <div class="jumbotron header">
     <div class="container container-header">
-            <img alt="baedrink - improve your self naturaly" style="width: 80%" src="./img/logo.png">
+        <img alt="baedrink - improve your self naturaly" class="img-responsive" src="./img/logo.png">
         <div style="margin-top: 40px">
-            <button class="btn btn-empty btn-green-hover btn-lg" href="WHATBAE" title="WHAT IS BAE ?" ng-click="GOTOWHAT()">C’EST QUOI BAE ?
+            <button class="btn btn-empty btn-green-hover btn-lg" href="WHATBAE" title="WHAT IS BAE ?"
+                    ng-click="GOTOWHAT()">C’EST QUOI BAE ?
             </button>
-            <button class="btn btn-empty btn-blue-hover btn-lg" href="PRODUCT" title="OUR BAE DRINKS" ng-click="GOTOPRODUCT()">NOS BOISSONS
+            <button class="btn btn-empty btn-blue-hover btn-lg" href="PRODUCT" title="OUR BAE DRINKS"
+                    ng-click="GOTOPRODUCT()">NOS BOISSONS
             </button>
-            <button class="btn btn-empty btn-orange-hover btn-lg" href="BUY" title="ORDER BAE" ng-click="GOTOBUY()">COMMANDER
+            <button class="btn btn-empty btn-orange-hover btn-lg" href="BUY" title="ORDER BAE" ng-click="GOTOBUY()">
+                COMMANDER
             </button>
             <a class="btn btn-empty btn-red-hover btn-lg" href="/contact/" title="CONTACT">CONTACTEZ-NOUS
             </a>
@@ -38,89 +43,93 @@
     margin: auto; margin-top: 75px; margin-bottom: 50px">
             <div class="social-media ">
                 <a title="Facebook" href="https://www.facebook.com/BaeDrinks/?fref=ts">
-                <div class="table-icon">
-                    <i class="fa fa-facebook facebook"
-                                                                                  aria-hidden="true"></i>
-                </div>
+                    <div class="table-icon">
+                        <i class="fa fa-facebook facebook"
+                           aria-hidden="true"></i>
+                    </div>
                 </a>
             </div>
             <div class="social-media">
                 <a title="Medium" href="https://medium.com/@baedrinks">
-                <div class="table-icon">
-                     <i class="fa fa-medium medium"
-                                                                aria-hidden="true"></i>
-                </div>
+                    <div class="table-icon">
+                        <i class="fa fa-medium medium"
+                           aria-hidden="true"></i>
+                    </div>
                 </a>
             </div>
             <div class="social-media ">
                 <a title="Instagram" href="https://www.instagram.com/baedrinks/">
         <span class="table-icon">
                 <i class="fa fa-instagram instagram" aria-hidden="true"></i>
-
         </span>
                 </a>
             </div>
-
         </div>
     </div>
 </div>
-
 <div class="container-global-1" id="WHATBAE">
     <div class="container marketing" style="display: table-cell; vertical-align: middle">
-        <div class="container" style="margin-bottom: 40px; ">
-            <h1 class="h1-custom">C’EST QUOI BAE ?</h1>
+        <div class="container" style="margin-top: 50px; margin-bottom: 50px" >
+            <img src="./img/what.png"  class="img-responsive" >
             <div class="row">
                 <div class="col-lg-2">
                 </div>
                 <div class="col-lg-8" style="font-size: 25px; margin-top: 25px">
-                    <p>La nature nous a toujours enseigné comment rester en bonne santé. A chaque fois que nous dévions du processus naturel,
-                        la qualité de notre bien-être diminue. </p>
-
-                        Chez Bae, nous analysons comment les choses se passent naturellement
-                        dans la nature, ensuite nous concevons des boissons naturelles BaeDrinks, et ainsi aider les gens à améliorer les différents aspects de leur bien-être.</>
+                    <p>La nature nous a toujours enseigné comment rester en bonne santé. A chaque fois que nous dévions
+                        du processus naturel, la qualité de notre bien-être diminue.</p>
+                    <p>Chez Bae, nous analysons minutieusement comment les choses se passent naturellement, ensuite nous
+                        concevons des boissons naturelles BaeDrinks inspirées de nos analyses pour aider les gens à
+                        améliorer la qualité de leur bien-être.</p>
                 </div>
                 <div class="col-lg-2">
                 </div>
             </div>
-
         </div>
     </div>
 </div>
 <div class="container-global-3" id="PRODUCT">
+    <div class="container marketing" style="display: table-cell; vertical-align: middle">
+        <div class="container" style="margin-top: 50px; margin-bottom: 50px">
+            <img src="./img/drinks.png" style="margin-bottom: 50px" class="img-responsive">
+            <p class="b-s25">Notre premiere BaeDrink aidera les gens à résoudre l’un des fréquents problèmes nuisant au bien-être. Nous avons analysé comment les choses se font naturellement; et aujourd’hui, nous avons LA solution !
+            </p>
+            <button ng-click="GOTOBUY()" class="btn btn-danger full-width">RESTEZ INFORMEZ</button>
+        </div>
+    </div>
+</div>
+<div class="container-global-3" id="PRODUCT" ng-if="false">
     <div class="container marketing" style="display: table-cell; vertical-align: middle; ">
-        <div class="container" style="margin-bottom: 40px; padding-top: 20px;">
-            <h1 class="h1-custom" ng-if="!hasClickedOnProduct">
-                BaeSleep
-            </h1>
-            <div class="row" style="margin-top: 25px" >
+        <div class="container" >
+            <div class="row" style="margin-top: 25px">
                 <div class="fs20 cursor" style="margin-bottom: 20px" ng-click="closeProduct()" ng-if="false">
                     <i class="fa fa-arrow-left" aria-hidden="true"></i>
                     Retour aux produits
                 </div>
                 <div class="col-md-7 col-md-push-5">
                     <p class="lead">
-                       Problème d'insomnie ou nuit blanche ? Ou vous voulez tout simplement vous détendre et de vous relaxez?
-                        Chez Bae nous avons pensé à vous, nous avons analysé minutieusement comment votre corps et cerveau
-                        fonctionne pour que vous entrez dans le sommeil et la détente.
-                        </p>
-
-                        <p class="lead">Nous avons ensuite conçu BaeSleep basée sur
-                        le même principe avec un goût pêche délicieux pour vous aider à vous détendre, vous relaxer et améliorer votre
+                        Problème d’insomnie ou nuit blanche? Vous voulez tout simplement vous détendre et vous relaxer?
+                        Chez Bae nous avons pensé à vous!
+                        Nous avons analysé en détail comment votre corps et cerveau fonctionne pour que vous entrez dans
+                        le sommeil et la détente.
+                    </p>
+                    <p class="lead">
+                        Nous avons concu BaeSleep inspirée de cette analyse, avec un goût pêche délicieux pour vous
+                        aider à vous détendre, vous relaxer et améliorer votre qualité de sommeil.
                         qualité de sommeil.</p>
-                        <div class="row">
+                    <div class="row">
                         <div class="col-lg-6">
-                            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+                            <img class="img-circle"
+                                 src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                 alt="Generic placeholder image" width="140" height="140">
                             <p>Melatonine</p>
                         </div><!-- /.col-lg-4 -->
                         <div class="col-lg-6">
-                            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+                            <img class="img-circle"
+                                 src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                 alt="Generic placeholder image" width="140" height="140">
                             <p>Flavor</p>
                         </div><!-- /.col-lg-4 -->
-                            <button class="btn btn-danger full-width fs20" ng-click="GOTOBUY()">Acheter une boissons BAE SLEEP</button>
-
-                        </div><!-- /.row -->
-
-
+                    </div><!-- /.row -->
                 </div>
                 <div class="col-md-5 col-md-pull-7">
                     <div class="bae-sleep"></div>
@@ -128,29 +137,31 @@
             </div>
         </div>
     </div>
-</div>
+</div n ng-if>
 <div class="container-global-4" id="BUY">
     <div class="container marketing" style="display: table-cell; vertical-align: middle">
         <div class="container">
-            <h1 class="h1-custom">
-               ACHETER UNE BOISSON
-            </h1>
-            <p class="b-s25">Vous désirez acheter une de nos BaeDrinks ? Pour l’instant les commandes ne sont pas encore ouvertes !
-                Restez Informés de l’ouverture des commandes et de nos nouveautés en saisissant votre mail et en nous suivant sur nos réseaux sociaux</p>
+            <img src="./img/order.png" style="margin-bottom: 50px" class="img-responsive">
+            <p class="b-s25">Vous désirez acheter une de nos BaeDrinks ? Pour l’instant les commandes ne sont pas encore
+                ouvertes !
+                Restez Informés de l’ouverture des commandes et de nos nouveautés en saisissant votre mail et en nous
+                suivant sur nos réseaux sociaux</p>
             <div ng-if="success">
-                <div  style="    color: #33ff4e; text-align: center;
-              padding: 10px;" ng-if="success">
-                    Merci pour votre participation, nous revenons vers vous très prochainement ! <i class="fa fa-check" aria-hidden="true"></i>
+                <div class="alert alert-success">
+                    Merci pour votre participation, nous revenons vers vous très prochainement ! <i class="fa fa-check"
+                                                                                                    aria-hidden="true"></i>
                 </div>
             </div>
             <div class="row" style="margin-top: 20px" ng-if="!success">
                 <div class="col-lg-2">
                 </div>
                 <div class="col-lg-4">
-                    <input type="text" ng-model="email" placeholder="example@domain.com" class="form-control" required>
+                    <input type="email" ng-model="email" placeholder="example@domain.com" class="form-control" required>
                 </div>
                 <div class="col-lg-4">
-                    <button class="btn btn-success" ng-click="sendMail(email)" type="submit" ng-disabled="!email">Envoyer mon adresse mail</button>
+                    <button class="btn btn-success" ng-click="sendMail(email)" type="submit" ng-disabled="!email">
+                        Envoyer mon adresse mail
+                    </button>
                 </div>
                 <div class="col-lg-2">
                 </div>
@@ -161,25 +172,24 @@
 <footer>
     <div class="footer navbar-fixed-bottom">
         <div class="container" style="padding-top: 20px">
-
             <div class="row">
                 <div class="col-lg-12">
                     <div style="
     margin: auto;">
                         <div class="social-media ">
                             <a href="https://www.facebook.com/BaeDrinks/?fref=ts">
-                            <div class="table-icon">
-                              <i class="fa fa-facebook facebook"
-                                                                                         aria-hidden="true"></i>
-                            </div>
+                                <div class="table-icon">
+                                    <i class="fa fa-facebook facebook"
+                                       aria-hidden="true"></i>
+                                </div>
                             </a>
                         </div>
                         <div class="social-media">
                             <a href="https://medium.com/@baedrinks">
-                            <div class="table-icon">
-                                <i class="fa fa-medium medium"
-                                                                            aria-hidden="true"></i>
-                            </div>
+                                <div class="table-icon">
+                                    <i class="fa fa-medium medium"
+                                       aria-hidden="true"></i>
+                                </div>
                             </a>
                         </div>
                         <div class="social-media ">
@@ -199,7 +209,7 @@
         </div>
 
         <div class="text-center" style="font-weight: bold; margin-top: 50px">
-            <p>  BAE DRINKS © 2017 All Rights Reserved. </p>
+            <p> BAE DRINKS © 2017 All Rights Reserved. </p>
             <p><b>B</b>efore <b>A</b>nyone <b>E</b>lse</span></p>
         </div>
     </div>
