@@ -8511,21 +8511,30 @@ li {
     .header {
         background: #3e3e3e;
     }
+    .btn-empty {
+        width: 100%;
+    }
 }
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-
+    .btn-empty {
+        width: 100%;
+    }
 }
 
 /* iPads (landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-
+    .btn-empty {
+        width: 100%;
+    }
 }
 
 /* iPads (portrait) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-
+    .btn-empty {
+        width: 100%;
+    }
 }
 
 /**********
@@ -8540,6 +8549,9 @@ iPad 3
         background: #3e3e3e;
         width: 100%;
         padding-bottom: 0;
+    }
+    .btn-empty {
+        width: 100%;
     }
 }
 
@@ -8567,11 +8579,16 @@ iPad 3
         margin-left: 30px;
     }
 
+
+
 }
 
 /* Large screens ----------- */
-@media only screen  and (min-width: 1824px) {
+@media only screen  and (max-width: 1800px) {
     /* Styles */
+    .btn-empty {
+        width: 100%;
+    }
 }
 
 /* iPhone 4 ----------- */
@@ -8606,10 +8623,10 @@ iPad 3
     .btn-empty {
         width: 100%;
     }
-
     .social-media {
         margin-left: 10px;
     }
+
 
 }
 
@@ -8618,6 +8635,9 @@ iPad 3
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
     .header {
         background: #3e3e3e;
+    }
+    .btn-empty {
+        width: 100%;
     }
 
 }
@@ -8636,6 +8656,9 @@ iPad 3
     .social-media {
         margin-left: 10px;
     }
+    .btn-empty {
+        width: 100%;
+    }
 
 
 }
@@ -8649,6 +8672,10 @@ iPad 3
         padding-bottom: 0;
     }
 
+    .btn-empty {
+        width: 100%;
+    }
+
 }
 
 @media only screen and (min-device-width: 410px) and (max-device-height: 730px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
@@ -8658,6 +8685,9 @@ iPad 3
 
     .header {
         background: #3e3e3e;
+    }
+    .btn-empty {
+        width: 100%;
     }
 
 }
@@ -8671,30 +8701,38 @@ iPad 3
     }
 
     .btn-empty {
-        width:100%;
+        width: 100%;
     }
 
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
-    /* Styles */
+    .btn-empty {
+        width: 100%;
+    }
 
 }
 
 /* Samsung Galaxy S4 ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-    /* Styles */
+    .btn-empty {
+        width: 100%;
+    }
 
 
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-    /* Styles */
+    .btn-empty {
+        width: 100%;
+    }
 }
 
 /* Samsung Galaxy S5 ----------- */
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-    /* Styles */
+    .btn-empty {
+        width: 100%;
+    }
 }
 
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
@@ -8702,6 +8740,9 @@ iPad 3
 
     .header {
         background: #3e3e3e;
+    }
+    .btn-empty {
+        width: 100%;
     }
 }
 
@@ -8711,6 +8752,9 @@ iPad 3
     .header {
         background: #3e3e3e;
         padding-bottom: 0;
+    }
+    .btn-empty {
+        width: 100%;
     }
 }
 
