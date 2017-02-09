@@ -7,6 +7,7 @@ angular.module('myApp', [
     'myApp.contactComponent',
     'myApp.invitationsComponent',
     'myApp.orderComponent',
+    'myApp.footerComponent',
 ])
     .config(['$locationProvider', '$routeProvider', '$logProvider', function ($locationProvider, $routeProvider, $logProvider) {
         $locationProvider.hashPrefix('!');

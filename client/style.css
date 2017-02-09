@@ -8389,7 +8389,7 @@ body {
     margin-left: 20px;
     color: white;
     margin-top: 20px;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .btn-empty:focus {
@@ -8587,7 +8587,7 @@ iPad 3
 @media only screen  and (max-width: 1800px) {
     /* Styles */
     .btn-empty {
-        width: 100%;
+        width: 80%;
     }
 }
 
@@ -8606,7 +8606,7 @@ iPad 3
         width: 500px;
     }
     .btn-empty {
-        width: 100%;
+        width: 80%;
     }
 
 }
@@ -8621,7 +8621,7 @@ iPad 3
         font-size: 35px;
     }
     .btn-empty {
-        width: 100%;
+        width: 80%;
     }
     .social-media {
         margin-left: 10px;
@@ -8637,7 +8637,7 @@ iPad 3
         background: #3e3e3e;
     }
     .btn-empty {
-        width: 100%;
+        width: 80%;
     }
 
 }
@@ -8657,7 +8657,7 @@ iPad 3
         margin-left: 10px;
     }
     .btn-empty {
-        width: 100%;
+        width: 80%;
     }
 
 
@@ -8673,7 +8673,7 @@ iPad 3
     }
 
     .btn-empty {
-        width: 100%;
+        width: 80%;
     }
 
 }
@@ -8687,7 +8687,7 @@ iPad 3
         background: #3e3e3e;
     }
     .btn-empty {
-        width: 100%;
+        width: 80%;
     }
 
 }
@@ -8701,14 +8701,14 @@ iPad 3
     }
 
     .btn-empty {
-        width: 100%;
+        width: 80%;
     }
 
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
     .btn-empty {
-        width: 100%;
+        width: 80%;
     }
 
 }
@@ -8724,14 +8724,14 @@ iPad 3
 
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
     .btn-empty {
-        width: 100%;
+        width: 80%;
     }
 }
 
 /* Samsung Galaxy S5 ----------- */
 @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
     .btn-empty {
-        width: 100%;
+        width: 80%;
     }
 }
 
@@ -8742,7 +8742,7 @@ iPad 3
         background: #3e3e3e;
     }
     .btn-empty {
-        width: 100%;
+        width: 80%;
     }
 }
 

@@ -1,4 +1,4 @@
-angular.module('templates-main', ['/components/contact/contact.view.html', '/components/home/home.view.html', '/components/invitations/invitations.view.html', '/components/order/order.view.html']);
+angular.module('templates-main', ['/components/contact/contact.view.html', '/components/footer/footer.view.html', '/components/home/home.view.html', '/components/invitations/invitations.view.html', '/components/order/order.view.html']);
 
 angular.module("/components/contact/contact.view.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("/components/contact/contact.view.html",
@@ -61,12 +61,14 @@ angular.module("/components/contact/contact.view.html", []).run(["$templateCache
     "        </form>\n" +
     "    </div>\n" +
     "</div>\n" +
-    "\n" +
-    "\n" +
+    "<main-footer></main-footer>");
+}]);
+
+angular.module("/components/footer/footer.view.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("/components/footer/footer.view.html",
     "<footer>\n" +
     "    <div class=\"footer navbar-fixed-bottom\">\n" +
     "        <div class=\"container\" style=\"padding-top: 20px\">\n" +
-    "\n" +
     "            <div class=\"row\">\n" +
     "                <div class=\"col-lg-12\">\n" +
     "                    <div style=\"\n" +
@@ -98,17 +100,15 @@ angular.module("/components/contact/contact.view.html", []).run(["$templateCache
     "\n" +
     "                    </div>\n" +
     "                </div>\n" +
-    "\n" +
     "            </div>\n" +
-    "\n" +
     "        </div>\n" +
-    "\n" +
     "        <div class=\"text-center\" style=\"font-weight: bold; margin-top: 50px\">\n" +
     "            <p>  BAE DRINKS © 2017 All Rights Reserved. </p>\n" +
     "            <p><b>B</b>efore <b>A</b>nyone <b>E</b>lse</span></p>\n" +
     "        </div>\n" +
     "    </div>\n" +
-    "</footer>");
+    "</footer>\n" +
+    "");
 }]);
 
 angular.module("/components/home/home.view.html", []).run(["$templateCache", function($templateCache) {
@@ -139,7 +139,6 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "        </div>\n" +
     "    </div>\n" +
     "</nav>\n" +
-    "\n" +
     "<div class=\"jumbotron header\">\n" +
     "    <div class=\"container container-header\">\n" +
     "        <img alt=\"baedrink - improve your self naturaly\" class=\"img-responsive\" src=\"./img/logo.png\">\n" +
@@ -294,51 +293,7 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "        </div>\n" +
     "    </div>\n" +
     "</div>\n" +
-    "<footer>\n" +
-    "    <div class=\"footer navbar-fixed-bottom\">\n" +
-    "        <div class=\"container\" style=\"padding-top: 20px\">\n" +
-    "            <div class=\"row\">\n" +
-    "                <div class=\"col-lg-12\">\n" +
-    "                    <div style=\"\n" +
-    "    margin: auto;\">\n" +
-    "                        <div class=\"social-media \">\n" +
-    "                            <a href=\"https://www.facebook.com/BaeDrinks/?fref=ts\">\n" +
-    "                                <div class=\"table-icon\">\n" +
-    "                                    <i class=\"fa fa-facebook facebook\"\n" +
-    "                                       aria-hidden=\"true\"></i>\n" +
-    "                                </div>\n" +
-    "                            </a>\n" +
-    "                        </div>\n" +
-    "                        <div class=\"social-media\">\n" +
-    "                            <a href=\"https://medium.com/@baedrinks\">\n" +
-    "                                <div class=\"table-icon\">\n" +
-    "                                    <i class=\"fa fa-medium medium\"\n" +
-    "                                       aria-hidden=\"true\"></i>\n" +
-    "                                </div>\n" +
-    "                            </a>\n" +
-    "                        </div>\n" +
-    "                        <div class=\"social-media \">\n" +
-    "                            <a href=\"https://www.instagram.com/baedrinks/\">\n" +
-    "        <span class=\"table-icon\">\n" +
-    "               <i class=\"fa fa-instagram instagram\" aria-hidden=\"true\"></i>\n" +
-    "\n" +
-    "        </span>\n" +
-    "                            </a>\n" +
-    "                        </div>\n" +
-    "\n" +
-    "                    </div>\n" +
-    "                </div>\n" +
-    "\n" +
-    "            </div>\n" +
-    "\n" +
-    "        </div>\n" +
-    "\n" +
-    "        <div class=\"text-center\" style=\"font-weight: bold; margin-top: 50px\">\n" +
-    "            <p> BAE DRINKS © 2017 All Rights Reserved. </p>\n" +
-    "            <p><b>B</b>efore <b>A</b>nyone <b>E</b>lse</span></p>\n" +
-    "        </div>\n" +
-    "    </div>\n" +
-    "</footer>");
+    "<main-footer></main-footer>");
 }]);
 
 angular.module("/components/invitations/invitations.view.html", []).run(["$templateCache", function($templateCache) {
@@ -425,55 +380,7 @@ angular.module("/components/invitations/invitations.view.html", []).run(["$templ
     "        </form>\n" +
     "    </div>\n" +
     "</div>\n" +
-    "\n" +
-    "\n" +
-    "\n" +
-    "<footer>\n" +
-    "    <div class=\"footer navbar-fixed-bottom\">\n" +
-    "        <div class=\"container\" style=\"padding-top: 20px\">\n" +
-    "\n" +
-    "            <div class=\"row\">\n" +
-    "                <div class=\"col-lg-12\">\n" +
-    "                    <div style=\"\n" +
-    "    margin: auto;\">\n" +
-    "                        <div class=\"social-media \">\n" +
-    "                            <a href=\"https://www.facebook.com/BaeDrinks/?fref=ts\">\n" +
-    "                                <div class=\"table-icon\">\n" +
-    "                                    <i class=\"fa fa-facebook facebook\"\n" +
-    "                                       aria-hidden=\"true\"></i>\n" +
-    "                                </div>\n" +
-    "                            </a>\n" +
-    "                        </div>\n" +
-    "                        <div class=\"social-media\">\n" +
-    "                            <a href=\"https://medium.com/@baedrinks\">\n" +
-    "                                <div class=\"table-icon\">\n" +
-    "                                    <i class=\"fa fa-medium medium\"\n" +
-    "                                       aria-hidden=\"true\"></i>\n" +
-    "                                </div>\n" +
-    "                            </a>\n" +
-    "                        </div>\n" +
-    "                        <div class=\"social-media \">\n" +
-    "                            <a href=\"https://www.instagram.com/baedrinks/\">\n" +
-    "        <span class=\"table-icon\">\n" +
-    "               <i class=\"fa fa-instagram instagram\" aria-hidden=\"true\"></i>\n" +
-    "\n" +
-    "        </span>\n" +
-    "                            </a>\n" +
-    "                        </div>\n" +
-    "\n" +
-    "                    </div>\n" +
-    "                </div>\n" +
-    "\n" +
-    "            </div>\n" +
-    "\n" +
-    "        </div>\n" +
-    "\n" +
-    "        <div class=\"text-center\" style=\"font-weight: bold; margin-top: 50px\">\n" +
-    "            <p>  BAE DRINKS © 2017 All Rights Reserved. </p>\n" +
-    "            <p><b>B</b>efore <b>A</b>nyone <b>E</b>lse</span></p>\n" +
-    "        </div>\n" +
-    "    </div>\n" +
-    "</footer>");
+    "<main-footer></main-footer>");
 }]);
 
 angular.module("/components/order/order.view.html", []).run(["$templateCache", function($templateCache) {
@@ -481,7 +388,8 @@ angular.module("/components/order/order.view.html", []).run(["$templateCache", f
     "<nav class=\"navbar navbar-default navbar-fixed-top navbar-blue\">\n" +
     "    <div class=\"container-fluid\">\n" +
     "        <div class=\"navbar-header\">\n" +
-    "            <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\n" +
+    "            <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\"\n" +
+    "                    aria-expanded=\"false\" aria-controls=\"navbar\">\n" +
     "                <span class=\"sr-only\">Toggle navigation</span>\n" +
     "                <span class=\"icon-bar\"></span>\n" +
     "                <span class=\"icon-bar\"></span>\n" +
@@ -502,21 +410,23 @@ angular.module("/components/order/order.view.html", []).run(["$templateCache", f
     "    <div class=\"container \" style=\"margin-top: 50px; padding-top: 50px\">\n" +
     "        <h1>Commande BAESLEEP</h1>\n" +
     "        <hr>\n" +
-    "        <form  class=\"form-horizontal\" role=\"form\" method=\"post\" style=\"margin-top: 50px\" ng-if=\"!sucess\">\n" +
+    "        <form class=\"form-horizontal\" role=\"form\" method=\"post\" style=\"margin-top: 50px\" ng-if=\"!sucess\">\n" +
     "            <li ng-if=\"error\" style=\"color: red\">Ce code n'existe pas !</li>\n" +
     "            <div class=\"form-group\">\n" +
     "                <label for=\"email\" class=\"col-sm-2 control-label\">Code de participation :</label>\n" +
     "                <div class=\"col-sm-10\">\n" +
-    "                    <input type=\"text\" class=\"form-control\" ng-model=\"order.code\" ng-change=\"newOrder()\"  placeholder=\"Code d'invitation bae\"  required ng-if=\"!success\">\n" +
-    "                       <div  class=\"alert alert-success\"  ng-if=\"success\">\n" +
-    "                    {{order.code}} -  code validé ! <i class=\"fa fa-check\" aria-hidden=\"true\"></i>\n" +
-    "                </div>\n" +
+    "                    <input type=\"text\" class=\"form-control\" ng-model=\"order.code\" ng-change=\"newOrder()\"\n" +
+    "                           placeholder=\"Code d'invitation bae\" required ng-if=\"!success\">\n" +
+    "                    <div class=\"alert alert-success\" ng-if=\"success\">\n" +
+    "                        {{order.code}} - code validé ! <i class=\"fa fa-check\" aria-hidden=\"true\"></i>\n" +
+    "                    </div>\n" +
     "                </div>\n" +
     "            </div>\n" +
     "            <div class=\"form-group\">\n" +
     "                <label for=\"email\" class=\"col-sm-2 control-label\">Email : </label>\n" +
     "                <div class=\"col-sm-10\">\n" +
-    "                    <input type=\"email\" class=\"form-control\" ng-model=\"order.email\" id=\"email\" placeholder=\"example@domain.com\"  required >\n" +
+    "                    <input type=\"email\" class=\"form-control\" ng-model=\"order.email\" id=\"email\"\n" +
+    "                           placeholder=\"example@domain.com\" required>\n" +
     "                </div>\n" +
     "            </div>\n" +
     "            <div class=\"form-group\">\n" +
@@ -525,76 +435,40 @@ angular.module("/components/order/order.view.html", []).run(["$templateCache", f
     "                    <input type=\"text\" class=\"form-control\" ng-model=\"order.firstname\" placeholder=\"Prénom\" required>\n" +
     "                </div>\n" +
     "                <div class=\"col-sm-3\">\n" +
-    "                    <input type=\"text\" class=\"form-control\"  ng-model=\"order.lastname\"  placeholder=\"Nom\" required>\n" +
+    "                    <input type=\"text\" class=\"form-control\" ng-model=\"order.lastname\" placeholder=\"Nom\" required>\n" +
     "                </div>\n" +
     "            </div>\n" +
     "\n" +
     "            <div class=\"form-group\">\n" +
     "                <label class=\"col-sm-2 control-label\">Livraison : </label>\n" +
     "                <div class=\"col-sm-5\">\n" +
-    "                    <input type=\"text\" class=\"form-control\" ng-model=\"order.adress\"  name=\"name\" placeholder=\"Adresse\" required>\n" +
+    "                    <input type=\"text\" class=\"form-control\" ng-model=\"order.adress\" name=\"name\" placeholder=\"Adresse\"\n" +
+    "                           required>\n" +
     "                </div>\n" +
     "\n" +
     "                <div class=\"col-sm-3\">\n" +
-    "                    <input type=\"text\" class=\"form-control\"  name=\"name\" ng-model=\"order.postal\" placeholder=\"code postal\" required>\n" +
+    "                    <input type=\"text\" class=\"form-control\" name=\"name\" ng-model=\"order.postal\"\n" +
+    "                           placeholder=\"code postal\" required>\n" +
     "                </div>\n" +
     "            </div>\n" +
     "\n" +
     "            <div class=\"form-group\">\n" +
     "                <div class=\"col-sm-10 col-sm-offset-2\">\n" +
-    "                    <li style=\"margin-bottom: 20px; color: #78a9ff; font-size: 18px; border: 1px solid #78a9ff; padding: 10px\"><i class=\"fa fa-exclamation-triangle\" aria-hidden=\"true\"></i> Avant de valider votre commande soyez sur de votre adresse de livraison. Les commandes sont effectuées gratuitement à Namur, Belgique, directement envoyer via la poste.</li>\n" +
+    "                    <li style=\"margin-bottom: 20px; color: #78a9ff; font-size: 18px; border: 1px solid #78a9ff; padding: 10px\">\n" +
+    "                        <i class=\"fa fa-exclamation-triangle\" aria-hidden=\"true\"></i> Avant de valider votre commande\n" +
+    "                        soyez sur de votre adresse de livraison. Les commandes sont effectuées gratuitement à Namur,\n" +
+    "                        Belgique, directement envoyer via la poste.\n" +
+    "                    </li>\n" +
     "\n" +
-    "                    <input id=\"submit\" name=\"submit\" type=\"submit\" value=\"Commander\" class=\"btn btn-primary btn-lg\" ng-if=\"!inProgress\" ng-click=\"sendOrder(order)\">\n" +
-    "                    <a  type=\"submit\"  class=\"btn btn-warning\" ng-if=\"inProgress\"><i class=\"fa fa-spinner fa-spin fa-3x fa-fw\"></i></a>\n" +
+    "                    <input id=\"submit\" name=\"submit\" type=\"submit\" value=\"Commander\" class=\"btn btn-primary btn-lg\"\n" +
+    "                           ng-if=\"!inProgress\" ng-click=\"sendOrder(order)\">\n" +
+    "                    <a type=\"submit\" class=\"btn btn-warning\" ng-if=\"inProgress\"><i\n" +
+    "                            class=\"fa fa-spinner fa-spin fa-3x fa-fw\"></i></a>\n" +
     "                </div>\n" +
     "            </div>\n" +
     "        </form>\n" +
     "    </div>\n" +
     "</div>\n" +
-    "\n" +
-    "<footer>\n" +
-    "    <div class=\"footer navbar-fixed-bottom\">\n" +
-    "        <div class=\"container\" style=\"padding-top: 20px\">\n" +
-    "            <div class=\"row\">\n" +
-    "                <div class=\"col-lg-12\">\n" +
-    "                    <div style=\"\n" +
-    "    margin: auto;\">\n" +
-    "                        <div class=\"social-media \">\n" +
-    "                            <a href=\"https://www.facebook.com/BaeDrinks/?fref=ts\">\n" +
-    "                                <div class=\"table-icon\">\n" +
-    "                                    <i class=\"fa fa-facebook facebook\"\n" +
-    "                                       aria-hidden=\"true\"></i>\n" +
-    "                                </div>\n" +
-    "                            </a>\n" +
-    "                        </div>\n" +
-    "                        <div class=\"social-media\">\n" +
-    "                            <a href=\"https://medium.com/@baedrinks\">\n" +
-    "                                <div class=\"table-icon\">\n" +
-    "                                    <i class=\"fa fa-medium medium\"\n" +
-    "                                       aria-hidden=\"true\"></i>\n" +
-    "                                </div>\n" +
-    "                            </a>\n" +
-    "                        </div>\n" +
-    "                        <div class=\"social-media \">\n" +
-    "                            <a href=\"https://www.instagram.com/baedrinks/\">\n" +
-    "        <span class=\"table-icon\">\n" +
-    "               <i class=\"fa fa-instagram instagram\" aria-hidden=\"true\"></i>\n" +
-    "\n" +
-    "        </span>\n" +
-    "                            </a>\n" +
-    "                        </div>\n" +
-    "\n" +
-    "                    </div>\n" +
-    "                </div>\n" +
-    "\n" +
-    "            </div>\n" +
-    "\n" +
-    "        </div>\n" +
-    "\n" +
-    "        <div class=\"text-center\" style=\"font-weight: bold; margin-top: 50px\">\n" +
-    "            <p>  BAE DRINKS © 2017 All Rights Reserved. </p>\n" +
-    "            <p><b>B</b>efore <b>A</b>nyone <b>E</b>lse</span></p>\n" +
-    "        </div>\n" +
-    "    </div>\n" +
-    "</footer>");
+    "<main-footer></main-footer>\n" +
+    "");
 }]);
