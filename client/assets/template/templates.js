@@ -123,7 +123,9 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "                <span class=\"icon-bar\"></span>\n" +
     "                <span class=\"icon-bar\"></span>\n" +
     "            </button>\n" +
-    "            <a class=\"navbar-brand\" href=\"#\" ng-click=\"GOTOTOP()\"><b>BAEDRINKS</b></a>\n" +
+    "            <a class=\"navbar-brand\" href=\"#\" ng-click=\"GOTOTOP()\"><img src=\"./img/logo2.png\" style=\"    width: 130px;\n" +
+    "    position: relative;\n" +
+    "    top: -21px;\"></a>\n" +
     "        </div>\n" +
     "        <div id=\"navbar\" class=\"navbar-collapse collapse\">\n" +
     "            <ul class=\"nav navbar-nav navbar-left\">\n" +
@@ -143,7 +145,7 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "        <img alt=\"baedrink - improve your self naturaly\" class=\"img-responsive\" src=\"./img/logo.png\">\n" +
     "        <div style=\"margin-top: 40px\">\n" +
     "            <button class=\"btn btn-empty btn-green-hover btn-lg\" href=\"WHATBAE\" title=\"WHAT IS BAE ?\"\n" +
-    "                    ng-click=\"GOTOWHAT()\">C’EST QUOI BAE ?\n" +
+    "                    ng-click=\"GOTOWHAT()\">NOTRE CULTURE\n" +
     "            </button>\n" +
     "            <button class=\"btn btn-empty btn-blue-hover btn-lg\" href=\"PRODUCT\" title=\"OUR BAE DRINKS\"\n" +
     "                    ng-click=\"GOTOPRODUCT()\">NOS BOISSONS\n" +
@@ -184,15 +186,15 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "</div>\n" +
     "<div class=\"container-global-1\" id=\"WHATBAE\">\n" +
     "    <div class=\"container marketing\" style=\"display: table-cell; vertical-align: middle\">\n" +
-    "        <div class=\"container\" style=\"margin-top: 50px; margin-bottom: 50px\" >\n" +
-    "            <img src=\"./img/what.png\"  class=\"img-responsive\" >\n" +
+    "        <div class=\"container\"  >\n" +
+    "            <img src=\"./img/what.png\" style=\"margin-top: 50px; margin-bottom: 5%\"  class=\"img-responsive\" >\n" +
     "            <div class=\"row\">\n" +
     "                <div class=\"col-lg-2\">\n" +
     "                </div>\n" +
     "                <div class=\"col-lg-8\" style=\"font-size: 25px; margin-top: 25px\">\n" +
     "                    <p>La nature nous a toujours enseigné comment rester en bonne santé. A chaque fois que nous dévions\n" +
     "                        du processus naturel, la qualité de notre bien-être diminue.</p>\n" +
-    "                    <p>Chez Bae, nous analysons minutieusement comment les choses se passent naturellement, ensuite nous\n" +
+    "                    <p style=\"margin-bottom: 50px\">Chez Bae, nous analysons minutieusement comment les choses se passent naturellement, ensuite nous\n" +
     "                        concevons des boissons naturelles BaeDrinks inspirées de nos analyses pour aider les gens à\n" +
     "                        améliorer la qualité de leur bien-être.</p>\n" +
     "                </div>\n" +
@@ -208,7 +210,15 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "            <img src=\"./img/drinks.png\" style=\"margin-bottom: 50px\" class=\"img-responsive\">\n" +
     "            <p class=\"b-s25\">Notre premiere BaeDrink aidera les gens à résoudre l’un des fréquents problèmes nuisant au bien-être. Nous avons analysé comment les choses se font naturellement; et aujourd’hui, nous avons LA solution !\n" +
     "            </p>\n" +
-    "            <button ng-click=\"GOTOBUY()\" class=\"btn btn-danger full-width\">RESTEZ INFORMEZ</button>\n" +
+    "            <div class=\"row\">\n" +
+    "                <div class=\"col-lg-3\">\n" +
+    "                </div>\n" +
+    "                <div class=\"col-lg-6\">\n" +
+    "                    <button ng-click=\"GOTOBUY()\" class=\"btn btn-warning full-width btn-designed\">RESTEZ INFORMEZ</button>\n" +
+    "                </div>\n" +
+    "                <div class=\"col-lg-3\">\n" +
+    "                </div>\n" +
+    "            </div>\n" +
     "        </div>\n" +
     "    </div>\n" +
     "</div>\n" +
@@ -274,7 +284,7 @@ angular.module("/components/home/home.view.html", []).run(["$templateCache", fun
     "                    <input type=\"email\" ng-model=\"email\" placeholder=\"example@domain.com\" class=\"form-control\" required>\n" +
     "                </div>\n" +
     "                <div class=\"col-lg-4\">\n" +
-    "                    <button class=\"btn btn-success\" ng-click=\"sendMail(email)\" type=\"submit\" ng-disabled=\"!email\">\n" +
+    "                    <button class=\"btn btn-success btn-designed\" ng-click=\"sendMail(email)\" type=\"submit\"^>\n" +
     "                        Envoyer mon adresse mail\n" +
     "                    </button>\n" +
     "                </div>\n" +
