@@ -9,9 +9,11 @@
 <html lang="fr" ng-app="myApp" class="no-js"> <!--<![endif]-->
 <head>
 
+
     <meta name="fragment" content="!">
     <!-- Hotjar Tracking Code for http://localhost:3000/ -->
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Toutes les boissons BaeDrinks sont naturellement conçues pour aider les gens à améliorer la qualité de leur bien-être">
     <meta name="keywords" content="sommeil, boissons naturelles, somnifère naturelle, somnifère, baedrinks, bae, brain, natural drink, se relaxer, bien-être">
     <meta name="author" content="baedrinks" />
@@ -31,10 +33,11 @@
 
     <base href="/">
     <title>Baedrinks - boisson somnifère naturelle</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Quicksand" rel="stylesheet">
     <link rel="manifest" href="manifest.json">
-    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js"></script>
     <script>
         var OneSignal = window.OneSignal || [];
         OneSignal.push(["init", {
@@ -57,12 +60,12 @@
             }
         }
         preload(
-                "https://www.baedrinks.com/img/logo.png",
-                "https://www.baedrinks.com/img/contact.jpg",
-                "https://www.baedrinks.com/img/topheader.jpg",
-                "https://www.baedrinks.com/img/background2.jpg",
-                "https://www.baedrinks.com/img/background4.jpg",
-                "https://www.baedrinks.com/img/background.jpg"
+                "http://localhost:8080/img/logo.png",
+                "http://localhost:8080/img/contact.jpg",
+                "http://localhost:8080/img/topheader.jpg",
+                "http://localhost:8080/img/background2.jpg",
+                "http://localhost:8080/img/background4.jpg",
+                "http://localhost:8080/img/background.jpg"
         )
         //--><!]]>
     </script>
@@ -84,24 +87,34 @@
     ga('send', 'pageview');
 </script>
 <body>
-<div id="fb-root"></div>
-<div ng-view></div>
 <script src="https://api.filestackapi.com/filestack.js"></script>
 <script type="text/javascript">
     filepicker.setKey("AEHsdCgTSIyW36lFsczgJz");
 </script>
-<script src="/assets/bae.min.js"></script>
+<div id="fb-root"></div>
 <link href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
       crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/lodash/4.16.6/lodash.min.js"></script>
-
 <link rel="stylesheet" href="style.css" crossorigin="anonymous">
 
+<div ng-view></div>
+
+<script src="/bower_components/angular/angular.js"></script>
+<script src="/bower_components/angular-route/angular-route.js"></script>
+<script src="/bower_components/ngInfiniteScroll/ng-infinite-scroll.js"></script>
+<script src="/assets/dev/app.js"></script>
 
 
+<!-- injector:js -->
+<script src="components/contact/contact.component.js"></script>
+<script src="components/home/home.component.js"></script>
+<script src="components/invitations/invitations.component.js"></script>
+<script src="components/order/order.component.js"></script>
+<script src="GruntFile.js"></script>
+<!-- endinjector -->
 </body>
 </html>
 .

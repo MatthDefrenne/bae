@@ -61,7 +61,7 @@ function homeComponent($scope, $http) {
 
     $scope.GOTOTOP = function() {
         $('html,body').animate({
-            scrollTop:$("#nav").offset().top
+            scrollTop: 0
         },'slow');
     }
 

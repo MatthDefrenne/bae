@@ -8,7 +8,9 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#" ng-click="GOTOTOP()"><b>BAEDRINKS</b></a>
+            <a class="navbar-brand" href="#" ng-click="GOTOTOP()"><img src="./img/logo2.png" style="    width: 130px;
+    position: relative;
+    top: -21px;"></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-left">
@@ -28,7 +30,7 @@
         <img alt="baedrink - improve your self naturaly" class="img-responsive" src="./img/logo.png">
         <div style="margin-top: 40px">
             <button class="btn btn-empty btn-green-hover btn-lg" href="WHATBAE" title="WHAT IS BAE ?"
-                    ng-click="GOTOWHAT()">C’EST QUOI BAE ?
+                    ng-click="GOTOWHAT()">NOTRE CULTURE
             </button>
             <button class="btn btn-empty btn-blue-hover btn-lg" href="PRODUCT" title="OUR BAE DRINKS"
                     ng-click="GOTOPRODUCT()">NOS BOISSONS
@@ -69,15 +71,15 @@
 </div>
 <div class="container-global-1" id="WHATBAE">
     <div class="container marketing" style="display: table-cell; vertical-align: middle">
-        <div class="container" style="margin-top: 50px; margin-bottom: 50px" >
-            <img src="./img/what.png"  class="img-responsive" >
+        <div class="container"  >
+            <img src="./img/what.png" style="margin-top: 50px; margin-bottom: 5%"  class="img-responsive" >
             <div class="row">
                 <div class="col-lg-2">
                 </div>
                 <div class="col-lg-8" style="font-size: 25px; margin-top: 25px">
                     <p>La nature nous a toujours enseigné comment rester en bonne santé. A chaque fois que nous dévions
                         du processus naturel, la qualité de notre bien-être diminue.</p>
-                    <p>Chez Bae, nous analysons minutieusement comment les choses se passent naturellement, ensuite nous
+                    <p style="margin-bottom: 50px">Chez Bae, nous analysons minutieusement comment les choses se passent naturellement, ensuite nous
                         concevons des boissons naturelles BaeDrinks inspirées de nos analyses pour aider les gens à
                         améliorer la qualité de leur bien-être.</p>
                 </div>
@@ -93,7 +95,15 @@
             <img src="./img/drinks.png" style="margin-bottom: 50px" class="img-responsive">
             <p class="b-s25">Notre premiere BaeDrink aidera les gens à résoudre l’un des fréquents problèmes nuisant au bien-être. Nous avons analysé comment les choses se font naturellement; et aujourd’hui, nous avons LA solution !
             </p>
-            <button ng-click="GOTOBUY()" class="btn btn-danger full-width">RESTEZ INFORMEZ</button>
+            <div class="row">
+                <div class="col-lg-3">
+                </div>
+                <div class="col-lg-6">
+                    <button ng-click="GOTOBUY()" class="btn btn-warning full-width btn-designed">RESTEZ INFORMEZ</button>
+                </div>
+                <div class="col-lg-3">
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -159,7 +169,7 @@
                     <input type="email" ng-model="email" placeholder="example@domain.com" class="form-control" required>
                 </div>
                 <div class="col-lg-4">
-                    <button class="btn btn-success" ng-click="sendMail(email)" type="submit" ng-disabled="!email">
+                    <button class="btn btn-success btn-designed" ng-click="sendMail(email)" type="submit"^>
                         Envoyer mon adresse mail
                     </button>
                 </div>
